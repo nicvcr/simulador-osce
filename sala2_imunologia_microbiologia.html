@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSCE Sala 2: Microbiologia e Imunologia | 4 Cenários de Treino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card-bg: rgba(17, 24, 39, 0.88);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text: #f3f4f6;
+      --text-muted: #94a3b8;
+      --primary: #10b981;
+      --primary-light: #6ee7b7;
+      --primary-glow: rgba(16, 185, 129, 0.25);
+      --accent-cyan: #06b6d4;
+      --accent-blue: #3b82f6;
+      --amber: #f59e0b;
+      --rose: #f43f5e;
+      --purple: #a855f7;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.14) 0px, transparent 45%),
+        radial-gradient(at 100% 20%, rgba(6, 182, 212, 0.12) 0px, transparent 40%),
+        radial-gradient(at 50% 100%, rgba(59, 130, 246, 0.08) 0px, transparent 50%);
+      color: var(--text);
+      min-height: 100vh;
+      padding-bottom: 4rem;
+    }
+
+    /* Top Nav */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 17, 32, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .nav-brand-badge {
+      background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
+      color: #fff;
+      padding: 0.2rem 0.6rem;
+      border-radius: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-btn {
+      padding: 0.45rem 0.9rem;
+      border-radius: 0.6rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .nav-btn-hub {
+      background: rgba(255, 255, 255, 0.06);
+      color: #cbd5e1;
+      border: 1px solid var(--card-border);
+    }
+    .nav-btn-hub:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    .nav-btn-prev {
+      background: rgba(6, 182, 212, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(6, 182, 212, 0.3);
+    }
+    .nav-btn-prev:hover {
+      background: rgba(6, 182, 212, 0.25);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1180px;
+      margin: 1.5rem auto 0;
+      padding: 0 1.25rem;
+    }
+
+    /* Hero Header */
+    .hero-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .station-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: var(--primary-light);
+      padding: 0.35rem 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 850px;
+      line-height: 1.55;
+    }
+
+    /* Glossário Simples */
+    .glossary-box {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 1rem;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1.75rem;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .glossary-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #34d399;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .glossary-terms {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .glossary-item {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 0.6rem;
+      padding: 0.75rem 1rem;
+      border-left: 3px solid var(--primary);
+    }
+
+    .glossary-item strong {
+      color: #fff;
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.9rem;
+    }
+
+    .glossary-item p {
+      color: #cbd5e1;
+      font-size: 0.85rem;
+      line-height: 1.45;
+    }
+
+    /* Seletor de Cenários */
+    .scenario-nav {
+      background: rgba(17, 24, 39, 0.9);
+      border: 1px solid var(--card-border);
+      border-radius: 1.25rem;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .scenario-nav-label {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+    }
+
+    .scenario-tabs {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+
+    .scenario-tab-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: #94a3b8;
+      padding: 0.55rem 1rem;
+      border-radius: 0.75rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .scenario-tab-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .scenario-tab-btn.active {
+      background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
+    }
+
+    /* Timer HUD */
+    .timer-hud {
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(17, 24, 39, 0.96));
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      border-radius: 1.25rem;
+      padding: 1.25rem 1.75rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .timer-hud::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--accent-cyan));
+    }
+
+    .timer-left {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .timer-display {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 3.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #fff;
+      text-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+      min-width: 160px;
+    }
+
+    .timer-display.warning {
+      color: var(--amber);
+      text-shadow: 0 0 25px rgba(245, 158, 11, 0.6);
+      animation: pulse-warning 1s infinite alternate;
+    }
+
+    .timer-display.danger {
+      color: var(--rose);
+      text-shadow: 0 0 25px rgba(244, 63, 94, 0.7);
+      animation: pulse-danger 0.6s infinite alternate;
+    }
+
+    @keyframes pulse-warning {
+      from { transform: scale(1); }
+      to { transform: scale(1.03); }
+    }
+    @keyframes pulse-danger {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+
+    .timer-status-box {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .timer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 0.4rem;
+      background: rgba(255, 255, 255, 0.08);
+      color: #94a3b8;
+      width: fit-content;
+    }
+
+    .timer-badge.active {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+    }
+
+    .timer-info-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .timer-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-timer {
+      padding: 0.65rem 1.25rem;
+      border-radius: 0.75rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-timer-primary {
+      background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+    .btn-timer-primary:hover {
+      filter: brightness(1.15);
+      transform: translateY(-1px);
+    }
+
+    .btn-timer-secondary {
+      background: rgba(255, 255, 255, 0.07);
+      color: #cbd5e1;
+      border: 1px solid var(--card-border);
+    }
+    .btn-timer-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    .sound-toggle-btn {
+      padding: 0.65rem 0.9rem;
+      border-radius: 0.75rem;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--card-border);
+      color: #cbd5e1;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 1.25rem;
+      padding: 1.75rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
+      margin-bottom: 2rem;
+    }
+
+    .card-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    /* Folha de Porta */
+    .door-sheet {
+      border-left: 4px solid var(--primary);
+      background: rgba(16, 185, 129, 0.05);
+    }
+
+    .door-header-tag {
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--primary-light);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 0.35rem;
+    }
+
+    .clinical-case-box {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 0.85rem;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .clinical-case-box strong {
+      color: #fff;
+    }
+
+    .task-list-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary-light);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Comandos do aluno em lista numerada profissional (sem setas) */
+    .door-tasks {
+      list-style: none;
+      counter-reset: task-counter;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      font-size: 0.95rem;
+    }
+
+    .door-tasks li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      color: #e2e8f0;
+      line-height: 1.55;
+    }
+
+    .door-tasks li::before {
+      counter-increment: task-counter;
+      content: counter(task-counter);
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--primary-light);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: 50%;
+      min-width: 24px;
+      height: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    /* Checklist */
+    .checklist-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .check-category {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      border-radius: 0.9rem;
+      overflow: hidden;
+    }
+
+    .check-cat-header {
+      padding: 0.85rem 1.2rem;
+      background: rgba(255, 255, 255, 0.04);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .cat-name {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #f1f5f9;
+    }
+
+    .cat-points {
+      font-size: 0.8rem;
+      color: var(--primary-light);
+      background: rgba(16, 185, 129, 0.15);
+      padding: 0.2rem 0.55rem;
+      border-radius: 0.4rem;
+    }
+
+    .check-items {
+      padding: 0.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 0.75rem 0.6rem;
+      border-radius: 0.6rem;
+      transition: background 0.15s ease;
+      cursor: pointer;
+    }
+
+    .check-item:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .custom-checkbox {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      border-radius: 0.4rem;
+      background: transparent;
+      outline: none;
+      cursor: pointer;
+      display: grid;
+      place-content: center;
+      margin-top: 0.15rem;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+
+    .custom-checkbox:checked {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .custom-checkbox:checked::before {
+      content: '✓';
+      color: #fff;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .check-content {
+      flex: 1;
+    }
+
+    .check-title-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-bottom: 0.25rem;
+    }
+
+    .check-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .item-val {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      font-family: 'JetBrains Mono', monospace;
+      white-space: nowrap;
+    }
+
+    /* Score Bar */
+    .score-summary-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 0.85rem;
+      padding: 1rem 1.4rem;
+      margin-top: 1.25rem;
+      border: 1px solid var(--card-border);
+    }
+
+    .score-label {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #cbd5e1;
+    }
+
+    .score-val-big {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--primary-light);
+    }
+
+    /* Roteiro de Fala */
+    .script-step {
+      background: rgba(255, 255, 255, 0.02);
+      border-left: 3px solid var(--primary);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .script-step.imuno {
+      border-left-color: var(--accent-cyan);
+    }
+    .script-step.vac {
+      border-left-color: var(--purple);
+    }
+
+    .script-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.15rem 0.5rem;
+      border-radius: 0.3rem;
+      background: rgba(16, 185, 129, 0.2);
+      color: #6ee7b7;
+      display: inline-block;
+      margin-bottom: 0.4rem;
+    }
+
+    .script-tag.imuno {
+      background: rgba(6, 182, 212, 0.2);
+      color: #67e8f9;
+    }
+    .script-tag.vac {
+      background: rgba(168, 85, 247, 0.2);
+      color: #c084fc;
+    }
+
+    .speech-bubble {
+      font-style: normal;
+      color: #f1f5f9;
+      font-size: 0.93rem;
+      line-height: 1.6;
+    }
+
+    .speech-tip {
+      margin-top: 0.4rem;
+      font-size: 0.8rem;
+      color: var(--amber);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Flashcard Quiz */
+    .flashcard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .flashcard {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      border-radius: 0.85rem;
+      padding: 1.25rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .flashcard:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .flashcard-q {
+      font-weight: 700;
+      color: #fff;
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .flashcard-a {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      line-height: 1.5;
+      display: none;
+      padding-top: 0.75rem;
+      border-top: 1px dashed var(--card-border);
+    }
+
+    .flashcard.revealed .flashcard-a {
+      display: block;
+      color: #a7f3d0;
+    }
+
+    .flashcard-hint {
+      font-size: 0.75rem;
+      color: var(--primary);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    /* Pocket Summary Tables */
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin-top: 0.75rem;
+    }
+
+    .summary-table th {
+      background: rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+      text-align: left;
+      padding: 0.65rem 0.9rem;
+      font-weight: 700;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .summary-table td {
+      padding: 0.65rem 0.9rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: #94a3b8;
+    }
+
+    .summary-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+      color: #f1f5f9;
+    }
+
+    .badge-vac {
+      background: rgba(168, 85, 247, 0.15);
+      color: #d8b4fe;
+      padding: 0.15rem 0.45rem;
+      border-radius: 0.3rem;
+      font-weight: 600;
+      font-size: 0.78rem;
+    }
+
+    @media (max-width: 768px) {
+      .timer-hud {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .timer-display { font-size: 2.6rem; }
+      .hero-title { font-size: 1.8rem; }
+      .scenario-nav { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-brand-badge">OSCE</span>
+      <span>Simulador Fisioterapia 2ºP</span>
+    </a>
+    <div class="nav-links">
+      <a href="sala1_locomotor_bioquimica_histologia.html" class="nav-btn nav-btn-prev">
+        Anterior: Sala 1
+      </a>
+      <a href="index.html" class="nav-btn nav-btn-hub">
+        Hub Principal
+      </a>
+    </div>
+  </nav>
+
+  <div class="container">
+    
+    <!-- Hero Header -->
+    <header class="hero-header">
+      <div class="station-pill">Sala 02 • Duração Oficial: 5 Minutos</div>
+      <h1 class="hero-title">Microbiologia & Imunologia</h1>
+      <p class="hero-desc">Vírus envelopados e não envelopados, ciclo de replicação, resposta inata com Interferons, resposta adaptativa com Linfócitos T e B, anticorpos IgM e IgG, vacinas e biossegurança na Fisioterapia.</p>
+    </header>
+
+    <!-- Glossário Simples do 2º Período -->
+    <div class="glossary-box">
+      <div class="glossary-title">
+        <span>💡</span> Glossário Descomplicado dos Termos do Caso (2º Período):
+      </div>
+      <div class="glossary-terms">
+        <div class="glossary-item">
+          <strong>Vírus Envelopado vs Desnudo:</strong>
+          <p>O vírus envelopado possui uma camada externa feita de gordura (lipídios) retirada da célula do paciente. Por ter essa capa lipídica, ele é facilmente inativado com <strong>álcool a 70% ou água e sabão</strong>. O vírus desnudo não tem gordura e resiste mais tempo nas superfícies.</p>
+        </div>
+        <div class="glossary-item">
+          <strong>Vacina (Ativa) vs Soro (Passivo):</strong>
+          <p>A <strong>vacina</strong> estimula o próprio corpo a produzir anticorpos e gera <em>memória imunológica</em> para o futuro. O <strong>soro</strong> fornece anticorpos prontos para agir imediatamente numa emergência, mas <em>não gera memória</em> e dura pouco tempo.</p>
+        </div>
+        <div class="glossary-item">
+          <strong>Anticorpos IgM vs IgG:</strong>
+          <p>O <strong>IgM</strong> é o anticorpo que aparece primeiro na <em>fase aguda</em> da infecção recente. O <strong>IgG</strong> surge em seguida, tem alta afinidade neutralizante e permanece na circulação como <em>memória de proteção</em>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seletor de Cenários de Treino -->
+    <div class="scenario-nav">
+      <div class="scenario-nav-label">
+        <span>Escolha o Cenário:</span>
+      </div>
+      <div class="scenario-tabs" id="scenarioTabs">
+        <!-- Injetado dinamicamente via JS -->
+      </div>
+    </div>
+
+    <!-- Timer HUD -->
+    <div class="timer-hud" id="timerHUD">
+      <div class="timer-left">
+        <div class="timer-display" id="timeDisplay">05:00</div>
+        <div class="timer-status-box">
+          <span class="timer-badge" id="timerBadge">Aguardando Início</span>
+          <span class="timer-info-text">Sinal sonoro aos 4:00 (aviso de 1 min restante)</span>
+        </div>
+      </div>
+      <div class="timer-controls">
+        <button class="btn-timer btn-timer-primary" id="btnStartPause">
+          <span id="startIcon">▶️</span> <span id="btnStartText">Iniciar Estação</span>
+        </button>
+        <button class="btn-timer btn-timer-secondary" id="btnReset">
+          Reiniciar
+        </button>
+        <button class="sound-toggle-btn" id="btnSoundToggle" title="Ativar/Desativar Som">
+          Áudio Ativo
+        </button>
+      </div>
+    </div>
+
+    <!-- CONTEÚDO DINÂMICO DO CENÁRIO -->
+    <div id="dynamicScenarioContent">
+
+      <!-- FOLHA DE PORTA -->
+      <section class="card door-sheet">
+        <div class="card-title-row">
+          <h2 class="card-title">
+            <span>🚪</span> Folha de Porta da Estação
+          </h2>
+          <span class="door-header-tag" id="scenarioBadge">Cenário 1 de 4</span>
+        </div>
+
+        <div class="clinical-case-box" id="caseDescription">
+          <!-- Injetado via JS -->
+        </div>
+
+        <div class="task-list-title">Comandos do Aluno na Estação:</div>
+        <ul class="door-tasks" id="caseTasks">
+          <!-- Injetado via JS em texto corrido estruturado -->
+        </ul>
+      </section>
+
+      <!-- CHECKLIST OFICIAL DO AVALIADOR -->
+      <section class="card">
+        <div class="card-title-row">
+          <h2 class="card-title">
+            <span>📋</span> Checklist Oficial do Avaliador (Espelho de Prova)
+          </h2>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Marque os itens conforme fala</span>
+        </div>
+
+        <div class="checklist-container" id="checklistContainer">
+          <!-- Injetado via JS -->
+        </div>
+
+        <div class="score-summary-bar">
+          <div class="score-label">Sua Nota Estimada nesta Estação:</div>
+          <div class="score-val-big"><span id="liveScore">0.0</span> / 10.0</div>
+        </div>
+      </section>
+
+      <!-- ROTEIRO DE FALA -->
+      <section class="card">
+        <div class="card-title-row">
+          <h2 class="card-title">
+            <span>🗣️</span> Guia de Argumentação Verbal (O que Falar para Tirar 10)
+          </h2>
+          <span style="font-size: 0.85rem; color: var(--primary-light);">Roteiro cronometrado para 5 minutos</span>
+        </div>
+
+        <div id="scriptContainer">
+          <!-- Injetado via JS -->
+        </div>
+      </section>
+
+      <!-- FLASHCARDS INTERATIVOS -->
+      <section class="card">
+        <div class="card-title-row">
+          <h2 class="card-title">
+            <span>⚡</span> Perguntas Rápidas do Examinador (Clique para Revelar a Resposta)
+          </h2>
+          <span class="flashcard-hint">Treino Rápido de Fixação</span>
+        </div>
+
+        <div class="flashcard-grid" id="flashcardsContainer">
+          <!-- Injetado via JS -->
+        </div>
+      </section>
+
+      <!-- TABELA RESUMO -->
+      <section class="card" id="summaryTableCard">
+        <!-- Injetado via JS -->
+      </section>
+
+    </div>
+  </div>
+
+  <script>
+    // Audio Context Synthesis (Zero dependências externas)
+    let audioCtx = null;
+    let soundEnabled = true;
+
+    function getAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    function playBeep(freq, type, duration, delay = 0) {
+      if (!soundEnabled) return;
+      try {
+        const ctx = getAudioContext();
+        setTimeout(() => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = type;
+          osc.frequency.setValueAtTime(freq, ctx.currentTime);
+          gain.gain.setValueAtTime(0.15, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + duration);
+        }, delay);
+      } catch (e) {
+        console.error("Audio error", e);
+      }
+    }
+
+    function playStartChime() {
+      playBeep(440, 'sine', 0.2, 0); // A4
+      playBeep(554.37, 'sine', 0.25, 120); // C#5
+      playBeep(659.25, 'sine', 0.45, 240); // E5
+    }
+
+    function playWarningChime() {
+      playBeep(880, 'triangle', 0.2, 0);
+      playBeep(880, 'triangle', 0.35, 200);
+    }
+
+    function playEndGong() {
+      playBeep(440, 'sawtooth', 0.3, 0);
+      playBeep(330, 'sawtooth', 0.3, 200);
+      playBeep(220, 'sine', 1.0, 400);
+    }
+
+    // Timer Logic
+    const TOTAL_TIME = 5 * 60; // 300 segundos
+    let timeLeft = TOTAL_TIME;
+    let timerInterval = null;
+    let isRunning = false;
+    let warningTriggered = false;
+
+    const timeDisplay = document.getElementById('timeDisplay');
+    const timerBadge = document.getElementById('timerBadge');
+    const btnStartPause = document.getElementById('btnStartPause');
+    const btnStartText = document.getElementById('btnStartText');
+    const startIcon = document.getElementById('startIcon');
+    const btnReset = document.getElementById('btnReset');
+    const btnSoundToggle = document.getElementById('btnSoundToggle');
+
+    function formatTime(seconds) {
+      const mins = Math.floor(seconds / 60);
+      const secs = seconds % 60;
+      return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    }
+
+    function updateTimerDisplay() {
+      timeDisplay.textContent = formatTime(timeLeft);
+
+      if (timeLeft <= 60 && timeLeft > 0) {
+        timeDisplay.className = 'timer-display warning';
+        if (!warningTriggered) {
+          playWarningChime();
+          warningTriggered = true;
+          timerBadge.textContent = '1 Minuto Restante!';
+          timerBadge.style.background = 'rgba(245, 158, 11, 0.25)';
+          timerBadge.style.color = '#fbbf24';
+        }
+      } else if (timeLeft === 0) {
+        timeDisplay.className = 'timer-display danger';
+        timerBadge.textContent = 'Tempo Esgotado!';
+        timerBadge.style.background = 'rgba(244, 63, 94, 0.25)';
+        timerBadge.style.color = '#f87171';
+      } else {
+        timeDisplay.className = 'timer-display';
+      }
+    }
+
+    function startTimer() {
+      if (isRunning) return;
+      isRunning = true;
+      getAudioContext();
+      playStartChime();
+      btnStartText.textContent = 'Pausar';
+      startIcon.textContent = '⏸️';
+      timerBadge.textContent = 'Em Andamento';
+      timerBadge.className = 'timer-badge active';
+
+      timerInterval = setInterval(() => {
+        if (timeLeft > 0) {
+          timeLeft--;
+          updateTimerDisplay();
+        } else {
+          clearInterval(timerInterval);
+          isRunning = false;
+          playEndGong();
+          btnStartText.textContent = 'Concluído';
+          startIcon.textContent = '🏁';
+        }
+      }, 1000);
+    }
+
+    function pauseTimer() {
+      if (!isRunning) return;
+      clearInterval(timerInterval);
+      isRunning = false;
+      btnStartText.textContent = 'Retomar';
+      startIcon.textContent = '▶️';
+      timerBadge.textContent = 'Pausado';
+      timerBadge.className = 'timer-badge';
+    }
+
+    btnStartPause.addEventListener('click', () => {
+      if (isRunning) {
+        pauseTimer();
+      } else {
+        if (timeLeft === 0) {
+          resetTimer();
+        }
+        startTimer();
+      }
+    });
+
+    function resetTimer() {
+      clearInterval(timerInterval);
+      isRunning = false;
+      timeLeft = TOTAL_TIME;
+      warningTriggered = false;
+      btnStartText.textContent = 'Iniciar Estação';
+      startIcon.textContent = '▶️';
+      timerBadge.textContent = 'Aguardando Início';
+      timerBadge.className = 'timer-badge';
+      timerBadge.style.background = '';
+      timerBadge.style.color = '';
+      updateTimerDisplay();
+    }
+
+    btnReset.addEventListener('click', resetTimer);
+
+    btnSoundToggle.addEventListener('click', () => {
+      soundEnabled = !soundEnabled;
+      btnSoundToggle.textContent = soundEnabled ? 'Áudio Ativo' : 'Áudio Mudo';
+      btnSoundToggle.style.color = soundEnabled ? '#cbd5e1' : '#ef4444';
+    });
+
+    // ==========================================
+    // 4 CENÁRIOS CLÍNICOS COMPLETOS PARA SALA 2
+    // (Texto corrido fluente, sem setas e sem fórmulas soltas)
+    // ==========================================
+    const sala2Scenarios = [
+      {
+        id: 1,
+        tabTitle: "1. Vírus Respiratório & Biossegurança",
+        badge: "Cenário 1: Infecção Viral Respiratória na Fisioterapia",
+        case: `<strong>CENÁRIO CLÍNICO:</strong><br>
+        Você atua como fisioterapeuta no setor de Reabilitação Cardiorrespiratória e Motora. A paciente <em>Dona Lúcia, 58 anos</em>, deu entrada com fraqueza muscular generalizada, cansaço aos mínimos esforços e tosse produtiva após infecção viral respiratória aguda (suspeita de Influenza ou Coronavírus). O professor examinador pede que você atenda a paciente com total biossegurança, explique a biologia do vírus, como o sistema imune reagiu e a importância das vacinas para a equipe de Fisioterapia.`,
+        tasks: [
+          "Apresente-se com postura ética, higienize as mãos com álcool a 70% e cite os equipamentos de proteção individual necessários para o manejo de gotículas e aerossóis respiratórios.",
+          "Explique a estrutura biológica do vírus, descrevendo o material genético, o capsídeo e o envelope de lipídios, detalhando por que os vírus envelopados são inativados facilmente com álcool a 70% e sabão nos aparelhos de fisioterapia.",
+          "Apresente em texto corrido as seis etapas consecutivas do ciclo replicativo viral, desde a adsorção ao receptor até a liberação de novos vírions.",
+          "Diferencie a resposta imune inata, com destaque para a produção de Interferon-alfa e Interferon-beta e ação das células Natural Killer, da resposta adaptativa mediada por Linfócitos T citotóxicos e anticorpos neutralizantes IgM e IgG.",
+          "Explique a relevância da vacinação anual da gripe e da vacinação contra a Covid-19 no fisioterapeuta como barreira protetora para pacientes cardiopatas e pneumopatas."
+        ],
+        checklist: [
+          {
+            catName: "1. Biossegurança e Postura Profissional",
+            points: "1.0 ponto",
+            items: [
+              { title: "Apresentação e paramentação correta", val: "0.5 pt", desc: "Apresentou-se dizendo seu nome e citou o uso de máscara PFF2/N95, luvas de procedimento, avental descartável e óculos de proteção." },
+              { title: "Higienização das mãos e desinfecção de aparelhos", val: "0.5 pt", desc: "Friccionou as mãos com álcool a 70% por 30 segundos e citou a desinfecção de macas, espirômetros e faixas elásticas." }
+            ]
+          },
+          {
+            catName: "2. Microbiologia: Estrutura e Ciclo Viral",
+            points: "3.0 pontos",
+            items: [
+              { title: "Estrutura do vírus (Genoma, Capsídeo e Envelope)", val: "1.0 pt", desc: "Explicou que o vírus é parasita intracelular obrigatório com genoma de DNA ou RNA, capsídeo proteico e envelope de gordura com espículas de ancoragem." },
+              { title: "Sensibilidade ao Álcool 70% e Sabão", val: "1.0 pt", desc: "Explicou que solventes dissolvem a camada de gordura do envelope, destruindo as espículas e inativando o vírus em tatames e aparelhos." },
+              { title: "As 6 etapas do ciclo replicativo viral", val: "1.0 pt", desc: "Citou ordenadamente: adsorção ao receptor celular, penetração, desnudamento do genoma, biossíntese de peças virais, montagem e liberação por brotamento ou lise." }
+            ]
+          },
+          {
+            catName: "3. Imunologia: Resposta Inata e Adaptativa",
+            points: "3.0 pontos",
+            items: [
+              { title: "Interferons tipo I e Células Natural Killer", val: "1.0 pt", desc: "Explicou que as células infectadas liberam Interferon-alfa e Interferon-beta para alertar as células vizinhas a bloquearem a replicação viral, enquanto as células NK destroem células invadidas." },
+              { title: "Linfócitos T Citotóxicos (CD8+) e Auxiliares (CD4+)", val: "1.0 pt", desc: "Explicou que o Linfócito T CD8+ mata células infectadas por perforinas e granzimas via MHC classe I, e o T CD4+ coordena a resposta imune via MHC classe II." },
+              { title: "Produção de anticorpos: IgM e IgG", val: "1.0 pt", desc: "Descreveu a diferenciação dos Linfócitos B em plasmócitos com síntese de IgM na fase aguda e produção de IgG neutralizante com memória duradoura." }
+            ]
+          },
+          {
+            catName: "4. Vacinas e Calendário do Fisioterapeuta",
+            points: "3.0 pontos",
+            items: [
+              { title: "Imunização Ativa gerando memória", val: "1.0 pt", desc: "Explicou que a vacina estimula o próprio organismo a gerar linfócitos de memória duradouros sem causar a doença grave." },
+              { title: "Plataformas: Vírus Inativado e RNA Mensageiro", val: "1.0 pt", desc: "Explicou que a vacina da gripe é de vírus inativado (morto) e as vacinas de Covid-19 utilizam plataformas como RNA mensageiro em nanopartículas lipídicas." },
+              { title: "Calendário vacinal obrigatório do fisioterapeuta", val: "1.0 pt", desc: "Citou as vacinas essenciais do profissional de saúde: Gripe anual, Covid-19, Hepatite B, Tríplice Viral e Dupla Adulto (dT)." }
+            ]
+          }
+        ],
+        script: [
+          { time: "0:00 - 0:45 | Entrada e Biossegurança", class: "", tag: "Biossegurança", speech: "Olá equipe, bom dia! Meu nome é [Seu Nome], sou fisioterapeuta responsável pela reabilitação da Dona Lúcia. Antes de qualquer contato com a paciente, higienizo minhas mãos com álcool a 70% por 30 segundos e realizo a paramentação com os equipamentos de proteção individual indicados para patógenos respiratórios: máscara PFF2/N95, óculos de proteção, avental descartável e luvas de procedimento." },
+          { time: "0:45 - 2:00 | Microbiologia: Vírus e Álcool 70%", class: "", tag: "Microbiologia", speech: "Os vírus são parasitas intracelulares obrigatórios constituídos por material genético de DNA ou RNA dentro de uma capa proteica chamada capsídeo. Vírus respiratórios como o Influenza e o Coronavírus possuem ainda um envelope lipoproteico externo, que é uma camada de gordura derivada da célula hospedeira onde ficam fixadas espículas de ancoragem. Essa característica é fundamental para a nossa prática fisioterapêutica: por terem essa capa de gordura, esses vírus são inativados facilmente com álcool a 70% e água e sabão, que dissolvem a camada lipídica e impedem o contágio cruzado em macas, espaldares e ventiladores. O ciclo viral ocorre em seis etapas: adsorção ao receptor celular, penetração, desnudamento do genoma, biossíntese de novas proteínas e ácidos nucleicos, montagem dos novos vírus e liberação por brotamento ou lise celular." },
+          { time: "2:00 - 3:30 | Imunologia: Da Inata à Adaptativa", class: "imuno", tag: "Imunologia", speech: "Diante da invasão viral, a imunidade inata atua de imediato: as células pulmonares infectadas secretam citocinas chamadas Interferon-alfa e Interferon-beta, que criam um estado de proteção antiviral nas células vizinhas, enquanto as células Natural Killer eliminam as células invadidas. Em seguida, inicia-se a imunidade adaptativa: os Linfócitos T CD8+ citotóxicos reconhecem o antígeno viral no MHC de classe I e destroem diretamente as células infectadas através de granzimas e perforinas. Ao mesmo tempo, os Linfócitos T CD4+ ativam os Linfócitos B a se transformarem em plasmócitos, que produzem anticorpos IgM na fase inicial aguda e anticorpos IgG neutralizantes de alta afinidade que garantem a memória imunológica duradoura." },
+          { time: "3:30 - 5:00 | Vacinas e Proteção do Fisioterapeuta", class: "vac", tag: "Vacinas", speech: "Para prevenir complicações e surtos, utilizamos as vacinas, que representam a imunização ativa: elas apresentam antígenos inofensivos ao corpo para que o próprio indivíduo produza suas células de memória. Como fisioterapeutas que atuam diretamente nas vias aéreas e na reabilitação motora de pacientes frágeis, temos a obrigação ética de manter atualizado o nosso calendário com a vacina anual da Gripe, as doses de reforço da Covid-19, a vacina da Hepatite B, a Tríplice Viral e a Dupla Adulto contra tétano e difteria." }
+        ],
+        flashcards: [
+          { q: "Por que o álcool a 70% inativa com facilidade o Coronavírus e o vírus da Gripe?", a: "Porque ambos são vírus envelopados. O álcool a 70% dissolve a camada de gordura do envelope lipídico e desnatura as proteínas de superfície, impedindo que o vírus consiga se fixar nas células humanas." },
+          { q: "Qual a função dos Interferons do tipo I (Interferon-alfa e Interferon-beta)?", a: "São citocinas liberadas pelas células logo após serem infectadas. Elas se ligam às células vizinhas sadias e induzem a ativação de genes de defesa que barram a replicação e a síntese proteica viral." },
+          { q: "Qual a diferença funcional entre o Linfócito T CD4+ e o Linfócito T CD8+?", a: "O Linfócito T CD4+ atua como coordenador e auxiliar, liberando citocinas que ativam outras células de defesa via MHC de classe II. O Linfócito T CD8+ é citotóxico, reconhecendo antígenos no MHC de classe I e matando diretamente a célula infectada por apoptose." },
+          { q: "O que significa dizer que os vírus são parasitas intracelulares obrigatórios?", a: "Significa que eles não possuem metabolismo próprio, organelas ou capacidade de gerar ATP sozinhos; precisam obrigatoriamente penetrar em uma célula viva e usar a maquinaria celular para se reproduzir." }
+        ],
+        table: {
+          title: "Etapas do Ciclo Replicativo Viral",
+          headers: ["Etapa", "Mecanismo Biológico", "Relevância na Prática"],
+          rows: [
+            ["1. Adsorção", "Ligação das espículas virais aos receptores da membrana da célula", "Alvo dos anticorpos neutralizantes da vacina"],
+            ["2. Penetração", "Entrada do vírus por fusão do envelope ou endocitose", "Passagem do capsídeo para o citoplasma"],
+            ["3. Desnudamento", "Degradação das proteínas do capsídeo e exposição do material genético", "Liberação do DNA ou RNA viral"],
+            ["4. Biossíntese", "Replicação do genoma e tradução de novas proteínas virais", "Uso forçado dos ribossomos da célula hospedeira"],
+            ["5. Montagem", "União das novas proteínas e ácidos nucleicos formando vírions", "Maturação dos vírus no interior da célula"],
+            ["6. Liberação", "Saída dos vírus por brotamento (envelopados) ou por lise celular", "Disseminação viral e contágio de novos tecidos"]
+          ]
+        }
+      },
+
+      {
+        id: 2,
+        tabTitle: "2. Acidente Perfurocortante & Hepatite B",
+        badge: "Cenário 2: Exposição Ocupacional e Imunização contra Hepatite B",
+        case: `<strong>CENÁRIO CLÍNICO:</strong><br>
+        Durante um atendimento de fisioterapia com uso de agulhamento a seco ou manuseio de curativo em ambulatório, um estagiário de Fisioterapia acidentalmente <strong>se arranhou com uma agulha contaminada com sangue</strong> de um paciente desconhecido. O estudante procura a coordenação com receio de contaminação por vírus transmissíveis pelo sangue, com destaque para o <strong>Vírus da Hepatite B</strong>.`,
+        tasks: [
+          "Apresente a conduta imediata de primeiros socorros: lavar o local de forma abundante com água corrente e sabão, sem espremer ou massagear o ferimento.",
+          "Explique as características microbiológicas do Vírus da Hepatite B, destacando que é um vírus de DNA envelopado com alta estabilidade e taxa de transmissão sanguínea.",
+          "Diferencie a conduta com base na carteira de vacinação do fisioterapeuta: se já completou as três doses e tem exame de Anti-HBs reagente acima de 10 UI/mL, ele está plenamente protegido.",
+          "Descreva o que fazer caso o profissional não seja vacinado: indicação urgente de Imunização Passiva com Imunoglobulina Humana Anti-Hepatite B nas primeiras 48 horas, combinada com o início imediato da Imunização Ativa com a vacina recombinante.",
+          "Explique que a vacina da Hepatite B é feita com subunidade proteica do antígeno de superfície HBsAg, garantindo total segurança biológica."
+        ],
+        checklist: [
+          {
+            catName: "1. Primeiros Socorros e Biossegurança Imediata",
+            points: "1.0 ponto",
+            items: [
+              { title: "Lavagem abundante com água e sabão", val: "0.5 pt", desc: "Orientou lavar a área imediatamente com água corrente e sabão neutro, sem espremer o local do corte." },
+              { title: "Notificação do acidente ocupacional", val: "0.5 pt", desc: "Orientou o preenchimento da ficha de notificação de acidente biológico e a busca pelo protocolo hospitalar de exposição." }
+            ]
+          },
+          {
+            catName: "2. Microbiologia: Vírus da Hepatite B",
+            points: "3.0 pontos",
+            items: [
+              { title: "Características estruturais do vírus", val: "1.0 pt", desc: "Explicou que é um vírus de DNA envelopado com alta estabilidade no ambiente e elevada capacidade de transmissão pelo sangue." },
+              { title: "Antígeno de superfície e anticorpo protetor", val: "1.0 pt", desc: "Diferenciou o antígeno viral HBsAg presente na infecção do anticorpo protetor Anti-HBs produzido pela resposta imune." },
+              { title: "Prevenção na prática fisioterapêutica", val: "1.0 pt", desc: "Citou o uso correto de luvas, descarte imediato em coletor rígido de perfurocortante sem reencapar agulhas e a vacinação prévia." }
+            ]
+          },
+          {
+            catName: "3. Imunologia e Imunobiológicos de Emergência",
+            points: "3.0 pontos",
+            items: [
+              { title: "Conceito de Imunoglobulina (Imunização Passiva)", val: "1.0 pt", desc: "Explicou que a imunoglobulina fornece anticorpos prontos imediatos para neutralizar o vírus antes que ele infecte os hepatócitos." },
+              { title: "Associação com a Vacina (Imunização Ativa)", val: "1.0 pt", desc: "Esclareceu que enquanto os anticorpos da imunoglobulina são eliminados em semanas, a vacina estimula a formação de memória permanente." },
+              { title: "Critério de proteção por Anti-HBs", val: "1.0 pt", desc: "Confirmou que títulos de Anti-HBs superiores a 10 UI/mL indicam imunidade de memória consolidada." }
+            ]
+          },
+          {
+            catName: "4. Tecnologia da Vacina da Hepatite B",
+            points: "3.0 pontos",
+            items: [
+              { title: "Vacina de subunidade proteica recombinante", val: "1.0 pt", desc: "Explicou que a vacina não contém o vírus inteiro nem seu material genético, sendo produzida apenas com a proteína HBsAg pura." },
+              { title: "Esquema de três doses", val: "1.0 pt", desc: "Citou o esquema padrão em três doses nos intervalos de zero, um e seis meses para gerar resposta secundária duradoura." },
+              { title: "Importância do exame pós-vacinal", val: "1.0 pt", desc: "Destacou a necessidade de o fisioterapeuta dosar o Anti-HBs para confirmar que houve resposta imune eficaz." }
+            ]
+          }
+        ],
+        script: [
+          { time: "0:00 - 0:45 | Entrada e Conduta Imediata", class: "", tag: "Primeiros Socorros", speech: "A primeira atitude diante do arranhão com a agulha é lavar a área machucada com água corrente e sabão em abundância, sem apertar ou espremer o ferimento. Em seguida, vamos verificar a carteira vacinal do estudante e abrir o protocolo oficial de acidente com material biológico para adotarmos as medidas imunológicas adequadas." },
+          { time: "0:45 - 2:00 | Microbiologia do Vírus da Hepatite B", class: "", tag: "Microbiologia", speech: "O Vírus da Hepatite B é um vírus de DNA envelopado com elevadíssimo potencial de contágio no sangue: em pessoas que não têm vacina, o risco de transmissão pós-acidente pode chegar a trinta por cento. Ele possui em seu envelope uma proteína característica chamada antígeno de superfície HBsAg. Na clínica e no hospital, a prevenção absoluta envolve descartar as agulhas diretamente na caixa coletora amarela sem reencapar e manter a vacinação em dia." },
+          { time: "2:00 - 3:30 | Avaliação Imunológica: Anti-HBs Protetor", class: "imuno", tag: "Imunologia", speech: "Se o fisioterapeuta já recebeu as três doses da vacina e possui o exame laboratorial comprovando que o anticorpo Anti-HBs está acima de 10 UI/mL, ele é considerado imunizado. Isso significa que seus Linfócitos B de memória e seus anticorpos IgG neutralizantes estão ativos na circulação e vão bloquear qualquer partícula viral que tenha entrado, não havendo necessidade de tratamentos extras." },
+          { time: "3:30 - 5:00 | Conduta se Não Vacinado: Soro + Vacina", class: "vac", tag: "Vacinas e Soro", speech: "Caso o profissional não tenha tomado a vacina ou apresente sorologia negativa, a conduta correta é combinar a Imunização Passiva com a Imunização Ativa. Administramos a Imunoglobulina Humana Anti-Hepatite B nas primeiras quarenta e oito horas, fornecendo anticorpos prontos que neutralizam o vírus de forma imediata na corrente sanguínea. Simultaneamente, aplicamos a primeira dose da vacina recombinante para que o organismo do profissional comece a fabricar seus próprios anticorpos e desenvolva imunidade duradoura para o restante da vida." }
+        ],
+        flashcards: [
+          { q: "Qual a diferença biológica entre o HBsAg e o Anti-HBs?", a: "O HBsAg é o próprio antígeno viral da superfície do vírus da Hepatite B. O Anti-HBs é o anticorpo protetor produzido pelo sistema imunológico em resposta à vacina ou após a cura da infecção." },
+          { q: "Por que a vacina da Hepatite B não tem risco de causar a doença?", a: "Porque é uma vacina de subunidade recombinante: ela não contém o vírus vivo nem o DNA do vírus, contendo apenas a proteína purificada HBsAg produzida por engenharia genética." },
+          { q: "O que define a Imunização Passiva homóloga?", a: "É o uso de anticorpos prontos de origem humana, como a Imunoglobulina Anti-Hepatite B, que conferem proteção imediata sem risco de reações alérgicas graves e sem gerar memória imune." },
+          { q: "Por que é proibido reencapar agulhas após o uso?", a: "Porque o ato de reencapar com as mãos é o principal responsável por acidentes perfurocortantes em profissionais de saúde, devendo o material ser descartado diretamente no coletor rígido." }
+        ],
+        table: {
+          title: "Interpretação da Sorologia da Hepatite B para Fisioterapeutas",
+          headers: ["HBsAg", "Anti-HBs", "Significado Clínico", "Conduta Recomendada"],
+          rows: [
+            ["Negativo", "Positivo (acima de 10 UI/mL)", "Imune por vacinação prévia eficaz", "Profissional protegido, sem necessidade de conduta extra"],
+            ["Negativo", "Negativo (abaixo de 10 UI/mL)", "Não vacinado ou sem resposta imune", "Iniciar vacinação imediata (e Imunoglobulina se houver acidente)"],
+            ["Positivo", "Negativo", "Infecção ativa presente pelo vírus", "Encaminhar para avaliação clínica médica especializada"]
+          ]
+        }
+      },
+
+      {
+        id: 3,
+        tabTitle: "3. Artralgia Crônica pós-Chikungunya",
+        badge: "Cenário 3: Arbovirose com Manifestação Articular e Muscular",
+        case: `<strong>CENÁRIO CLÍNICO:</strong><br>
+        A paciente <em>Dona Neusa, 54 anos</em>, é encaminhada ao serviço de saúde três meses após um episódio agudo de <strong>Febre Chikungunya</strong>. Ela relata que a febre e as manchas vermelhas já desapareceram, mas permanecem dores articulares incapacitantes com rigidez matinal nas mãos, punhos, joelhos e tornozelos. O supervisor solicita que você explique a biologia do vírus, os fatores imunológicos que mantêm essa inflamação crônica e as medidas essenciais de biossegurança e prevenção epidemiológica.`,
+        tasks: [
+          "Apresente-se com acolhimento e postura atenciosa, higienize as mãos com álcool a 70% com a técnica correta e examine as articulações dolorosas com toques suaves e respeitosos.",
+          "Descreva o vírus Chikungunya como um arbovírus de RNA envelopado transmitido pela picada do mosquito <em>Aedes aegypti</em>, destacando seu tropismo pelas membranas sinoviais, tendões e células musculares.",
+          "Explique em texto corrido os motivos da cronicidade da dor articular: permanência de fragmentos de antígenos virais e RNA nos tecidos articulares, liberação sustentada de citocinas inflamatórias como TNF-alfa e Interleucina-6 e ativação crônica de macrófagos sinoviais.",
+          "Esclareça o perfil de anticorpos da paciente aos três meses de evolução, descrevendo o declínio do IgM e a manutenção de níveis elevados de IgG como marcador de resposta adaptativa crônica.",
+          "Apresente as medidas de prevenção e biossegurança em saúde pública: eliminação sistemática de criadouros de água estagnada do vetor, uso de barreiras mecânicas e químicas (telas e repelentes com Icaridina/DEET) e notificação compulsória para vigilância epidemiológica."
+        ],
+        checklist: [
+          {
+            catName: "1. Postura e Avaliação Articular Suave",
+            points: "1.0 ponto",
+            items: [
+              { title: "Apresentação e higienização alcoólica das mãos", val: "0.5 pt", desc: "Higienizou as mãos com álcool a 70% e acolheu a queixa de dor crônica incapacitante com empatia." },
+              { title: "Inspeção e palpação sem compressões dolorosas", val: "0.5 pt", desc: "Examinou punhos, tornozelos e joelhos respeitando rigorosamente o limiar de dor da paciente." }
+            ]
+          },
+          {
+            catName: "2. Microbiologia: Arbovírus Chikungunya",
+            points: "3.0 pontos",
+            items: [
+              { title: "Classificação como Arbovírus de RNA envelopado", val: "1.0 pt", desc: "Explicou que é um vírus de RNA da família Togaviridae transmitido pela picada do mosquito Aedes aegypti." },
+              { title: "Tropismo por tecidos musculoesqueléticos", val: "1.0 pt", desc: "Destacou que o vírus infecta preferencialmente células sinoviais, tendões e células musculares esqueléticas." },
+              { title: "Persistência viral no tecido articular", val: "1.0 pt", desc: "Explicou que fragmentos de material viral continuam retidos nas células sinoviais estimulando inflamação prolongada." }
+            ]
+          },
+          {
+            catName: "3. Imunologia da Dor Crônica Pós-Viral",
+            points: "3.0 pontos",
+            items: [
+              { title: "Cascata de Citocinas (TNF-alfa e Interleucinas)", val: "1.0 pt", desc: "Descreveu que os macrófagos sinoviais continuam secretando TNF-alfa e Interleucina-6, mantendo as vias da dor hipersensíveis." },
+              { title: "Deposição de imunocomplexos na membrana sinovial", val: "1.0 pt", desc: "Citou que a formação de complexos de antígeno e anticorpo ativa mediadores inflamatórios locais." },
+              { title: "Perfil sorológico aos 3 meses (IgM decaindo e IgG alto)", val: "1.0 pt", desc: "Diferenciou a fase aguda da fase crônica através da soroconversão e permanência de IgG de memória." }
+            ]
+          },
+          {
+            catName: "4. Prevenção, Biossegurança e Saúde Pública",
+            points: "3.0 pontos",
+            items: [
+              { title: "Eliminação de criadouros do mosquito vetor", val: "1.0 pt", desc: "Explicou a necessidade de eliminar focos de água estagnada para interromper o ciclo biológico do Aedes aegypti." },
+              { title: "Proteção individual química e mecânica", val: "1.0 pt", desc: "Orientou o uso de telas de proteção e repelentes à base de Icaridina ou DEET para evitar novas picadas." },
+              { title: "Notificação compulsória e vigilância em saúde", val: "1.0 pt", desc: "Destacou a obrigatoriedade da notificação do caso para o mapeamento epidemiológico das arboviroses." }
+            ]
+          }
+        ],
+        script: [
+          { time: "0:00 - 0:45 | Entrada e Acolhimento", class: "", tag: "Acolhimento", speech: "Olá Dona Neusa, bom dia! Meu nome é [Seu Nome]. Higienizo minhas mãos com álcool a 70%. Sei que essa dor nas articulações após a Chikungunya é prolongada e causa muita rigidez nas mãos e nas pernas. Vamos examinar suas articulações com movimentos muito suaves e analisar os fatores imunológicos que explicam esse quadro." },
+          { time: "0:45 - 2:00 | Microbiologia do Vírus Chikungunya", class: "", tag: "Microbiologia", speech: "O vírus Chikungunya é classificado como um arbovírus, o que significa que ele é um vírus de RNA envelopado transmitido pela picada do mosquito Aedes aegypti. Esse vírus tem uma atração biológica específica pelas estruturas do nosso aparelho locomotor: ele infecta a membrana sinovial das articulações, as bainhas dos tendões e as células musculares. Mesmo depois de superada a fase febril inicial, fragmentos de antígenos virais e de seu RNA permanecem retidos no interior dos macrófagos articulares por muitos meses, justificando a duração prolongada das dores." },
+          { time: "2:00 - 3:30 | Imunologia: Por que a dor não passa?", class: "imuno", tag: "Imunologia", speech: "Como esses fragmentos virais permanecem nas articulações, o sistema imunológico continua em alerta constante: os macrófagos locais secretam citocinas inflamatórias como TNF-alfa e Interleucina-6, que mantêm a sinóvia inflamada e deixam os nervos da dor extremamente sensíveis. Ao completarmos três meses de doença, o perfil sorológico mostra que os anticorpos IgM da fase inicial estão em queda, enquanto os anticorpos IgG permanecem elevados, indicando a transição para a fase crônica da resposta imunológica." },
+          { time: "3:30 - 5:00 | Prevenção e Controle do Vetor", class: "vac", tag: "Saúde Pública", speech: "Como não dispomos de um tratamento antiviral curativo específico, o pilar de proteção da população e dos serviços de saúde é o controle rigoroso do vetor Aedes aegypti. Devemos orientar a eliminação de todo foco de água estagnada onde as larvas se desenvolvem, incentivar o uso de telas protetoras e repelentes comprovados como Icaridina ou DEET, e realizar a notificação compulsória do caso às autoridades de vigilância epidemiológica para mapeamento e bloqueio da transmissão na comunidade." }
+        ],
+        flashcards: [
+          { q: "O que significa o termo Arbovírus?", a: "Significa vírus transmitido por artrópodes hematófagos, como mosquitos e carrapatos. O termo é derivado da expressão em inglês Arthropod-Borne Virus." },
+          { q: "Por que as dores articulares pós-Chikungunya podem persistir por meses ou anos?", a: "Porque partes do vírus e do seu material genético permanecem retidas na membrana sinovial e nos tendões, estimulando a liberação contínua de citocinas inflamatórias como TNF-alfa e Interleucina-6 por macrófagos." },
+          { q: "Qual o papel dos anticorpos IgM e IgG no acompanhamento sorológico?", a: "O anticorpo IgM indica infecção recente na fase aguda, enquanto o IgG representa a resposta imunológica crônica, convalescença e memória contra o vírus." },
+          { q: "Por que o controle vetorial do mosquito Aedes aegypti é a principal medida de saúde pública na Febre Chikungunya?", a: "Porque não há tratamento antiviral curativo nem vacina amplamente disponível na rotina pública, sendo a eliminação de criadouros de água parada a única forma eficaz de interromper o ciclo de transmissão biológica." }
+        ],
+        table: {
+          title: "Fases Clínicas da Chikungunya e Resposta Imunológica",
+          headers: ["Fase Clínica", "Tempo de Duração", "Perfil de Anticorpos", "Conduta Imunológica e Preventiva"],
+          rows: [
+            ["Fase Aguda", "Até 14 dias", "Replicação viral ativa e pico de anticorpos IgM", "Repouso relativo, hidratação e proteção contra novas picadas"],
+            ["Fase Pós-Aguda", "De 15 a 90 dias", "Início da síntese de IgG e persistência inflamatória", "Acompanhamento sorológico e monitoramento de marcadores"],
+            ["Fase Crônica", "Mais de 90 dias", "Níveis elevados de IgG e inflamação sinovial residual", "Vigilância epidemiológica contínua e controle do vetor no domicílio"]
+          ]
+        }
+      },
+
+      {
+        id: 4,
+        tabTitle: "4. Tétano vs Vacinas Obrigatórias (dT)",
+        badge: "Cenário 4: Ferimento Contaminado e Imunobiológicos (Vacina vs Soro)",
+        case: `<strong>CENÁRIO CLÍNICO:</strong><br>
+        O paciente <em>Seu Antônio, 66 anos</em>, usuário de cadeira de rodas com sequela de AVC, dá entrada no ambulatório com uma escoriação profunda e contaminada com terra e ferrugem na perna. Ele não se lembra de quando tomou vacinas pela última vez. A equipe de Fisioterapia reúne os alunos para discutir a conduta imediata contra infecções graves como o <strong>Tétano</strong>, a diferença prática entre aplicar o <strong>Soro Antitetânico</strong> ou a <strong>Vacina Dupla Adulto (dT)</strong> e o calendário vacinal obrigatório do fisioterapeuta.`,
+        tasks: [
+          "Apresente-se com postura profissional, higienize as mãos com álcool a 70% e proceda à limpeza inicial do ferimento com soro fisiológico e água.",
+          "Diferencie claramente a Imunização Passiva mediada por soros e imunoglobulinas da Imunização Ativa promovida por vacinas, detalhando o tempo de início de ação e a presença de memória duradoura.",
+          "Explique em que condição o paciente necessita do Soro Antitetânico e justifique por que a vacina deve ser administrada em conjunto para garantir proteção a longo prazo.",
+          "Descreva a constituição da vacina Dupla Adulto (dT), explicando o conceito de toxoide como toxina inativada que preserva a imunogenicidade sem causar efeitos tóxicos.",
+          "Cite o calendário vacinal obrigatório do fisioterapeuta, destacando o reforço da vacina dT a cada dez anos, a vacina da Hepatite B, a vacina da Gripe anual e a Tríplice Viral."
+        ],
+        checklist: [
+          {
+            catName: "1. Acolhimento e Limpeza do Ferimento",
+            points: "1.0 ponto",
+            items: [
+              { title: "Identificação e higienização alcoólica das mãos", val: "0.5 pt", desc: "Apresentou-se com clareza e higienizou as mãos com álcool a 70% antes do exame." },
+              { title: "Limpeza mecânica e avaliação da contaminação", val: "0.5 pt", desc: "Orientou limpeza profunda com água corrente ou soro fisiológico e avaliou o risco de contaminação por esporos tetânicos." }
+            ]
+          },
+          {
+            catName: "2. Diferença Conceitual: Vacina vs Soro",
+            points: "3.0 pontos",
+            items: [
+              { title: "Imunização Ativa (Vacinas)", val: "1.0 pt", desc: "Explicou que a vacina estimula o organismo a produzir seus próprios anticorpos e gera Linfócitos B e T de memória, com efeito duradouro." },
+              { title: "Imunização Passiva (Soros e Imunoglobulinas)", val: "1.0 pt", desc: "Explicou que o soro traz anticorpos prontos já formados, com efeito imediato, temporário e sem geração de memória imunológica." },
+              { title: "Indicação clínica combinada no ferimento de risco", val: "1.0 pt", desc: "Indicou o soro ou imunoglobulina para neutralização imediata da toxina e a vacina para garantir a imunidade futura." }
+            ]
+          },
+          {
+            catName: "3. Tecnologia dos Imunobiológicos (Toxoides)",
+            points: "3.0 pontos",
+            items: [
+              { title: "Conceito de Toxoide na vacina dT", val: "1.0 pt", desc: "Explicou que o toxoide é a toxina tratada quimicamente que não causa doença mas estimula a produção de anticorpos protetores." },
+              { title: "Reforço a cada 10 anos", val: "1.0 pt", desc: "Esclareceu que os níveis de anticorpos declinam ao longo do tempo, necessitando de doses de reforço decenais." },
+              { title: "Diferença entre soro heterólogo e imunoglobulina humana", val: "1.0 pt", desc: "Destacou que a imunoglobulina humana é mais segura e tem menor risco de reações alérgicas do que o soro produzido em animais." }
+            ]
+          },
+          {
+            catName: "4. Calendário Vacinal do Fisioterapeuta",
+            points: "3.0 pontos",
+            items: [
+              { title: "Vacina Dupla Adulto (dT)", val: "1.0 pt", desc: "Reforço decenal contra tétano e difteria como regra de biossegurança ocupacional." },
+              { title: "Tríplice Viral (Sarampo, Caxumba e Rubéola)", val: "1.0 pt", desc: "Proteção contra vírus respiratórios e sistêmicos transmissíveis no ambiente clínico." },
+              { title: "Hepatite B e Influenza anual", val: "1.0 pt", desc: "Garante a imunização contra patógenos frequentes na rotina hospitalar e ambulatorial." }
+            ]
+          }
+        ],
+        script: [
+          { time: "0:00 - 0:45 | Entrada e Limpeza do Ferimento", class: "", tag: "Primeiros Socorros", speech: "Olá Seu Antônio, bom dia! Meu nome é [Seu Nome], sou seu fisioterapeuta. Higienizo minhas mãos com álcool a 70%. Vamos realizar a limpeza profunda dessa escoriação na perna com soro fisiológico para remover todos os resíduos de terra e ferrugem, e imediatamente vamos orientar a proteção imunológica necessária contra o tétano." },
+          { time: "0:45 - 2:00 | Vacina vs Soro: A Grande Diferença", class: "", tag: "Conceito Imunológico", speech: "Diante de um ferimento sujo e com vacinação incerta, é indispensável compreender a diferença entre vacina e soro. A vacina é uma imunização ativa: ela estimula o corpo do próprio paciente a produzir anticorpos e a gerar células de memória, mas leva de sete a quatorze dias para alcançar proteção plena. Como a toxina do tétano tem ação rápida, não podemos esperar esse tempo. Por essa razão, o paciente precisa receber de imediato o Soro Antitetânico ou a Imunoglobulina Humana, que é uma imunização passiva constituída por anticorpos prontos que neutralizam a toxina no momento exato da aplicação." },
+          { time: "2:00 - 3:30 | Como a Vacina dT é Feita?", class: "imuno", tag: "Bioquímica da Vacina", speech: "A vacina utilizada para adultos é a Dupla Adulto (dT), que protege contra o tétano e a difteria. Ela não contém bactérias vivas: é formulada com toxoides, que são toxinas bacterianas purificadas tratadas quimicamente com formaldeído. Dessa forma, o toxoide perde o potencial de causar danos aos tecidos, mas mantém o formato para ser reconhecido pelos Linfócitos B e T, que passam a produzir anticorpos neutralizantes da classe IgG." },
+          { time: "3:30 - 5:00 | O Calendário do Fisioterapeuta", class: "vac", tag: "Calendário Oficial", speech: "Essa proteção é igualmente fundamental para nós, profissionais de Fisioterapia. Todo fisioterapeuta deve manter em dia a sua dose de reforço da vacina dT a cada dez anos, a vacina da Hepatite B com confirmação do exame de Anti-HBs, a vacina anual da Gripe, a vacina de Covid-19 e a Tríplice Viral contra sarampo, caxumba e rubéola. Manter o calendário vacinal atualizado é o primeiro passo para a segurança dos nossos pacientes e a nossa própria biossegurança." }
+        ],
+        flashcards: [
+          { q: "Qual a diferença biológica entre Imunização Ativa e Imunização Passiva?", a: "A imunização ativa ensina o próprio organismo a produzir anticorpos e gera células de memória de longa duração (como as vacinas). A imunização passiva fornece anticorpos pré-formados prontos para ação imediata, mas temporária e sem memória (como os soros)." },
+          { q: "O que é um Toxoide?", a: "É uma toxina bacteriana modificada quimicamente que perde a toxicidade biológica, preservando a capacidade de ser reconhecida pelo sistema imune e de induzir anticorpos protetores." },
+          { q: "Com que frequência o fisioterapeuta deve tomar a dose de reforço da vacina dT?", a: "A cada dez anos. No entanto, se o profissional sofrer um ferimento profundo ou contaminado e a última dose tiver sido administrada há mais de cinco anos, deve antecipar o reforço." },
+          { q: "Por que a Imunoglobulina Antitetânica Humana é preferível ao Soro Antitetânico comum?", a: "Porque o soro comum é produzido em cavalos (heterólogo) e tem maior risco de causar reações alérgicas graves e doença do soro, enquanto a imunoglobulina humana é altamente segura e compatível." }
+        ],
+        table: {
+          title: "Comparação Direta: Vacinas vs Soros Terapêuticos",
+          headers: ["Característica", "Vacina (Imunização Ativa)", "Soro (Imunização Passiva)"],
+          rows: [
+            ["Substância inoculada", "Antígenos atenuados, inativados ou toxoides", "Anticorpos já prontos de doadores ou animais"],
+            ["Início da proteção", "Mais lento (dias a semanas para produzir defesas)", "Imediato logo após entrar na circulação"],
+            ["Memória imunológica", "Sim, gera linfócitos de memória duradouros", "Não gera nenhuma memória imunológica"],
+            ["Indicação primordial", "Prevenção a médio e longo prazo", "Urgência médica para neutralização imediata"],
+            ["Exemplo comum", "Vacina Dupla Adulto (dT contra tétano e difteria)", "Soro Antitetânico e Imunoglobulina Antitetânica"]
+          ]
+        }
+      }
+    ];
+
+    let currentScenarioIndex = 0;
+
+    function renderScenarioTabs() {
+      const tabsContainer = document.getElementById('scenarioTabs');
+      tabsContainer.innerHTML = '';
+      sala2Scenarios.forEach((sc, idx) => {
+        const btn = document.createElement('button');
+        btn.className = `scenario-tab-btn ${idx === currentScenarioIndex ? 'active' : ''}`;
+        btn.innerHTML = sc.tabTitle;
+        btn.addEventListener('click', () => {
+          selectScenario(idx);
+        });
+        tabsContainer.appendChild(btn);
+      });
+    }
+
+    function selectScenario(index) {
+      currentScenarioIndex = index;
+      renderScenarioTabs();
+      renderScenarioData();
+      resetTimer();
+    }
+
+    function renderScenarioData() {
+      const sc = sala2Scenarios[currentScenarioIndex];
+
+      document.getElementById('scenarioBadge').textContent = sc.badge;
+      document.getElementById('caseDescription').innerHTML = sc.case;
+
+      // Tasks em texto corrido estruturado
+      const tasksUl = document.getElementById('caseTasks');
+      tasksUl.innerHTML = '';
+      sc.tasks.forEach(t => {
+        const li = document.createElement('li');
+        li.innerHTML = t;
+        tasksUl.appendChild(li);
+      });
+
+      // Checklist
+      const chkContainer = document.getElementById('checklistContainer');
+      chkContainer.innerHTML = '';
+      sc.checklist.forEach(cat => {
+        const catDiv = document.createElement('div');
+        catDiv.className = 'check-category';
+
+        let itemsHtml = '';
+        cat.items.forEach(it => {
+          const pts = parseFloat(it.val);
+          itemsHtml += `
+            <label class="check-item">
+              <input type="checkbox" class="custom-checkbox item-chk" data-points="${pts}">
+              <div class="check-content">
+                <div class="check-title-line">
+                  <span>${it.title}</span>
+                  <span class="item-val">${it.val}</span>
+                </div>
+                <p class="check-desc">${it.desc}</p>
+              </div>
+            </label>
+          `;
+        });
+
+        catDiv.innerHTML = `
+          <div class="check-cat-header">
+            <span class="cat-name">${cat.catName}</span>
+            <span class="cat-points">${cat.points}</span>
+          </div>
+          <div class="check-items">
+            ${itemsHtml}
+          </div>
+        `;
+        chkContainer.appendChild(catDiv);
+      });
+
+      // Attach score listener
+      document.querySelectorAll('.item-chk').forEach(chk => {
+        chk.addEventListener('change', calculateScore);
+      });
+      calculateScore();
+
+      // Script
+      const scriptCont = document.getElementById('scriptContainer');
+      scriptCont.innerHTML = '';
+      sc.script.forEach(st => {
+        const div = document.createElement('div');
+        div.className = `script-step ${st.class}`;
+        div.innerHTML = `
+          <span class="script-tag ${st.class}">${st.time} | ${st.tag}</span>
+          <p class="speech-bubble">"${st.speech}"</p>
+        `;
+        scriptCont.appendChild(div);
+      });
+
+      // Flashcards
+      const fcCont = document.getElementById('flashcardsContainer');
+      fcCont.innerHTML = '';
+      sc.flashcards.forEach(fc => {
+        const div = document.createElement('div');
+        div.className = 'flashcard';
+        div.onclick = function() { this.classList.toggle('revealed'); };
+        div.innerHTML = `
+          <div class="flashcard-q">
+            <span>❓</span> ${fc.q}
+          </div>
+          <div class="flashcard-a">
+            ${fc.a}
+          </div>
+        `;
+        fcCont.appendChild(div);
+      });
+
+      // Table
+      const tbCont = document.getElementById('summaryTableCard');
+      let ths = sc.table.headers.map(h => `<th>${h}</th>`).join('');
+      let trs = sc.table.rows.map(r => {
+        return `<tr>${r.map(td => `<td>${td}</td>`).join('')}</tr>`;
+      }).join('');
+
+      tbCont.innerHTML = `
+        <div class="card-title-row">
+          <h2 class="card-title">
+            <span>📚</span> Resumo de Bolso: ${sc.table.title}
+          </h2>
+        </div>
+        <table class="summary-table">
+          <thead>
+            <tr>${ths}</tr>
+          </thead>
+          <tbody>
+            ${trs}
+          </tbody>
+        </table>
+      `;
+    }
+
+    function calculateScore() {
+      const chks = document.querySelectorAll('.item-chk');
+      let total = 0;
+      chks.forEach(chk => {
+        if (chk.checked) {
+          total += parseFloat(chk.getAttribute('data-points') || 0);
+        }
+      });
+      document.getElementById('liveScore').textContent = total.toFixed(1);
+    }
+
+    // Init
+    renderScenarioTabs();
+    renderScenarioData();
+    updateTimerDisplay();
+  </script>
+</body>
+</html>

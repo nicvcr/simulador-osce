@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hub OSCE - 2º Período de Fisioterapia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card-bg: rgba(17, 24, 39, 0.85);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text: #f3f4f6;
+      --text-muted: #94a3b8;
+      --primary: #06b6d4;
+      --primary-glow: rgba(6, 182, 212, 0.25);
+      --accent-1: #3b82f6;
+      --accent-2: #10b981;
+      --amber: #f59e0b;
+      --rose: #f43f5e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(6, 182, 212, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.12) 0px, transparent 50%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      color: var(--primary);
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .room-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 1.5rem;
+      padding: 2.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      backdrop-filter: blur(16px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+
+    .room-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      opacity: 0.8;
+      transition: height 0.3s ease;
+    }
+
+    .room-card.sala-1::before {
+      background: linear-gradient(90deg, #06b6d4, #3b82f6);
+    }
+
+    .room-card.sala-2::before {
+      background: linear-gradient(90deg, #10b981, #06b6d4);
+    }
+
+    .room-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    .room-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .room-tag {
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0.35rem 0.8rem;
+      border-radius: 0.6rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .sala-1 .room-tag {
+      background: rgba(6, 182, 212, 0.15);
+      color: #38bdf8;
+    }
+
+    .sala-2 .room-tag {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+    }
+
+    .time-chip {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+
+    .room-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .topic-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 0.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+    }
+
+    .room-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 2rem;
+    }
+
+    .card-footer {
+      margin-top: auto;
+    }
+
+    .btn-enter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      width: 100%;
+      padding: 0.95rem;
+      border-radius: 0.9rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .sala-1 .btn-enter {
+      background: linear-gradient(135deg, #06b6d4, #2563eb);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+    }
+
+    .sala-1 .btn-enter:hover {
+      box-shadow: 0 6px 22px rgba(6, 182, 212, 0.5);
+      filter: brightness(1.1);
+    }
+
+    .sala-2 .btn-enter {
+      background: linear-gradient(135deg, #10b981, #0284c7);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+    }
+
+    .sala-2 .btn-enter:hover {
+      box-shadow: 0 6px 22px rgba(16, 185, 129, 0.5);
+      filter: brightness(1.1);
+    }
+
+    .instructions-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 1.25rem;
+      padding: 1.5rem 1.8rem;
+      font-size: 0.92rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .instructions-box h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .instructions-list {
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .instructions-list li {
+      margin-bottom: 0.4rem;
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 2.1rem; }
+      .grid { grid-template-columns: 1fr; }
+      .room-card { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="badge">🩺 Fisioterapia • 2º Período • Metodologia Ativa</div>
+      <h1>Simulador Oficial OSCE</h1>
+      <p class="subtitle">Prepare-se para o seu Exame Clínico Objetivo Estruturado com cronômetro real de 5 minutos, checklists de pontuação, casos práticos e roteiro completo de argumentação.</p>
+    </header>
+
+    <div class="grid">
+      <!-- SALA 1 -->
+      <div class="room-card sala-1">
+        <div>
+          <div class="room-header">
+            <span class="room-tag">📍 Estação 01</span>
+            <span class="time-chip">⏱️ 5:00 min</span>
+          </div>
+          <h2 class="room-title">Locomotor, Bioquímica & Histologia</h2>
+          <div class="topic-pills">
+            <span class="pill">Cenário 1: Isquiotibiais</span>
+            <span class="pill">Cenário 2: Tríceps Sural ('Pedrada')</span>
+            <span class="pill">Cenário 3: Reto Femoral / Quadríceps</span>
+            <span class="pill">Cenário 4: Sobrecarga & CK Alta</span>
+          </div>
+          <p class="room-desc">
+            Agora com <strong>4 cenários clínicos selecionáveis</strong> por abas! Contém glossário simples para o 2º período, anatomia detalhada de membros inferiores, mecanismo sarcomérico dependente de íons cálcio e ATP, estresse oxidativo e reparo por células satélite.
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="sala1_locomotor_bioquimica_histologia.html" class="btn-enter" id="btn-enter-sala-1">
+            Entrar na Sala 1 (4 Casos)
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- SALA 2 -->
+      <div class="room-card sala-2">
+        <div>
+          <div class="room-header">
+            <span class="room-tag">📍 Estação 02</span>
+            <span class="time-chip">⏱️ 5:00 min cada</span>
+          </div>
+          <h2 class="room-title">Microbiologia & Imunologia</h2>
+          <div class="topic-pills">
+            <span class="pill">Cenário 1: Vírus Respiratório & Biossegurança</span>
+            <span class="pill">Cenário 2: Perfurocortante & Hepatite B</span>
+            <span class="pill">Cenário 3: Artralgia pós-Chikungunya</span>
+            <span class="pill">Cenário 4: Tétano vs Vacinas (dT)</span>
+          </div>
+          <p class="room-desc">
+            Agora com <strong>4 cenários clínicos selecionáveis</strong> por abas! Abrange estrutura viral e sensibilidade ao álcool 70%, ciclo replicativo, imunidade inata/adaptativa, vacinas vs soros e biossegurança na Fisioterapia.
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="sala2_imunologia_microbiologia.html" class="btn-enter" id="btn-enter-sala-2">
+            Entrar na Sala 2 (4 Casos)
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="instructions-box">
+      <h3>💡 Como usar este simulador para tirar nota máxima:</h3>
+      <ol class="instructions-list">
+        <li>Clique em uma das salas e leia primeiro o <strong>Comando de Porta</strong> (você tem mentalmente 1 minuto antes de entrar).</li>
+        <li>Inicie o cronômetro oficial de <strong>5:00 minutos</strong> com áudio ativado (aviso com som nos últimos 60 segundos).</li>
+        <li>Responda e marque os itens do <strong>Checklist Oficial do Avaliador</strong> conforme desenvolve seu raciocínio.</li>
+        <li>Consulte o <strong>Guia de Resposta & Argumentação Verbal</strong> para saber exatamente quais termos técnicos o professor espera escutar de você.</li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>
