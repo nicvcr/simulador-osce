@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumo de Estudos — Sala 2: Microbiologia e Imunologia | OSCE Fisioterapia</title>
+  <meta name="description" content="Guia teórico completo de estudos para a OSCE da Sala 2: Virologia e Estrutura dos Vírus, Complexo MHC, Linfócitos B e T, Imunoglobulinas (IgM, IgG, IgA, IgE) e Imunobiológicos (Soros e Vacinas).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card-bg: rgba(17, 24, 39, 0.9);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text: #f3f4f6;
+      --text-muted: #94a3b8;
+      --text-soft: #cbd5e1;
+      --primary: #10b981;
+      --primary-light: #6ee7b7;
+      --primary-glow: rgba(16, 185, 129, 0.25);
+      --accent-blue: #0284c7;
+      --cyan: #06b6d4;
+      --amber: #f59e0b;
+      --rose: #f43f5e;
+      --purple: #a855f7;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 20%, rgba(2, 132, 199, 0.1) 0px, transparent 45%),
+        radial-gradient(at 50% 100%, rgba(6, 182, 212, 0.08) 0px, transparent 50%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+      padding-bottom: 5rem;
+    }
+
+    /* Top Navigation */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 17, 32, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .nav-badge {
+      background: linear-gradient(135deg, var(--primary), var(--accent-blue));
+      color: #fff;
+      padding: 0.2rem 0.65rem;
+      border-radius: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-btn {
+      padding: 0.45rem 0.95rem;
+      border-radius: 0.6rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .nav-btn-hub {
+      background: rgba(255, 255, 255, 0.06);
+      color: #cbd5e1;
+      border: 1px solid var(--card-border);
+    }
+
+    .nav-btn-hub:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    .nav-btn-sim {
+      background: linear-gradient(135deg, var(--primary), var(--accent-blue));
+      color: #fff;
+      box-shadow: 0 4px 14px var(--primary-glow);
+    }
+
+    .nav-btn-sim:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    /* Container Layout */
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    /* Header Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--primary);
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    h1.hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 820px;
+      margin: 0 auto 1.5rem;
+    }
+
+    /* Action bar banner */
+    .cta-banner {
+      background: linear-gradient(90deg, rgba(16, 185, 129, 0.15), rgba(2, 132, 199, 0.15));
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 1rem;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta-banner-text {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .cta-banner-text span.icon {
+      font-size: 1.8rem;
+    }
+
+    .cta-banner-text h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    .cta-banner-text p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .btn-cta {
+      background: linear-gradient(135deg, var(--primary), var(--accent-blue));
+      color: #fff;
+      padding: 0.65rem 1.3rem;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 15px var(--primary-glow);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-cta:hover {
+      filter: brightness(1.1);
+      transform: translateY(-2px);
+    }
+
+    /* Navigation Tabs */
+    .study-tabs-container {
+      position: sticky;
+      top: 65px;
+      z-index: 90;
+      background: rgba(11, 17, 32, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 0.75rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .study-tabs {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.3rem;
+      scrollbar-width: thin;
+    }
+
+    .study-tab-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: #94a3b8;
+      padding: 0.55rem 1.1rem;
+      border-radius: 0.75rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .study-tab-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .study-tab-btn.active {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(2, 132, 199, 0.2));
+      border-color: var(--primary);
+      color: var(--primary-light);
+      box-shadow: 0 0 15px var(--primary-glow);
+    }
+
+    /* Study Cards */
+    .study-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(16px);
+      position: relative;
+    }
+
+    .card-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-bottom: 1rem;
+    }
+
+    .card-title-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .card-icon {
+      font-size: 1.8rem;
+      background: rgba(255, 255, 255, 0.05);
+      width: 48px;
+      height: 48px;
+      border-radius: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .card-tag {
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.3rem 0.7rem;
+      border-radius: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tag-micro { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .tag-imuno { background: rgba(2, 132, 199, 0.15); color: #38bdf8; border: 1px solid rgba(2, 132, 199, 0.3); }
+    .tag-bio { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
+    .tag-clin { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+
+    /* Headings and text */
+    h3.section-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1.6rem 0 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h3.section-heading::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 1.1rem;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    p {
+      color: var(--text-soft);
+      font-size: 0.98rem;
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+
+    strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* Alert Boxes */
+    .alert-box {
+      border-radius: 0.9rem;
+      padding: 1.1rem 1.4rem;
+      margin: 1.3rem 0;
+      display: flex;
+      gap: 0.9rem;
+      align-items: flex-start;
+      font-size: 0.93rem;
+      line-height: 1.55;
+    }
+
+    .alert-box .alert-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .alert-osce {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #fde68a;
+    }
+
+    .alert-osce strong {
+      color: #fbbf24;
+    }
+
+    .alert-biomed {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #d1fae5;
+    }
+
+    .alert-biomed strong {
+      color: #6ee7b7;
+    }
+
+    .alert-critical {
+      background: rgba(244, 63, 94, 0.1);
+      border: 1px solid rgba(244, 63, 94, 0.3);
+      color: #fecdd3;
+    }
+
+    .alert-critical strong {
+      color: #fb7185;
+    }
+
+    /* Tables */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin: 1.4rem 0;
+      border-radius: 0.85rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(11, 17, 32, 0.5);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    thead th {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      white-space: nowrap;
+    }
+
+    tbody td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: var(--text-soft);
+      vertical-align: top;
+    }
+
+    tbody tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: #34d399;
+    }
+
+    /* Flow Step Cards */
+    .flow-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .flow-step-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 0.85rem;
+      padding: 1.2rem;
+      position: relative;
+    }
+
+    .flow-step-number {
+      position: absolute;
+      top: -10px;
+      left: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--accent-blue));
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.75rem;
+      padding: 0.15rem 0.6rem;
+      border-radius: 9999px;
+      box-shadow: 0 2px 8px var(--primary-glow);
+    }
+
+    .flow-step-card h4 {
+      font-family: 'Outfit', sans-serif;
+      color: #fff;
+      margin: 0.4rem 0 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .flow-step-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    /* Accordion */
+    .accordion-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0.8rem;
+      margin-bottom: 0.8rem;
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .accordion-header {
+      padding: 1rem 1.3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.2s ease;
+    }
+
+    .accordion-header:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .accordion-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      color: #f3f4f6;
+      font-size: 0.98rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .accordion-chevron {
+      color: var(--primary);
+      transition: transform 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .accordion-item.open .accordion-chevron {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease;
+      padding: 0 1.3rem;
+      background: rgba(0, 0, 0, 0.2);
+      border-top: 1px solid transparent;
+    }
+
+    .accordion-item.open .accordion-content {
+      max-height: 450px;
+      padding: 1rem 1.3rem 1.2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .accordion-content p {
+      margin-bottom: 0.5rem;
+      font-size: 0.92rem;
+      color: #cbd5e1;
+    }
+
+    /* Glossary grid */
+    .glossary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 1.2rem 0;
+    }
+
+    .glossary-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 3px solid var(--primary);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 0.9rem 1.1rem;
+    }
+
+    .glossary-term {
+      font-weight: 700;
+      color: #fff;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .glossary-def {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* Footer Nav */
+    .footer-nav {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+    }
+
+    .footer-left {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-btns {
+      display: flex;
+      gap: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="top-nav">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-badge">GUIA TEÓRICO</span>
+      <span>OSCE Fisioterapia • Sala 2</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-btn nav-btn-hub">
+        <span>🏠</span> Hub Principal
+      </a>
+      <a href="resumo_sala1_locomotor_bioquimica_histologia.html" class="nav-btn nav-btn-hub">
+        <span>🦴</span> Guia Sala 1
+      </a>
+      <a href="sala2_imunologia_microbiologia.html" class="nav-btn nav-btn-sim">
+        <span>⏱️</span> Iniciar Simulação Sala 2
+      </a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- Header Hero -->
+    <section class="hero">
+      <div class="hero-tag">Microbiologia, Virologia & Imunobiológicos</div>
+      <h1 class="hero-title">Caderno de Revisão Aprofundado para a OSCE</h1>
+      <p class="hero-subtitle">
+        Conteúdo completo baseado nas aulas dos professores: Estrutura dos Vírus, Mecanismo do Álcool 70%, Complexo MHC (HLA no Cromossomo 6), Linfócitos B e T, Imunoglobulinas (IgM, IgG, IgA, IgE), Vacinas vs. Soros e Biossegurança em Fisioterapia.
+      </p>
+    </section>
+
+    <!-- CTA Banner to Simulation -->
+    <div class="cta-banner">
+      <div class="cta-banner-text">
+        <span class="icon">🎯</span>
+        <div>
+          <h3>Pronto para testar sua argumentação verbal de 5 minutos?</h3>
+          <p>Após dominar os conceitos abaixo, simule os 4 cenários clínicos da Sala 2 com checklist oficial e cronômetro com áudio.</p>
+        </div>
+      </div>
+      <a href="sala2_imunologia_microbiologia.html" class="btn-cta">
+        <span>Simular Estação (5 min)</span> ➔
+      </a>
+    </div>
+
+    <!-- Quick Category Switcher Tabs -->
+    <nav class="study-tabs-container">
+      <div class="study-tabs">
+        <button class="study-tab-btn active" onclick="scrollToSection('sec-virologia')">🦠 1. Introdução à Virologia</button>
+        <button class="study-tab-btn" onclick="scrollToSection('sec-infeccoes-virais')">🔬 2. Principais Viroses Clínicas</button>
+        <button class="study-tab-btn" onclick="scrollToSection('sec-mhc-linfocitos')">🧬 3. Complexo MHC & Linfócitos</button>
+        <button class="study-tab-btn" onclick="scrollToSection('sec-imunoglobulinas')">🛡️ 4. Imunoglobulinas (Anticorpos)</button>
+        <button class="study-tab-btn" onclick="scrollToSection('sec-vacinas-soros')">💉 5. Vacinas vs. Soros</button>
+        <button class="study-tab-btn" onclick="scrollToSection('sec-cenarios-osce')">❓ 6. Perguntas de Fixação da OSCE</button>
+      </div>
+    </nav>
+
+    <!-- ==========================================
+         SEÇÃO 1: VIROLOGIA E ESTRUTURA DOS VÍRUS
+         ========================================== -->
+    <article class="study-card" id="sec-virologia">
+      <div class="card-header-bar">
+        <div class="card-title-group">
+          <div class="card-icon">🦠</div>
+          <div>
+            <h2 class="card-title">1. Microbiologia Geral: Propriedades e Estrutura dos Vírus</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Definição biológica, componentes do vírion e sensibilidade físico-química</span>
+          </div>
+        </div>
+        <span class="card-tag tag-micro">Virologia</span>
+      </div>
+
+      <div class="alert-box alert-biomed">
+        <div class="alert-icon">💡</div>
+        <div>
+          <strong>Definição Biológica Central:</strong> Os vírus são agentes infecciosos <strong>acelulares</strong> e <strong>parasitas intracelulares obrigatórios</strong>. Fora da célula hospedeira, são metabólicamente inertes (não possuem mitocôndrias, ribossomos ou síntese própria de ATP). A partícula viral completa e infectante é denominada <strong>Vírion</strong>.
+        </div>
+      </div>
+
+      <h3 class="section-heading">Componentes Estruturais do Vírion</h3>
+      <div class="flow-steps">
+        <div class="flow-step-card">
+          <span class="flow-step-number">01</span>
+          <h4>Material Genético</h4>
+          <p>Diferente de todas as células vivas (que possuem DNA e RNA juntos), cada vírus possui <strong>ou DNA ou RNA</strong> (fita simples ou dupla; linear ou circular; segmentado ou contínuo). Nos retrovírus (ex: HIV), o genoma de RNA é retrotranscrito em DNA pela enzima transcriptase reversa.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">02</span>
+          <h4>Capsídeo Protéico</h4>
+          <p>Capa protetora de proteína que circunda o material genético, composta por subunidades estruturais chamadas <strong>capsômeros</strong>. Confere a morfologia geométrica: <em>helicoidal</em> (tubular, ex: vírus do tabaco, ebola), <em>icosaédrico / poliédrico</em> (20 faces triangulares, ex: adenovírus) ou <em>complexo</em> (ex: bacteriófagos).</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">03</span>
+          <h4>Envelope Lipoprotéico</h4>
+          <p>Presente apenas em <strong>vírus envelopados</strong>. É uma bicamada fosfolipídica adquirida da membrana da célula hospedeira durante o processo de brotamento, incrustada com <strong>espículas glicoprotéicas (peplômeros)</strong> que atuam na fixação e ancoramento celular.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">04</span>
+          <h4>Dimensões Ultramicroscópicas</h4>
+          <p>Variam entre <strong>20 a 300 nanômetros (nm)</strong>. São centenas de vezes menores que bactérias (ex: <em>E. coli</em> ~2.000 nm) e hemácias (~10.000 nm). Atravessam filtros bacteriológicos comuns e só são visíveis sob microscopia eletrônica.</p>
+        </div>
+      </div>
+
+      <h3 class="section-heading">Vírus Envelopados vs. Vírus Não Envelopados (Nus)</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Característica</th>
+              <th>Vírus Envelopados</th>
+              <th>Vírus Não Envelopados (Nus)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Estrutura Externa</strong></td>
+              <td>Capsídeo proteico recoberto por <strong>bicamada lipídica com glicoproteínas</strong> (adquirida da célula do hospedeiro).</td>
+              <td>Apenas o <strong>capsídeo proteico rígido</strong> exposto ao ambiente (sem membrana lipídica).</td>
+            </tr>
+            <tr>
+              <td><strong>Resistência Ambiental</strong></td>
+              <td><strong>Lábeis / Frágeis</strong> ao ambiente, dessecação, calor, ácidos, sais biliares e detergentes.</td>
+              <td><strong>Altamente resistentes</strong> ao ressecamento, calor, extremos de pH (suco gástrico) e detergentes.</td>
+            </tr>
+            <tr>
+              <td><strong>Ação do Álcool 70%<br>(Pegadinha OSCE!)</strong></td>
+              <td><strong>Sensíveis / Rapidamente inativados!</strong> O álcool a 70% solubiliza a bicamada lipídica do envelope e desnatura as espículas de ancoramento, impedindo a infecção.</td>
+              <td><strong>Resistentes ou menos sensíveis</strong> à dessecação por solventes lipídicos comuns. Podem exigir hipoclorito de sódio ou glutaraldeído.</td>
+            </tr>
+            <tr>
+              <td><strong>Via de Transmissão Predominante</strong></td>
+              <td>Gotículas respiratórias, secreções íntimas, sangue e contato direto (precisam de umidade). Ex: Influenza, SARS-CoV-2, HIV, Hepatite B e C, Herpesvírus.</td>
+              <td>Via fecal-oral, fômites secos e água contaminada. Ex: Poliovírus, Rotavírus, Norovírus, HPV.</td>
+            </tr>
+            <tr>
+              <td><strong>Mecanismo de Liberação</strong></td>
+              <td>Geralmente por <strong>Brotamento</strong> na membrana plasmática celular (mantendo a célula viva por mais tempo).</td>
+              <td>Geralmente por <strong>Lise Celular</strong> mecânica (ruptura osmótica da célula hospedeira).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-heading">As 6 Etapas do Ciclo Replicativo Viral</h3>
+      <p>
+        1. <strong>Adsorção (Fixação):</strong> As espículas glicoproteicas do vírus ligam-se com extrema especificidade a receptores proteicos na membrana da célula hospedeira (ex: gp120 do HIV com receptor CD4 e correceptor CCR5; espícula Spike do SARS-CoV-2 com receptor ACE2).<br>
+        2. <strong>Penetração:</strong> Ocorre por <em>fusão do envelope</em> com a membrana plasmática (envelopados) ou por <em>endocitose mediada por receptor</em> (envelopados e não envelopados).<br>
+        3. <strong>Desnudamento:</strong> Enzimas celulares digerem o capsídeo, liberando o ácido nucleico viral livre no citoplasma ou núcleo.<br>
+        4. <strong>Biossíntese Macromolecular:</strong> O vírus sequestra a maquinaria de replicação e os ribossomos da célula hospedeira para copiar seu genoma e sintetizar proteínas virais estruturais e funcionais.<br>
+        5. <strong>Maturação / Montagem:</strong> Os capsômeros se autoarranjam formando novos capsídeos em volta das réplicas do material genético recém-sintetizado.<br>
+        6. <strong>Liberação:</strong> Novos vírions deixam a célula por brotamento (adquirindo o envelope lipídico) ou por lise celular.
+      </p>
+    </article>
+
+    <!-- ==========================================
+         SEÇÃO 2: PRINCIPAIS VIROSES CLÍNICAS
+         ========================================== -->
+    <article class="study-card" id="sec-infeccoes-virais">
+      <div class="card-header-bar">
+        <div class="card-title-group">
+          <div class="card-icon">🔬</div>
+          <div>
+            <h2 class="card-title">2. Principais Viroses de Relevância na Fisioterapia</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Arboviroses (Chikungunya), Hepatites Virais, HIV/AIDS e Biossegurança</span>
+          </div>
+        </div>
+        <span class="card-tag tag-clin">Viroses Clínicas</span>
+      </div>
+
+      <div class="alert-box alert-osce">
+        <div class="alert-icon">⚠️</div>
+        <div>
+          <strong>Conexão Direta com a Fisioterapia na OSCE (Cenários 2 e 3):</strong><br>
+          • <em>Chikungunya:</em> O vírus possui tropismo acentuado por <strong>fibroblastos do tecido articular e tendíneo</strong>, induzindo sinovite crônica, dor articular incapacitante simétrica (punhos, mãos, tornozelos) e rigidez matinal que perdura por meses/anos devido à persistência de antígenos virais na membrana sinovial.<br>
+          • <em>Hepatite B em Acidente com Perfurocortante:</em> Risco ocupacional do fisioterapeuta em punções, agulhamento seco (*dry needling*) ou manuseio de lixo biológico. O marcador <strong>HBsAg</strong> indica infecção viral ativa; o <strong>Anti-HBs</strong> positivo confere imunidade protetora eficaz.
+        </div>
+      </div>
+
+      <h3 class="section-heading">Tabela de Viroses de Alta Relevância em Saúde Pública</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Vírus / Doença</th>
+              <th>Família / Genoma / Envelope</th>
+              <th>Transmissão Principal</th>
+              <th>Quadro Clínico Típico</th>
+              <th>Prevenção e Relevância OSCE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Chikungunya</strong></td>
+              <td>Togaviridae (Alphavirus)<br>RNA fita simples (+)<br>Envelopado</td>
+              <td>Picada do mosquito vetor <strong>Aedes aegypti</strong></td>
+              <td>Febre súbita, exantema e <strong>artralgia/artrite simétrica intensa e incapacitante</strong> em punhos, tornozelos e dedos. Pode cronificar por anos com edema e rigidez matinal.</td>
+              <td>Controle vetorial do <em>Aedes</em>. Reabilitação fisioterapêutica motora analgésica e cinesioterapia suave para preservar amplitude articular e prevenir atrofias.</td>
+            </tr>
+            <tr>
+              <td><strong>Hepatite B (VHB)</strong></td>
+              <td>Hepadnaviridae<br>DNA fita dupla parcial<br>Envelopado</td>
+              <td>Parenteral (acidentes com perfurocortantes), sexual e vertical (parto)</td>
+              <td>Hepatite aguda (icterícia, colúria, fadiga) com risco de cronificação, cirrose e hepatocarcinoma. Alta estabilidade no sangue seco.</td>
+              <td><strong>Vacina recombinante (HBsAg)</strong> em 3 doses. Pós-exposição em não vacinado: <strong>Imunoglobulina humana anti-hepatite B (IGHAHB)</strong> + vacina imediata.</td>
+            </tr>
+            <tr>
+              <td><strong>Hepatite C (VHC)</strong></td>
+              <td>Flaviviridae<br>RNA fita simples (+)<br>Envelopado</td>
+              <td>Sanguínea / Parenteral (transfusões antigas, agulhas compartilhadas)</td>
+              <td>Maioria assintomática na fase aguda, porém com <strong>altíssima taxa de cronificação (80%)</strong> evoluindo silenciosamente para cirrose hepática.</td>
+              <td>Não há vacina. Uso estrito de EPIs e descarte em caixa de perfurocortantes (Descarpack). Tratamento com antivirais de ação direta (DAA).</td>
+            </tr>
+            <tr>
+              <td><strong>HIV / AIDS</strong></td>
+              <td>Retroviridae (Lentivirus)<br>RNA fita simples (+)<br>Envelopado (gp120/gp41)</td>
+              <td>Relações sexuais desprotegidas, sangue/agulhas contaminadas, perinatal</td>
+              <td>Destruição progressiva dos <strong>Linfócitos T CD4+</strong>. Quando CD4 < 200/mm³, surgem infecções oportunistas (tuberculose, candidíase esofágica, sarcoma de Kaposi).</td>
+              <td>Biossegurança com luvas e descarte de agulhas sem reencapar. Profilaxia Pós-Exposição (PEP) com antirretrovirais iniciada em até 72 horas.</td>
+            </tr>
+            <tr>
+              <td><strong>Herpes Simplex (HSV) & Varicela-Zóster</strong></td>
+              <td>Herpesviridae<br>DNA fita dupla<br>Envelopado</td>
+              <td>Contato direto com vesículas, saliva ou secreções respiratórias</td>
+              <td>Infecção primária seguida de <strong>Latência vitalícia em gânglios sensitivos</strong> (ex: trigêmeo ou raiz dorsal). Reativação como <strong>Herpes-Zóster</strong> com dor neuropática em dermátomos.</td>
+              <td>Vacina contra Varicela e Zóster. Fisioterapia no manejo da neuralgia pós-herpética com recursos eletroterapêuticos analgésicos.</td>
+            </tr>
+            <tr>
+              <td><strong>Vírus da Raiva</strong></td>
+              <td>Rhabdoviridae<br>RNA fita simples (-)<br>Envelopado (morfologia em bala)</td>
+              <td>Mordedura, arranhadura ou lambedura por mamíferos infectados (cães, morcegos)</td>
+              <td>Vírus neurotrópico que viaja pelos axônios até o SNC. Causa encefalite aguda progressiva com hidrofobia, espasmos e letalidade próxima de 100%.</td>
+              <td>Urgência médica: Lavagem abundante com água e sabão + <strong>Soro Antirrábico (SAR)</strong> infiltrado na lesão + <strong>Vacina antirrábica</strong> em esquema profilático pós-exposição.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- ==========================================
+         SEÇÃO 3: COMPLEXO MHC E LINFÓCITOS
+         ========================================== -->
+    <article class="study-card" id="sec-mhc-linfocitos">
+      <div class="card-header-bar">
+        <div class="card-title-group">
+          <div class="card-icon">🧬</div>
+          <div>
+            <h2 class="card-title">3. O Complexo MHC / HLA & Ativação das Respostas Específicas</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">MHC Classe I vs MHC Classe II, Linfócitos T CD4/CD8 e Linfócitos B</span>
+          </div>
+        </div>
+        <span class="card-tag tag-imuno">Imunologia Celular</span>
+      </div>
+
+      <p>
+        O <strong>Complexo Maior de Histocompatibilidade (MHC)</strong> em humanos é chamado de <strong>HLA (Human Leukocyte Antigen)</strong>. É um agrupamento gênico altamente polimórfico localizado no <strong>braço curto do cromossomo 6 (6p21.3)</strong>, funcionando como a "impressão digital imunológica" de cada indivíduo.
+      </p>
+
+      <h3 class="section-heading">Comparação Crítica entre MHC Classe I e MHC Classe II</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Parâmetro</th>
+              <th>MHC de Classe I</th>
+              <th>MHC de Classe II</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Genes Codificadores</strong></td>
+              <td>HLA-A, HLA-B e HLA-C</td>
+              <td>HLA-DP, HLA-DQ e HLA-DR</td>
+            </tr>
+            <tr>
+              <td><strong>Células que Expressam</strong></td>
+              <td><strong>Todas as células nucleadas do corpo</strong> e plaquetas (ausente em hemácias maduras anucleadas!).</td>
+              <td>Exclusivo em <strong>Células Apresentadoras de Antígenos (APCs) profissionais</strong>: Macrófagos, Células Dendríticas e Linfócitos B.</td>
+            </tr>
+            <tr>
+              <td><strong>Origem do Antígeno Apresentado</strong></td>
+              <td><strong>Antígenos Endógenos / Intracelulares:</strong> proteínas virais sintetizadas no citoplasma ou proteínas mutadas tumorais (processadas pelo proteassoma).</td>
+              <td><strong>Antígenos Exógenos / Extracelulares:</strong> bactérias, toxinas e vírus capturados por endocitose/fagocitose (processados no fagolisossomo).</td>
+            </tr>
+            <tr>
+              <td><strong>Célula Efetora Alvo</strong></td>
+              <td>Apresenta para <strong>Linfócitos T Citotóxicos (CD8+)</strong></td>
+              <td>Apresenta para <strong>Linfócitos T Auxiliares / Helper (CD4+)</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Regra Mnemônica da Multiplicação</strong></td>
+              <td><span class="mono">MHC I × CD8 = 8</span></td>
+              <td><span class="mono">MHC II × CD4 = 8</span></td>
+            </tr>
+            <tr>
+              <td><strong>Mecanismo Efetor de Ação</strong></td>
+              <td><strong>"O Beijo da Morte":</strong> Liberação polarizada de <strong>Perforinas</strong> (abrem poros na membrana celular) e <strong>Granzimas</strong> (ativam caspases desencadeando apoptose da célula infectada).</td>
+              <td><strong>Orquestração Imunológica:</strong> Secreção de citocinas (Th1 libera IFN-γ ativando macrófagos; Th2 libera IL-4/IL-5 estimulando Linfócitos B a produzir anticorpos).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-heading">Linfócitos: Valores de Referência e Tipos de Resposta Humoral</h3>
+      <p>
+        No leucograma do adulto saudável, a contagem normal de linfócitos totais situa-se entre <strong>1.000 e 3.500 / mm³ (ou μL)</strong>.
+      </p>
+      <ul style="margin-left: 1.5rem; color: var(--text-soft); margin-bottom: 1rem;">
+        <li><strong>Linfócitos B:</strong> Amadurecem na medula óssea. Expressam receptores de superfície <strong>BCR</strong> (IgD e IgM de membrana). Quando ativados, diferenciam-se em <strong>Plasmócitos</strong> (que sintetizam anticorpos solúveis em grande escala) e <strong>Células B de Memória</strong>.</li>
+        <li><strong>Resposta Humoral T-Independente:</strong> Ocorre contra antígenos não proteicos multivalentes (polissacarídeos de cápsula bacteriana, lipídeos). Ativa o Linfócito B sem auxílio de T CD4+. Produz quase exclusivamente <strong>IgM</strong> e <em>não gera memória imunológica duradoura</em>.</li>
+        <li><strong>Resposta Humoral T-Dependente:</strong> Ocorre contra antígenos proteicos. Exige o reconhecimento conjunto pelo Linfócito T CD4+ via MHC-II. Desencadeia troca de classe de isotipos (produção de <strong>IgG, IgA, IgE</strong>), maturação de afinidade e formação robusta de <strong>Células de Memória</strong>.</li>
+      </ul>
+    </article>
+
+    <!-- ==========================================
+         SEÇÃO 4: IMUNOGLOBULINAS (ANTICORPOS)
+         ========================================== -->
+    <article class="study-card" id="sec-imunoglobulinas">
+      <div class="card-header-bar">
+        <div class="card-title-group">
+          <div class="card-icon">🛡️</div>
+          <div>
+            <h2 class="card-title">4. Imunoglobulinas: Estrutura, Classes e Cinética Sorológica</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Glicoproteínas efetoras sintetizadas por plasmócitos (não são células!)</span>
+          </div>
+        </div>
+        <span class="card-tag tag-imuno">Anticorpos</span>
+      </div>
+
+      <div class="alert-box alert-osce">
+        <div class="alert-icon">💡</div>
+        <div>
+          <strong>Pegadinha Clássica de Avaliação:</strong> Anticorpos <strong>NÃO SÃO CÉLULAS</strong>! São <em>glicoproteínas plasmáticas efetoras e termoestáveis</em> secretadas no sangue e fluidos corporais por <strong>Plasmócitos</strong> (linfócitos B diferenciados).
+        </div>
+      </div>
+
+      <h3 class="section-heading">Estrutura Molecular do Monômero em "Y"</h3>
+      <div class="flow-steps">
+        <div class="flow-step-card">
+          <span class="flow-step-number">Cadeias</span>
+          <h4>4 Cadeias Polipeptídicas</h4>
+          <p>O monômero é composto por <strong>2 cadeias pesadas (H - Heavy)</strong> e <strong>2 cadeias leves (L - Light)</strong>, unidas entre si por pontes dissulfeto covalentes (<span class="mono">—S—S—</span>).</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Fab</span>
+          <h4>Fração Fab (Antigen-Binding)</h4>
+          <p>Formada pelos braços superiores do "Y" (domínios variáveis <span class="mono">VH e VL</span>). Contém as regiões hipervariáveis (CDRs) que formam o <strong>parátopo</strong>, sítio de ligação de altíssima especificidade ao epítopo do antígeno.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Fc</span>
+          <h4>Fração Fc (Cristalizável)</h4>
+          <p>Formada pela haste inferior do "Y" (domínios constantes das cadeias pesadas). Medeia as <strong>funções biológicas efetoras</strong>: opsonização (ligação a receptores Fc em macrófagos), ativação da via clássica do sistema complemento (C1q) e transporte transplacentário.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Funções</span>
+          <h4>Atividades Primárias das Ig</h4>
+          <p>• <strong>Neutralização:</strong> bloqueio físico de toxinas e vírus.<br>• <strong>Opsonização:</strong> marcação de microrganismos para fagocitose facilitada.<br>• <strong>Aglutinação:</strong> aglomeração de bactérias em grumos.<br>• <strong>Fixação do Complemento:</strong> lise bacteriana pelo complexo MAC.</p>
+        </div>
+      </div>
+
+      <h3 class="section-heading">As 5 Classes de Imunoglobulinas (Quadro Comparativo)</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Classe</th>
+              <th>Estrutura Molecular</th>
+              <th>Concentração Sérica</th>
+              <th>Propriedades Biológicas e Funções</th>
+              <th>Interpretação Sorológica / Clínica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>IgM</strong><br>(Cadeia μ - Mu)</td>
+              <td><strong>Pentâmero</strong> (5 monômeros unidos pela Cadeia J, com 10 sítios de ligação ao antígeno)</td>
+              <td>5 a 10%</td>
+              <td><strong>Primeira classe produzida na resposta imune primária.</strong> Molécula de grande tamanho que não atravessa a placenta. Excelente aglutinadora e a mais potente ativadora da via clássica do complemento.</td>
+              <td><strong>Marcador de Infecção Aguda ou Recente!</strong><br>Ex: <span class="mono">IgM (+) e IgG (-)</span> = infecção ativa em fase inicial.</td>
+            </tr>
+            <tr>
+              <td><strong>IgG</strong><br>(Cadeia γ - Gama)</td>
+              <td><strong>Monômero</strong><br>(4 subclasses: IgG1 a IgG4)</td>
+              <td><strong>75 a 80%</strong><br>(A mais abundante no sangue)</td>
+              <td>Produzida predominantemente na <strong>resposta imune secundária</strong>. Principal anticorpo de memória, opsonização para neutrófilos/macrófagos e neutralização de toxinas. <strong>ÚNICA CLASSE QUE ATRAVESSA A PLACENTA</strong> (via receptor FcRn), conferindo imunidade passiva natural ao feto.</td>
+              <td><strong>Marcador de Memória / Imunidade / Cura!</strong><br>Ex: <span class="mono">IgM (-) e IgG (+)</span> = infecção pregressa curada ou vacinação bem-sucedida.</td>
+            </tr>
+            <tr>
+              <td><strong>IgA</strong><br>(Cadeia α - Alfa)</td>
+              <td>Monômero no soro;<br><strong>Dímero nas secreções exócrinas</strong> (unido por Cadeia J e Peça Secretora)</td>
+              <td>10 a 15%</td>
+              <td>Principal anticorpo das superfícies mucosas (trato respiratório, digestório e geniturinário), saliva, lágrimas e <strong>leite materno / colostro</strong>. A peça secretora confere resistência contra enzimas digestivas bacterianas.</td>
+              <td>Imunidade de barreira mucosa e proteção passiva do recém-nascido durante a amamentação (evita diarreias infecciosas no lactente).</td>
+            </tr>
+            <tr>
+              <td><strong>IgE</strong><br>(Cadeia ε - Épsilon)</td>
+              <td>Monômero</td>
+              <td>< 0,01%<br>(Baixíssima concentração sérica)</td>
+              <td>Liga-se com altíssima afinidade aos receptores <span class="mono">FcεRI</span> na superfície de <strong>Mastócitos e Basófilos</strong>. Ao entrar em contato com alérgenos, dispara a desgranulação explosiva de <strong>Histamina</strong> (reações de Hipersensibilidade Tipo I / Anafilaxia / Rinite / Asma). Atua também na defesa contra <strong>parasitas e helmintos</strong> (ativação de eosinófilos).</td>
+              <td>Elevada em quadros de atopia, alergias respiratórias e parasitoses intestinais por vermes.</td>
+            </tr>
+            <tr>
+              <td><strong>IgD</strong><br>(Cadeia δ - Delta)</td>
+              <td>Monômero</td>
+              <td>< 1%</td>
+              <td>Encontrada principalmente na membrana de <strong>Linfócitos B virgens</strong> (junto com IgM monomérica), atuando como receptor antigênico (BCR) para a ativação inicial da célula B. Praticamente ausente livre no soro.</td>
+              <td>Marcador de diferenciação e maturação ontogenética dos Linfócitos B.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-heading">Cinética da Resposta Imune: Primária vs Secundária</h3>
+      <p>
+        • <strong>Resposta Primária (Primeiro Contato com o Antígeno):</strong> Período de latência longo (5 a 10 dias). Títulos de anticorpos modestos. O primeiro anticorpo a surgir é a <strong>IgM</strong>, seguido dias depois por títulos crescentes de IgG.<br>
+        • <strong>Resposta Secundária (Reexposição ou Dose de Reforço Vacinal):</strong> Período de latência mínimo (1 a 3 dias) devido à existência de <strong>Linfócitos B de memória</strong>. Produção rápida, vigorosa e prolongada de <strong>IgG em altíssimos títulos</strong>, com anticorpos que apresentam afinidade muito mais alta pelo antígeno (maturação de afinidade).
+      </p>
+    </article>
+
+    <!-- ==========================================
+         SEÇÃO 5: VACINAS VS. SOROS
+         ========================================== -->
+    <article class="study-card" id="sec-vacinas-soros">
+      <div class="card-header-bar">
+        <div class="card-title-group">
+          <div class="card-icon">💉</div>
+          <div>
+            <h2 class="card-title">5. Imunobiológicos: Vacinas vs. Soros & Condutas Clínicas</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Imunização ativa vs passiva, tipos de vacinas e protocolos de urgência</span>
+          </div>
+        </div>
+        <span class="card-tag tag-bio">Imunobiológicos</span>
+      </div>
+
+      <h3 class="section-heading">Tabela Mestra Comparativa: Vacinas vs. Soros (Cai em Toda OSCE!)</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Parâmetro</th>
+              <th>VACINAS</th>
+              <th>SOROS E IMUNOGLOBULINAS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Tipo de Imunização</strong></td>
+              <td><strong>Imunização ATIVA</strong><br>(O próprio organismo é estimulado a produzir a resposta imune)</td>
+              <td><strong>Imunização PASSIVA</strong><br>(O organismo recebe anticorpos pré-formados prontos)</td>
+            </tr>
+            <tr>
+              <td><strong>O que é Inoculado?</strong></td>
+              <td><strong>Antígenos</strong> inativados, atenuados, subunidades proteicas recombinantes ou toxoides.</td>
+              <td><strong>Anticorpos prontos</strong> (imunoglobulinas específicas purificadas).</td>
+            </tr>
+            <tr>
+              <td><strong>Origem dos Anticorpos</strong></td>
+              <td>Produzidos pelos <strong>próprios plasmócitos do paciente</strong> após dias de estímulo antigênico.</td>
+              <td>Produzidos em <strong>outro organismo</strong>: equinos (soros heterólogos) ou doadores humanos (imunoglobulinas homólogas).</td>
+            </tr>
+            <tr>
+              <td><strong>Início da Proteção</strong></td>
+              <td><strong>Lento / Tardio</strong> (demora dias a semanas para atingir títulos séricos protetores).</td>
+              <td><strong>Imediato</strong> (anticorpos circulam e neutralizam antígenos no mesmo instante da infusão).</td>
+            </tr>
+            <tr>
+              <td><strong>Duração da Proteção</strong></td>
+              <td><strong>Prolongada / Duradoura</strong> (anos a décadas, ou por toda a vida).</td>
+              <td><strong>Temporária / Fugaz</strong> (apenas algumas semanas, até os anticorpos serem degradados).</td>
+            </tr>
+            <tr>
+              <td><strong>Indução de Memória?</strong></td>
+              <td><strong>SIM!</strong> Gera Linfócitos B e T de memória.</td>
+              <td><strong>NÃO!</strong> Não estimula o sistema imune do paciente a formar células de memória.</td>
+            </tr>
+            <tr>
+              <td><strong>Finalidade Principal</strong></td>
+              <td><strong>Preventiva / Profilática populacional</strong> (administrada antes da exposição ao patógeno).</td>
+              <td><strong>Curativa / Emergencial</strong> (usada após acidentes com risco imediato de morte ou intoxicação).</td>
+            </tr>
+            <tr>
+              <td><strong>Exemplos Clínicos</strong></td>
+              <td>Vacina contra Tétano (dT / Toxoide), Vacina contra Hepatite B, Febre Amarela, Tríplice Viral, Influenza.</td>
+              <td>Soro Antitetânico (SAT), Soro Antiofídico (antiveneno de cobras), Soro Antirrábico (SAR), Imunoglobulina Humana Anti-Tétano (IGHAT).</td>
+            </tr>
+            <tr>
+              <td><strong>Riscos / Reações Adversas</strong></td>
+              <td>Dor local leve, febre baixa transitória. <em>Vacinas atenuadas são contraindicadas em gestantes e imunodeprimidos.</em></td>
+              <td>Soros heterólogos (equinos) têm alto risco de <strong>Choque Anafilático</strong> imediato e <strong>Doença do Soro</strong> (reação por imunocomplexos).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-heading">Tipos de Vacinas</h3>
+      <div class="flow-steps">
+        <div class="flow-step-card">
+          <span class="flow-step-number">Atenuadas</span>
+          <h4>Vivas Atenuadas</h4>
+          <p>Microrganismos vivos com virulência enfraquecida por passagens em laboratório. Geram resposta imune humoral e celular citotóxica completa e duradoura.<br><strong>Contraindicação absoluta:</strong> Gestantes e imunossuprimidos!<br><em>Ex: BCG, Febre Amarela, Tríplice Viral, Varicela.</em></p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Inativadas</span>
+          <h4>Inativadas (Mortas)</h4>
+          <p>Microrganismos mortos por calor ou produtos químicos (formol). São incapazes de se multiplicar. Extremamente seguras (podem ser aplicadas em imunodeprimidos e gestantes). Exigem múltiplas doses de reforço e adjuvantes.<br><em>Ex: Influenza, Hepatite A, CoronaVac, Salk (Pólio VIP).</em></p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Toxoides</span>
+          <h4>Toxoides (Anatoxinas)</h4>
+          <p>Exotoxinas bacterianas inativadas com formol que perdem a toxicidade patogênica, mas preservam intacta sua antigenicidade, estimulando anticorpos neutralizantes.<br><em>Ex: Toxoide Tetânico (vacina antitetânica) e Toxoide Diftérico.</em></p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Subunidade</span>
+          <h4>Subunidades / Recombinantes</h4>
+          <p>Utilizam apenas fragmentos antigênicos específicos (proteínas purificadas) obtidos por engenharia genética de DNA recombinante, sem o genoma do patógeno.<br><em>Ex: Vacina da Hepatite B (antígeno de superfície HBsAg expresso em leveduras).</em></p>
+        </div>
+      </div>
+
+      <div class="alert-box alert-critical">
+        <div class="alert-icon">⚡</div>
+        <div>
+          <strong>Conduta Oficial na OSCE — Caso de Ferimento Contaminado e Risco de Tétano (Cenário 4):</strong><br>
+          Paciente com corte profundo e contaminado com terra/fezes, com esquema vacinal incompleto ou desconhecido:
+          <br>1. Prescrever <strong>Soro Antitetânico (SAT)</strong> ou <strong>IGHAT</strong>: para conferir <em>imunidade passiva imediata</em> e neutralizar as moléculas da toxina tetânica já circulantes antes que penetrem nos terminais nervosos.
+          <br>2. Prescrever <strong>Vacina Antitetânica (dT)</strong>: para conferir <em>imunidade ativa e memória de longo prazo</em>.
+          <br>3. <strong>REGRA DE OURO NA OSCE:</strong> Aplicar o soro e a vacina em <strong>MEMBROS DISTINTOS</strong> (ex: Soro no deltoide direito e Vacina no deltoide esquerdo)! Se aplicados na mesma seringa ou no mesmo braço, os anticorpos do soro neutralizam os antígenos da vacina, invalidando o efeito protetor!
+        </div>
+      </div>
+
+      <h3 class="section-heading">Fatos Históricos e Fases de P&D das Vacinas</h3>
+      <p>
+        • <strong>Edward Jenner (1796):</strong> Observou que ordenhadoras expostas à varíola bovina (*cowpox*) não contraíam a letal varíola humana. Inoculou material de lesão bovina no jovem James Phipps, criando a primeira vacina da humanidade.<br>
+        • <strong>Louis Pasteur (1885):</strong> Desenvolveu a vacina antirrábica atenuada em medula espinhal de coelhos e salvou a vida do menino Joseph Meister, mordido repetidamente por um cão raivoso.<br>
+        • <strong>Oswaldo Cruz & a Revolta da Vacina (1904, Rio de Janeiro):</strong> Campanha massiva e higienista de vacinação obrigatória contra a varíola na capital da república, gerando revolta popular, mas erradicando as epidemias no Brasil.<br>
+        • <strong>Fases Clínicas de P&D:</strong><br>
+        - <em>Fase Pré-clínica:</em> testes laboratoriais in vitro e em modelos animais.<br>
+        - <em>Fase I:</em> teste em pequeno grupo de voluntários saudáveis (20 a 80) focado em segurança e tolerabilidade.<br>
+        - <em>Fase II:</em> teste em centenas de indivíduos para avaliar imunogenicidade, esquema de doses e resposta de anticorpos.<br>
+        - <em>Fase III:</em> estudo multicêntrico duplo-cego em milhares ou dezenas de milhares de pessoas para comprovar eficácia real e identificar efeitos adversos raros.<br>
+        - <em>Fase IV:</em> Farmacovigilância contínua após aprovação regulatória e distribuição em massa na população.
+      </p>
+    </article>
+
+    <!-- ==========================================
+         SEÇÃO 6: PERGUNTAS DE FIXAÇÃO DA OSCE
+         ========================================== -->
+    <article class="study-card" id="sec-cenarios-osce">
+      <div class="card-header-bar">
+        <div class="card-title-group">
+          <div class="card-icon">❓</div>
+          <div>
+            <h2 class="card-title">6. Perguntas Rápidas de Prova (Flashcards da Sala 2)</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Clique nas perguntas para treinar sua resposta antes de iniciar o cronômetro</span>
+          </div>
+        </div>
+        <span class="card-tag tag-clin">Treino Rápido</span>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-title">
+            <span>❓</span> Por que o álcool a 70% inativa o vírus da Influenza e o Coronavírus, mas pode falhar contra o Rotavírus?
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </div>
+        <div class="accordion-content">
+          <p><strong>Resposta Esperada:</strong> Porque Influenza e Coronavírus são <strong>vírus envelopados</strong>. O álcool a 70% dissolve e solubiliza a bicamada lipídica do envelope e desnatura as glicoproteínas de ancoramento, tornando o vírus incapaz de infectar novas células. Já o Rotavírus é um <strong>vírus não envelopado (nu)</strong>, possuindo apenas um capsídeo proteico rígido altamente resistente à dessecação e a solventes lipídicos.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-title">
+            <span>❓</span> Qual a diferença de apresentação antigênica entre o MHC Classe I e o MHC Classe II?
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </div>
+        <div class="accordion-content">
+          <p><strong>Resposta Esperada:</strong> O <strong>MHC-I</strong> está presente em todas as células nucleadas e apresenta peptídeos de origem <strong>endógena</strong> (como proteínas virais sintetizadas dentro da célula) para os <strong>Linfócitos T Citotóxicos (CD8+)</strong>, desencadeando a lise celular por perforinas e granzimas. Já o <strong>MHC-II</strong> é expresso exclusivamente em <strong>APCs profissionais</strong> (macrófagos, células dendríticas e linfócitos B) e apresenta antígenos <strong>exógenos</strong> fagocitados para os <strong>Linfócitos T Auxiliares (CD4+)</strong>, que orquestram a produção de citocinas e estimulam a imunidade humoral.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-title">
+            <span>❓</span> O que significa um resultado sorológico com IgM negativo e IgG positivo para Hepatite B ou Dengue?
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </div>
+        <div class="accordion-content">
+          <p><strong>Resposta Esperada:</strong> Indica <strong>infecção pregressa curada ou imunidade de memória conferida por vacinação</strong>. A ausência de IgM descarta infecção aguda recente, enquanto a presença de IgG confirma a existência de anticorpos secundários de alta afinidade e células de memória imunológica circulantes.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-title">
+            <span>❓</span> Por que não podemos misturar o Soro Antitetânico e a Vacina Antitetânica no mesmo braço?
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </div>
+        <div class="accordion-content">
+          <p><strong>Resposta Esperada:</strong> Porque o soro contém anticorpos pré-formados prontos em alta concentração (imunidade passiva) e a vacina contém o antígeno / toxoide (imunidade ativa). Se aplicados no mesmo sítio anatômico, os anticorpos do soro vão se ligar imediatamente aos antígenos da vacina e neutralizá-los, impedindo que o sistema imune do paciente processe a vacina e forme suas próprias células de memória.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-title">
+            <span>❓</span> Por que pacientes pós-Chikungunya frequentemente procuram a Fisioterapia com dor crônica após meses?
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </div>
+        <div class="accordion-content">
+          <p><strong>Resposta Esperada:</strong> O vírus Chikungunya tem tropismo específico por <strong>fibroblastos do tecido sinovial articular, periósteo e fáscias</strong>. Mesmo após a eliminação da viremia sistêmica, fragmentos e antígenos virais podem persistir na sinóvia, mantendo um infiltrado inflamatório crônico de macrófagos e citocinas, gerando poliartralgia intensa, rigidez matinal e sinovite persistente, demandando reabilitação funcional para controle da dor e prevenção de deformidades.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Footer Navigation -->
+    <footer class="footer-nav">
+      <div class="footer-left">
+        <span>📖 Guia Teórico Sala 2 • 2º Período de Fisioterapia</span>
+      </div>
+      <div class="footer-btns">
+        <a href="index.html" class="nav-btn nav-btn-hub">
+          <span>🏠</span> Voltar ao Hub
+        </a>
+        <a href="sala2_imunologia_microbiologia.html" class="nav-btn nav-btn-sim">
+          <span>⏱️</span> Ir para o Simulador Sala 2
+        </a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Smooth scroll helper and tab highlight
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        const offset = 120;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = el.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+
+      // Update tab active state
+      document.querySelectorAll('.study-tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.currentTarget.classList.add('active');
+    }
+
+    // Toggle Accordion function
+    function toggleAccordion(header) {
+      const item = header.parentElement;
+      item.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

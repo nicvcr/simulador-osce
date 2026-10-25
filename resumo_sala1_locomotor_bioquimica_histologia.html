@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumo de Estudos — Sala 1: Locomotor, Bioquímica e Histologia | OSCE Fisioterapia</title>
+  <meta name="description" content="Guia teórico completo de estudos para a OSCE da Sala 1: Anatomia de Membros Inferiores, Bioquímica da Contração e Lesão Muscular, Inflamação, Estresse Oxidativo e Regeneração Tecidual.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card-bg: rgba(17, 24, 39, 0.9);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text: #f3f4f6;
+      --text-muted: #94a3b8;
+      --text-soft: #cbd5e1;
+      --primary: #06b6d4;
+      --primary-light: #67e8f9;
+      --primary-glow: rgba(6, 182, 212, 0.25);
+      --accent-blue: #3b82f6;
+      --emerald: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.2);
+      --amber: #f59e0b;
+      --amber-glow: rgba(245, 158, 11, 0.2);
+      --rose: #f43f5e;
+      --rose-glow: rgba(244, 63, 94, 0.2);
+      --purple: #a855f7;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(6, 182, 212, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 20%, rgba(59, 130, 246, 0.1) 0px, transparent 45%),
+        radial-gradient(at 50% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+      padding-bottom: 5rem;
+    }
+
+    /* Top Navigation */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 17, 32, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .nav-badge {
+      background: linear-gradient(135deg, var(--primary), var(--accent-blue));
+      color: #fff;
+      padding: 0.2rem 0.65rem;
+      border-radius: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-btn {
+      padding: 0.45rem 0.95rem;
+      border-radius: 0.6rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .nav-btn-hub {
+      background: rgba(255, 255, 255, 0.06);
+      color: #cbd5e1;
+      border: 1px solid var(--card-border);
+    }
+
+    .nav-btn-hub:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    .nav-btn-sim {
+      background: linear-gradient(135deg, var(--primary), var(--accent-blue));
+      color: #fff;
+      box-shadow: 0 4px 14px var(--primary-glow);
+    }
+
+    .nav-btn-sim:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    /* Container Layout */
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    /* Header Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      color: var(--primary);
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    h1.hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 820px;
+      margin: 0 auto 1.5rem;
+    }
+
+    /* Action bar banner */
+    .cta-banner {
+      background: linear-gradient(90deg, rgba(6, 182, 212, 0.15), rgba(59, 130, 246, 0.15));
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      border-radius: 1rem;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta-banner-text {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .cta-banner-text span.icon {
+      font-size: 1.8rem;
+    }
+
+    .cta-banner-text h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    .cta-banner-text p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .btn-cta {
+      background: linear-gradient(135deg, var(--primary), var(--accent-blue));
+      color: #fff;
+      padding: 0.65rem 1.3rem;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 15px var(--primary-glow);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-cta:hover {
+      filter: brightness(1.1);
+      transform: translateY(-2px);
+    }
+
+    /* Category Navigation Tabs */
+    .study-tabs-container {
+      position: sticky;
+      top: 65px;
+      z-index: 90;
+      background: rgba(11, 17, 32, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 0.75rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .study-tabs {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.3rem;
+      scrollbar-width: thin;
+    }
+
+    .study-tab-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: #94a3b8;
+      padding: 0.55rem 1.1rem;
+      border-radius: 0.75rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .study-tab-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .study-tab-btn.active {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(59, 130, 246, 0.2));
+      border-color: var(--primary);
+      color: var(--primary-light);
+      box-shadow: 0 0 15px var(--primary-glow);
+    }
+
+    /* Study Cards */
+    .study-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(16px);
+      position: relative;
+    }
+
+    .card-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-bottom: 1rem;
+    }
+
+    .card-title-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .card-icon {
+      font-size: 1.8rem;
+      background: rgba(255, 255, 255, 0.05);
+      width: 48px;
+      height: 48px;
+      border-radius: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .card-tag {
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.3rem 0.7rem;
+      border-radius: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tag-anat { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+    .tag-bioq { background: rgba(6, 182, 212, 0.15); color: #67e8f9; border: 1px solid rgba(6, 182, 212, 0.3); }
+    .tag-histo { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .tag-clin { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+
+    /* Text & Content Styling */
+    h3.section-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1.6rem 0 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h3.section-heading::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 1.1rem;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    p {
+      color: var(--text-soft);
+      font-size: 0.98rem;
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+
+    strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* Callout Alert Boxes */
+    .alert-box {
+      border-radius: 0.9rem;
+      padding: 1.1rem 1.4rem;
+      margin: 1.3rem 0;
+      display: flex;
+      gap: 0.9rem;
+      align-items: flex-start;
+      font-size: 0.93rem;
+      line-height: 1.55;
+    }
+
+    .alert-box .alert-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .alert-osce {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #fde68a;
+    }
+
+    .alert-osce strong {
+      color: #fbbf24;
+    }
+
+    .alert-biomed {
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      color: #cffafe;
+    }
+
+    .alert-biomed strong {
+      color: #67e8f9;
+    }
+
+    .alert-critical {
+      background: rgba(244, 63, 94, 0.1);
+      border: 1px solid rgba(244, 63, 94, 0.3);
+      color: #fecdd3;
+    }
+
+    .alert-critical strong {
+      color: #fb7185;
+    }
+
+    /* Tables */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin: 1.4rem 0;
+      border-radius: 0.85rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(11, 17, 32, 0.5);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    thead th {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      white-space: nowrap;
+    }
+
+    tbody td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: var(--text-soft);
+      vertical-align: top;
+    }
+
+    tbody tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: #38bdf8;
+    }
+
+    /* Diagram / Flow Steps */
+    .flow-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .flow-step-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 0.85rem;
+      padding: 1.2rem;
+      position: relative;
+    }
+
+    .flow-step-number {
+      position: absolute;
+      top: -10px;
+      left: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--accent-blue));
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.75rem;
+      padding: 0.15rem 0.6rem;
+      border-radius: 9999px;
+      box-shadow: 0 2px 8px var(--primary-glow);
+    }
+
+    .flow-step-card h4 {
+      font-family: 'Outfit', sans-serif;
+      color: #fff;
+      margin: 0.4rem 0 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .flow-step-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    /* Interactive Accordion for OSCE Flashcards/Questions */
+    .accordion-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0.8rem;
+      margin-bottom: 0.8rem;
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .accordion-header {
+      padding: 1rem 1.3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.2s ease;
+    }
+
+    .accordion-header:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .accordion-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      color: #f3f4f6;
+      font-size: 0.98rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .accordion-chevron {
+      color: var(--primary);
+      transition: transform 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .accordion-item.open .accordion-chevron {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease;
+      padding: 0 1.3rem;
+      background: rgba(0, 0, 0, 0.2);
+      border-top: 1px solid transparent;
+    }
+
+    .accordion-item.open .accordion-content {
+      max-height: 400px;
+      padding: 1rem 1.3rem 1.2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .accordion-content p {
+      margin-bottom: 0.5rem;
+      font-size: 0.92rem;
+      color: #cbd5e1;
+    }
+
+    /* Quick Glossary Grid */
+    .glossary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 1.2rem 0;
+    }
+
+    .glossary-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 3px solid var(--primary);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 0.9rem 1.1rem;
+    }
+
+    .glossary-term {
+      font-weight: 700;
+      color: #fff;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .glossary-def {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* Footer Navigation */
+    .footer-nav {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+    }
+
+    .footer-left {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-btns {
+      display: flex;
+      gap: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="top-nav">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-badge">GUIA TEÓRICO</span>
+      <span>OSCE Fisioterapia • Sala 1</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-btn nav-btn-hub">
+        <span>🏠</span> Hub Principal
+      </a>
+      <a href="resumo_sala2_imunologia_microbiologia.html" class="nav-btn nav-btn-hub">
+        <span>🦠</span> Guia Sala 2
+      </a>
+      <a href="sala1_locomotor_bioquimica_histologia.html" class="nav-btn nav-btn-sim">
+        <span>⏱️</span> Iniciar Simulação Sala 1
+      </a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- Header Hero -->
+    <section class="hero">
+      <div class="hero-tag">Aparelho Locomotor, Bioquímica & Histologia</div>
+      <h1 class="hero-title">Caderno de Revisão Aprofundado para a OSCE</h1>
+      <p class="hero-subtitle">
+        Integração completa baseada nas aulas dos professores: Aminoácidos e Proteínas, Contração Sarcomérica, Lesão Muscular, Rabdomiólise, Inflamação, Espécies Reativas (ERO/ERN), Células Satélite e Anatomia Funcional de Membro Inferior.
+      </p>
+    </section>
+
+    <!-- CTA Banner to Simulation -->
+    <div class="cta-banner">
+      <div class="cta-banner-text">
+        <span class="icon">🎯</span>
+        <div>
+          <h3>Pronto para testar seus conhecimentos em tempo real?</h3>
+          <p>Após ler os conceitos abaixo, simule os 4 cenários clínicos cronometrados com checklist interativo e gongo sonoro.</p>
+        </div>
+      </div>
+      <a href="sala1_locomotor_bioquimica_histologia.html" class="btn-cta">
+        <span>Simular Estação (5 min)</span> ➔
+      </a>
+    </div>
+
+    <!-- Quick Category Switcher Tabs -->
+    <nav class="study-tabs-container">
+      <div class="study-tabs">
+        <button class="study-tab-btn active" onclick="scrollToSection('sec-anatomia')">🦴 1. Anatomia de Membro Inferior</button>
+        <button class="study-tab-btn" onclick="scrollToSection('sec-bioquimica-prot')">🧪 2. Aminoácidos & Proteínas</button>
+        <button class="study-tab-btn" onclick="scrollToSection('sec-contracao')">⚡ 3. Contração Muscular & ATP</button>
+        <button class="study-tab-btn" onclick="scrollToSection('sec-lesao')">💥 4. Mecanismos de Lesão & CK</button>
+        <button class="study-tab-btn" onclick="scrollToSection('sec-inflamacao')">🔥 5. Inflamação & Estresse Oxidativo</button>
+        <button class="study-tab-btn" onclick="scrollToSection('sec-histologia')">🔬 6. Histologia & Regeneração</button>
+        <button class="study-tab-btn" onclick="scrollToSection('sec-perguntas')">❓ 7. Perguntas Rápidas de Fixação</button>
+      </div>
+    </nav>
+
+    <!-- ==========================================
+         SEÇÃO 1: ANATOMIA DE MEMBROS INFERIORES
+         ========================================== -->
+    <article class="study-card" id="sec-anatomia">
+      <div class="card-header-bar">
+        <div class="card-title-group">
+          <div class="card-icon">🦴</div>
+          <div>
+            <h2 class="card-title">1. Anatomia Funcional dos Membros Inferiores</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Grupos musculares, origens, inserções, ações e inervação motora correlacionadas às lesões</span>
+          </div>
+        </div>
+        <span class="card-tag tag-anat">Anatomia</span>
+      </div>
+
+      <div class="alert-box alert-osce">
+        <div class="alert-icon">💡</div>
+        <div>
+          <strong>Requisito Crítico na OSCE:</strong> O examinador não quer apenas que você aponte onde dói! Você deve verbalizar o <strong>grupo muscular afetado</strong>, os músculos individuais componentes, sua <strong>origem óssea</strong>, <strong>inserção</strong>, <strong>inervação periférica motora</strong> e o <strong>movimento articular</strong> onde a lesão ocorreu (quase sempre contração excêntrica em desaceleração ou frenagem).
+        </div>
+      </div>
+
+      <h3 class="section-heading">Tabela Mestra de Músculos de Membros Inferiores para Prova</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Grupo / Compartimento</th>
+              <th>Músculos Componentes</th>
+              <th>Origem Óssea</th>
+              <th>Inserção Óssea</th>
+              <th>Ação Articular</th>
+              <th>Inervação Motora</th>
+              <th>Correlação Clínica OSCE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Coxa Posterior</strong><br>(Isquiotibiais / Jarrete)</td>
+              <td>• Bíceps femoral (cb. longa e curta)<br>• Semitendíneo<br>• Semimembranoso</td>
+              <td>• <strong>Tuberosidade Isquiática</strong> (cb. longa bíceps, semitendíneo, semimembranoso)<br>• <strong>Linha Áspera do Fêmur</strong> (cb. curta bíceps)</td>
+              <td>• <strong>Cabeça da Fíbula</strong> (Bíceps)<br>• <strong>Pata de Ganso / Tíbia medial</strong> (Semitendíneo)<br>• <strong>Côndilo medial da tíbia</strong> (Semimembranoso)</td>
+              <td>• Extensão do Quadril<br>• Flexão do Joelho<br>• Rotação da perna</td>
+              <td><span class="mono">Nervo Isquiático (Ciático)</span><br>• Ramo Tibial (L5, S1, S2)<br>• Ramo Fibular Comum (para a cb. curta do bíceps)</td>
+              <td><strong>Cenário 1 OSCE:</strong> Estiramento em frenagem brusca de corrida (fase terminal do balanço). Dor aguda ao esticar o joelho com quadril fletido.</td>
+            </tr>
+            <tr>
+              <td><strong>Perna Posterior Superficial</strong><br>(Tríceps Sural)</td>
+              <td>• Gastrocnêmio Medial<br>• Gastrocnêmio Lateral<br>• Sóleo<br>(e Plantar delgado)</td>
+              <td>• <strong>Côndilos Medial e Lateral do Fêmur</strong> (Gastrocnêmios - biarticulares)<br>• <strong>Linha do Sóleo na Tíbia e cabeça da Fíbula</strong> (Sóleo - monoarticular)</td>
+              <td><strong>Tuberosidade do Calcâneo</strong> através do <strong>Tendão do Calcâneo (Tendão de Aquiles)</strong></td>
+              <td>• Flexão Plantar do Tornozelo (potente)<br>• Gastrocnêmios auxiliam na Flexão do Joelho</td>
+              <td><span class="mono">Nervo Tibial (S1, S2)</span></td>
+              <td><strong>Cenário 2 OSCE:</strong> "Síndrome da Pedrada". Distensão aguda na transição miotendínea (especialmente cabeça medial) em arrancada brusca com joelho estendido.</td>
+            </tr>
+            <tr>
+              <td><strong>Coxa Anterior</strong><br>(Quadríceps Femoral)</td>
+              <td>• Reto Femoral (biarticular)<br>• Vasto Lateral<br>• Vasto Medial<br>• Vasto Intermédio</td>
+              <td>• <strong>Espinha Ilíaca Ântero-Inferior (EIAI)</strong> e teto acetabular (Reto Femoral)<br>• <strong>Corpo e Linha Áspera do Fêmur</strong> (Vastos)</td>
+              <td><strong>Base da Patela</strong> e através do <strong>Ligamento Patelar</strong> na <strong>Tuberosidade Anterior da Tíbia (TAT)</strong></td>
+              <td>• Extensão Potente do Joelho<br>• Reto Femoral também realiza Flexão do Quadril</td>
+              <td><span class="mono">Nervo Femoral (L2, L3, L4)</span></td>
+              <td><strong>Cenário 3 OSCE:</strong> Estiramento do Reto Femoral em chute em falso ou desaceleração súbita após salto. Dor na face anterior da coxa.<br><em>Curiosidade aula:</em> Injeção IM em bebês no vasto lateral.</td>
+            </tr>
+            <tr>
+              <td><strong>Coxa Medial</strong><br>(Adutores)</td>
+              <td>• Adutor Longo<br>• Adutor Curto<br>• Adutor Magno<br>• Grácil<br>• Pectíneo</td>
+              <td>Ramo púbico e tuberosidade isquiática (tubérculo do púbis)</td>
+              <td>Linha áspera do fêmur, tubérculo adutor e pata de ganso (Grácil)</td>
+              <td>• Adução da coxa/quadril<br>• Rotação e flexão acessória</td>
+              <td><span class="mono">Nervo Obturatório (L2, L3, L4)</span><br>(Pectíneo pelo Femoral e parte isquiocondilar do magno pelo Tibial)</td>
+              <td>Pubalgia e estiramento de adutores em mudanças bruscas de direção no futebol. Pata de Ganso = Sartório + Grácil + Semitendíneo.</td>
+            </tr>
+            <tr>
+              <td><strong>Perna Anterior</strong><br>(Dorsiflexores)</td>
+              <td>• Tibial Anterior<br>• Extensor Longo dos Dedos<br>• Extensor Longo do Hálux</td>
+              <td>Côndilo lateral e face lateral da tíbia proximal</td>
+              <td>Cuneiforme medial e base do 1º metatarso (Tibial Anterior)</td>
+              <td>• Dorsiflexão do Tornozelo<br>• Inversão do Pé (Tibial Ant.)</td>
+              <td><span class="mono">Nervo Fibular Profundo (L4, L5)</span></td>
+              <td>Lesão nervosa gera "pé caído" (marcha escarvante). Síndrome compartimental anterior após trauma/fratura.</td>
+            </tr>
+            <tr>
+              <td><strong>Perna Lateral</strong><br>(Evertores)</td>
+              <td>• Fibular Longo<br>• Fibular Curto</td>
+              <td>Superfície lateral da fíbula</td>
+              <td>Base do 1º metatarso/cuneiforme (Longo) e base do 5º metatarso (Curto)</td>
+              <td>• Eversão do Pé<br>• Auxílio na flexão plantar</td>
+              <td><span class="mono">Nervo Fibular Superficial (L5, S1)</span></td>
+              <td>Entorse de tornozelo em inversão gera tensão excessiva e avulsão do tendão fibular curto na base do 5º metatarso.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-heading">Conexão Biomecânica: Por que Músculos Biarticulares Estiram Mais?</h3>
+      <p>
+        Músculos como o <strong>Bíceps Femoral (cabeça longa)</strong>, <strong>Semitendíneo</strong>, <strong>Semimembranoso</strong>, <strong>Reto Femoral</strong> e <strong>Gastrocnêmios</strong> cruzam duas articulações sinoviais simultaneamente. Quando uma articulação exige o alongamento passivo extremo enquanto a outra exige contração ativa forte (ex: flexão de quadril com extensão de joelho no chute ou corrida), o sarcômero atinge o ápice de sua curva de tensão-comprimento. Se submetido a uma contração excêntrica (onde a força externa obriga o músculo a se alongar enquanto desenvolve tensão), ocorre falha estrutural do sarcolema e da junção miotendínea.
+      </p>
+    </article>
+
+    <!-- ==========================================
+         SEÇÃO 2: AMINOÁCIDOS E PROTEÍNAS
+         ========================================== -->
+    <article class="study-card" id="sec-bioquimica-prot">
+      <div class="card-header-bar">
+        <div class="card-title-group">
+          <div class="card-icon">🧪</div>
+          <div>
+            <h2 class="card-title">2. Bioquímica de Aminoácidos e Proteínas no Músculo</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Da estrutura molecular ao turnover proteico e reparo muscular</span>
+          </div>
+        </div>
+        <span class="card-tag tag-bioq">Bioquímica</span>
+      </div>
+
+      <p>
+        No músculo esquelético, cerca de <strong>20% da massa muscular total é composta por proteínas</strong>. Elas são responsáveis pela geração de força, integridade estrutural, catálise enzimática e adaptação ao estresse mecânico.
+      </p>
+
+      <div class="flow-steps">
+        <div class="flow-step-card">
+          <span class="flow-step-number">01</span>
+          <h4>Estrutura do Aminoácido</h4>
+          <p>Composto por um <strong>Carbono Alfa (Cα)</strong> central ligado a: Grupo Amino (<span class="mono">—NH₂</span>), Grupo Carboxila (<span class="mono">—COOH</span>), um Átomo de Hidrogênio (<span class="mono">—H</span>) e uma Cadeia Lateral (<span class="mono">—R</span>) que confere propriedades únicas (hidrofóbica, polar, ácida ou básica).</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">02</span>
+          <h4>Ligação Peptídica</h4>
+          <p>Ligação covalente rígida e estável formada por reação de desidratação (perda de H₂O) entre a carboxila de um aminoácido e o grupo amino do seguinte. Forma cadeias polipeptídicas lineares.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">03</span>
+          <h4>Hierarquia Estrutural</h4>
+          <p><strong>Primária:</strong> sequência linear geneticamente codificada.<br><strong>Secundária:</strong> arranjos locais (alfa-hélice e folha beta por pontes de H).<br><strong>Terciária:</strong> dobramento 3D funcional.<br><strong>Quaternária:</strong> associação de múltiplas cadeias (ex: actina/miosina, hemoglobina).</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">04</span>
+          <h4>Desnaturação Proteica</h4>
+          <p>Perda da conformação tridimensional nativa provocada por variações extremas de pH (acidose láctica severa), hipertermia ou estresse oxidativo, levando à inativação biológica da proteína sem romper as ligações peptídicas.</p>
+        </div>
+      </div>
+
+      <h3 class="section-heading">Classificação Nutricional & Metabólica</h3>
+      <p>
+        • <strong>Aminoácidos Essenciais:</strong> Não são sintetizados em quantidades adequadas pelo organismo humano, sendo obrigatório o aporte via dieta (ex: fenilalanina, histidina, isoleucina, leucina, lisina, metionina, treonina, triptofano, valina).<br>
+        • <strong>Aminoácidos Não Essenciais:</strong> Produzidos endogenamente a partir de intermediários glicolíticos ou do ciclo de Krebs.<br>
+        • <strong>Destaque Metabólico — Leucina (BCAA):</strong> Atua como um potente sinalizador molecular. Além de servir como substrato para a síntese proteica, ativa diretamente a via da <strong>mTORC1 (Mammalian Target of Rapamycin)</strong>, disparando a tradução gênica e anabolismo muscular no pós-lesão e pós-exercício.
+      </p>
+
+      <h3 class="section-heading">Turnover Proteico: Síntese vs. Degradação</h3>
+      <p>
+        O músculo vive em equilíbrio dinâmico entre a <strong>Síntese Proteica Muscular (SPM)</strong> e a <strong>Degradação Proteica Muscular (DPM)</strong>.
+      </p>
+      <ul style="margin-left: 1.5rem; color: var(--text-soft); margin-bottom: 1rem;">
+        <li><strong>Balanço Proteico Positivo (SPM > DPM):</strong> Hipertrofia, regeneração de miofibrilas lesionadas e reparação tecidual bem-sucedida. Estimulado por carga mecânica progressiva e aminoácidos essenciais.</li>
+        <li><strong>Balanço Proteico Negativo (DPM > SPM):</strong> Atrofia muscular por desuso, caquexia ou imobilização gessada pós-trauma. Mediado pelas vias <strong>Ubiquitina-Proteassoma</strong> e <strong>Autofagia</strong>.</li>
+      </ul>
+    </article>
+
+    <!-- ==========================================
+         SEÇÃO 3: CONTRAÇÃO MUSCULAR & ATP
+         ========================================== -->
+    <article class="study-card" id="sec-contracao">
+      <div class="card-header-bar">
+        <div class="card-title-group">
+          <div class="card-icon">⚡</div>
+          <div>
+            <h2 class="card-title">3. Bioquímica da Contração Muscular e Sistemas de ATP</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Do potencial de ação neuromuscular ao ciclo das pontes cruzadas e relaxamento</span>
+          </div>
+        </div>
+        <span class="card-tag tag-bioq">Bioquímica</span>
+      </div>
+
+      <div class="alert-box alert-biomed">
+        <div class="alert-icon">🧬</div>
+        <div>
+          <strong>Conceito Fundamental da Aula:</strong> A contração muscular é a transformação direta de <em>energia química (ATP) em energia mecânica (força e deslizamento filamentar)</em>. Sem íons Ca²⁺ não há acoplamento de pontes; sem nova molécula de ATP, o músculo não desliga e entra em contratura ou rigidez cadavérica!
+        </div>
+      </div>
+
+      <h3 class="section-heading">Passo a Passo Bioquímico do Acoplamento Excitação-Contração</h3>
+      <div class="flow-steps">
+        <div class="flow-step-card">
+          <span class="flow-step-number">Etapa 1</span>
+          <h4>Despolarização e Túbulos T</h4>
+          <p>O neurônio motor libera <strong>Acetilcolina (ACh)</strong> na fenda sináptica. A ACh liga-se aos receptores nicotínicos no sarcolema, gerando influxo de Na⁺ e potencial de ação, que invade as profundezas da fibra através dos <strong>Túbulos T (túbulos transversos)</strong>.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Etapa 2</span>
+          <h4>Sensor DHP e Liberação de Cálcio</h4>
+          <p>O sensor de voltagem <strong>Receptor DHP (di-hidropiridina)</strong> no túbulo T sofre alteração conformacional e abre mecanicamente o <strong>Receptor de Rianodina (RyR1)</strong> nas cisternas terminais do <strong>Retículo Sarcoplasmático</strong>. O Ca²⁺ inunda o citosol.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Etapa 3</span>
+          <h4>Troponina C e Tropomiosina</h4>
+          <p>O Ca²⁺ citosólico liga-se com alta afinidade à <strong>Troponina C</strong>. Essa ligação gera uma mudança alostérica no complexo da troponina, que <strong>desloca a Tropomiosina</strong> para fora da fenda da actina, expondo os sítios de união para as cabeças da miosina.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Etapa 4</span>
+          <h4>Ciclo das Pontes Cruzadas</h4>
+          <p>A cabeça da miosina (já portando ADP + Pi oriundos de hidrólise prévia) atraca na actina. Ocorre a liberação do Pi e do ADP, desencadeando o <strong>Golpe de Força (Power Stroke)</strong>: a cabeça gira 45°, tracionando o filamento fino de actina em direção ao centro do sarcômero (Linha M).</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Etapa 5</span>
+          <h4>Desligamento por Novo ATP</h4>
+          <p>Uma <strong>nova molécula de ATP</strong> se liga à cabeça da miosina. Isso diminui abruptamente sua afinidade pela actina, fazendo a cabeça se desprender. O ATP é então hidrolisado em ADP + Pi pela atividade ATPase da miosina, rearmando a cabeça para um novo ciclo.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Etapa 6</span>
+          <h4>Relaxamento Muscular (SERCA)</h4>
+          <p>Para cessar a contração, a bomba <strong>SERCA (Ca²⁺-ATPase do Retículo Sarcoplasmático)</strong> recapta os íons Ca²⁺ ativamente de volta para o RS com <strong>gasto de ATP</strong>. Sem Ca²⁺ livre, a Troponina C perde o cálcio e a Tropomiosina volta a tampar os sítios da actina.</p>
+        </div>
+      </div>
+
+      <h3 class="section-heading">Sistemas Energéticos para Ressíntese de ATP no Músculo</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Sistema Metabólico</th>
+              <th>Enzima-Chave / Substrato</th>
+              <th>Duração de Predomínio</th>
+              <th>Potência vs Capacidade</th>
+              <th>Relevância na Prática Clínica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Sistema ATP-CP<br>(Fosfagênio)</strong></td>
+              <td><strong>Creatina Quinase (CK)</strong><br>Fosfocreatina + ADP ➔ Creatina + ATP</td>
+              <td>0 a 10 segundos</td>
+              <td>Potência Máxima imediata<br>Capacidade Mínima</td>
+              <td>Sprints, arrancadas bruscas, saltos máximos. A CK muscular (CK-MM) é a enzima desse sistema que vaza para o sangue em caso de lesão.</td>
+            </tr>
+            <tr>
+              <td><strong>Glicólise Anaeróbia<br>(Láctica)</strong></td>
+              <td>Fosfofrutoquinase-1 (PFK-1)<br>Glicose / Glicogênio muscular ➔ Lactato + 2 ATP</td>
+              <td>10 seg a 2 minutos</td>
+              <td>Potência Alta<br>Capacidade Média</td>
+              <td>Exercícios intensos e repetidos (ex: tiros de 400m, séries de agachamento até a falha). Gera prótons H⁺ (acidose muscular associada à fadiga).</td>
+            </tr>
+            <tr>
+              <td><strong>Fosforilação Oxidativa<br>(Aeróbia Mitocondrial)</strong></td>
+              <td>Ciclo de Krebs e Cadeia Transportadora de Elétrons<br>Carboidratos e Lipídios (Beta-oxidação) + O₂ ➔ ~32 ATP</td>
+              <td>> 2 minutos até horas</td>
+              <td>Potência Baixa<br>Capacidade Quase Ilimitada</td>
+              <td>Fibras musculares tipo I (lentas/posturais como o Sóleo). Rica densidade mitocondrial e mioglobina para evitar fadiga durante caminhadas e postura.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- ==========================================
+         SEÇÃO 4: MECANISMOS DE LESÃO E CK
+         ========================================== -->
+    <article class="study-card" id="sec-lesao">
+      <div class="card-header-bar">
+        <div class="card-title-group">
+          <div class="card-icon">💥</div>
+          <div>
+            <h2 class="card-title">4. Fisiopatologia da Lesão Muscular e Rabdomiólise</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Sobrecarga mecânica, ruptura do sarcolema, influxo de cálcio e marcadores séricos</span>
+          </div>
+        </div>
+        <span class="card-tag tag-clin">Clínica & Bioquímica</span>
+      </div>
+
+      <p>
+        As distensões musculares ocorrem quando a carga mecânica externa excede a capacidade de deformação e resistência do tecido. Acontecem tipicamente durante a <strong>fase excêntrica</strong> da contração, onde o músculo desenvolve altíssima tensão enquanto se distende.
+      </p>
+
+      <h3 class="section-heading">Cascata Molecular da Necrose Muscular (Passo a Passo)</h3>
+      <div class="flow-steps">
+        <div class="flow-step-card">
+          <span class="flow-step-number">Passo 1</span>
+          <h4>Ruptura Mecânica do Sarcolema</h4>
+          <p>Ocorre cisalhamento físico da membrana plasmática da fibra muscular (sarcolema) e ruptura das miofibrilas sarcoméricas, expondo o meio intracelular ao interstício.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Passo 2</span>
+          <h4>Influxo Maciço de Cálcio</h4>
+          <p>O gradiente de cálcio normal (onde a concentração extracelular é 10.000 vezes maior que a citosólica) desmorona. O cálcio inunda descontroladamente o citoplasma da fibra.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Passo 3</span>
+          <h4>Ativação de Calpaínas e Fosfolipases</h4>
+          <p>O excesso patológico de Ca²⁺ ativa proteases dependentes de cálcio chamadas <strong>Calpaínas</strong> e <strong>Fosfolipases A2</strong>, que autodigerem as proteínas do citoesqueleto (titina, distrofina) e degradam lipídios de membrana.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Passo 4</span>
+          <h4>Extravasamento para o Sangue</h4>
+          <p>Proteínas e enzimas estritamente intracelulares extravasam para a circulação: <strong>Creatina Quinase (CK)</strong>, <strong>Mioglobina</strong>, Lactato Desidrogenase (LDH) e íons Potássio (K⁺).</p>
+        </div>
+      </div>
+
+      <div class="alert-box alert-critical">
+        <div class="alert-icon">⚠️</div>
+        <div>
+          <strong>Rabdomiólise & Risco Renal na OSCE (Cenário 4):</strong><br>
+          Quando a necrose muscular é extensa (ex: sobrecarga extrema de agachamentos excêntricos em sedentário), a <strong>Mioglobina</strong> atinge concentrações maciças na corrente sanguínea. Por ter baixo peso molecular (~17 kDa), ela é livremente filtrada pelos glomérulos renais, conferindo à urina um aspecto de <strong>urina cor de Coca-Cola ou chá-mate (Mioglobinúria)</strong>. Em meio urinário ácido, a mioglobina precipita nos túbulos renais, formando cilindros que causam obstrução tubular direta, estresse oxidativo e necrose tubular aguda (<strong>Insuficiência Renal Aguda</strong>). Exige hidratação venosa imediata!
+        </div>
+      </div>
+
+      <h3 class="section-heading">Classificação dos Graus de Lesão Muscular</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Grau da Lesão</th>
+              <th>Alteração Histológica / Anatomopatológica</th>
+              <th>Quadro Clínico e Funcional</th>
+              <th>Tempo Médio de Recuperação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Grau I<br>(Leve / Estiramento)</strong></td>
+              <td>Microrruptura envolvendo <strong>< 10% das fibras</strong> musculares. Epimísio e fáscia íntegros. Sem gap palpável.</td>
+              <td>Dor localizada à palpação e contração contra resistência. Perda funcional mínima. Sem equimose evidente.</td>
+              <td>1 a 2 semanas</td>
+            </tr>
+            <tr>
+              <td><strong>Grau II<br>(Moderada / Ruptura Parcial)</strong></td>
+              <td>Ruptura parcial significativa de fibras (10% a 50%) com envolvimento da junção miotendínea e aponeurose.</td>
+              <td>Dor aguda intensa ("estalido"), espasmo protetor, edema, equimose visível, apoio antálgico (manca) e perda moderada a severa de força.</td>
+              <td>3 a 8 semanas</td>
+            </tr>
+            <tr>
+              <td><strong>Grau III<br>(Grave / Ruptura Total)</strong></td>
+              <td>Ruptura completa do ventre muscular ou desinserção tendínea total (> 50% das fibras ou 100%).</td>
+              <td>"Sinal da corda" ou defeito em fenda (gap palpável com retração muscular em bola), hematoma volumoso e perda completa de função. Pode exigir cirurgia.</td>
+              <td>2 a 6 meses</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- ==========================================
+         SEÇÃO 5: INFLAMAÇÃO E ESTRESSE OXIDATIVO
+         ========================================== -->
+    <article class="study-card" id="sec-inflamacao">
+      <div class="card-header-bar">
+        <div class="card-title-group">
+          <div class="card-icon">🔥</div>
+          <div>
+            <h2 class="card-title">5. Resposta Inflamatória e Estresse Oxidativo</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Sinais cardinais, mediadores lipídicos, citocinas e balanço redox (ERO / ERN vs Antioxidantes)</span>
+          </div>
+        </div>
+        <span class="card-tag tag-bioq">Bioquímica & Fisiologia</span>
+      </div>
+
+      <h3 class="section-heading">Os 5 Sinais Cardinais da Inflamação Aguda</h3>
+      <div class="glossary-grid">
+        <div class="glossary-card">
+          <div class="glossary-term">1. Rubor (Vermelhidão)</div>
+          <div class="glossary-def">Vasodilatação arteriolar mediada por histamina, óxido nítrico e prostaglandinas, aumentando o fluxo sanguíneo local (hiperemia ativa).</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term">2. Calor (Aumento de Temperatura)</div>
+          <div class="glossary-def">Consequência direta do aporte aumentado de sangue aquecido vindo da circulação central para a periferia lesionada.</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term">3. Edema (Inchaço)</div>
+          <div class="glossary-def">Aumento da permeabilidade vascular nas vênulas pós-capilares, permitindo o extravasamento de plasma rico em proteínas (exsudato) para o interstício.</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term">4. Dor</div>
+          <div class="glossary-def">Estimulação direta e sensibilização dos nociceptores por mediadores químicos locais: <strong>Bradicinina</strong>, <strong>Prostaglandina E2 (PGE2)</strong> e substância P, além da compressão mecânica pelo edema.</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term">5. Perda de Função (Functio Laesa)</div>
+          <div class="glossary-def">Adicionado por Virchow: incapacidade do músculo de gerar força e movimentar o membro devido à dor inibitória e descontinuidade anatômica das fibras.</div>
+        </div>
+      </div>
+
+      <h3 class="section-heading">Etapas e Mediadores da Resposta Inflamatória Muscular</h3>
+      <p>
+        1. <strong>Reconhecimento:</strong> Células residentes (mastócitos e macrófagos) reconhecem padrões moleculares associados ao dano tecidual (<strong>DAMPs</strong>, como ATP extracelular e DNA mitocondrial vazados da fibra necrótica).<br>
+        2. <strong>Liberação de Mediadores:</strong><br>
+        • <em>Histamina:</em> Liberada rapidamente por mastócitos; promove vasodilatação imediata e abertura de junções endoteliais.<br>
+        • <em>Eicosanoides:</em> Derivados do ácido araquidônico da membrana celular via fosfolipase A2. A via da <strong>Ciclooxigenase (COX-2)</strong> gera <em>Prostaglandinas</em> (vasodilatação, dor e febre); a via da <strong>Lipoxigenase (5-LOX)</strong> gera <em>Leucotrienos</em> (quimiotaxia de neutrófilos e broncoconstrição).<br>
+        • <em>Citocinas Pró-inflamatórias:</em> <strong>TNF-α</strong>, <strong>IL-1β</strong> e <strong>IL-6</strong>, que ativam células endoteliais e coordenam o recrutamento de glóbulos brancos.<br>
+        3. <strong>Recrutamento Leucocitário:</strong> Neutrófilos invadem a área nas primeiras 24 horas, liberando enzimas proteolíticas. Em seguida, <strong>Macrófagos M1</strong> assumem a fagocitose do debris necrótico.<br>
+        4. <strong>Transição para Resolução:</strong> Macrófagos mudam seu fenótipo para <strong>M2 (Anti-inflamatórios/Reparadores)</strong>, secretando <strong>IL-10</strong> e <strong>TGF-β</strong>, estimulando as células satélite e a angiogênese.
+      </p>
+
+      <h3 class="section-heading">Estresse Oxidativo: Espécies Reativas vs Defesa Antioxidante</h3>
+      <p>
+        O <strong>Estresse Oxidativo</strong> é o desequilíbrio entre a produção de pró-oxidantes (espécies reativas) e os mecanismos de defesa antioxidante, favorecendo danos moleculares celulares.
+      </p>
+
+      <div class="flow-steps">
+        <div class="flow-step-card">
+          <span class="flow-step-number">ERO</span>
+          <h4>Espécies Reativas de Oxigênio</h4>
+          <p>• <strong>Ânion Superóxido (<span class="mono">O₂•⁻</span>):</strong> gerado no complexo mitocondrial I/III e pela NADPH oxidase.<br>• <strong>Peróxido de Hidrogênio (<span class="mono">H₂O₂</span>):</strong> difusível pelas membranas.<br>• <strong>Radical Hidroxila (<span class="mono">•OH</span>):</strong> o mais tóxico e reativo, que ataca lipídios do sarcolema.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">ERN</span>
+          <h4>Espécies Reativas de Nitrogênio</h4>
+          <p>• <strong>Óxido Nítrico (<span class="mono">NO•</span>):</strong> sintetizado pela eNOS/iNOS.<br>• <strong>Peroxinitrito (<span class="mono">ONOO⁻</span>):</strong> formado pela reação instantânea entre <span class="mono">NO•</span> e <span class="mono">O₂•⁻</span>; potente agente citotóxico que causa nitração de resíduos de tirosina em proteínas contráteis.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Antiox</span>
+          <h4>Defesas Antioxidantes Enzimáticas</h4>
+          <p>• <strong>Superóxido Dismutase (SOD):</strong> converte <span class="mono">O₂•⁻</span> em <span class="mono">H₂O₂</span> e oxigênio.<br>• <strong>Catalase (CAT):</strong> nos peroxissomos, decompõe <span class="mono">2 H₂O₂ ➔ 2 H₂O + O₂</span>.<br>• <strong>Glutationa Peroxidase (GPx):</strong> consome glutationa reduzida (GSH) para neutralizar peróxidos: <span class="mono">H₂O₂ + 2 GSH ➔ GSSG + 2 H₂O</span>.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Nrf2</span>
+          <h4>Via Adaptativa Nrf2 / ARE</h4>
+          <p>O <strong>Nrf2</strong> é o fator de transcrição mestre das defesas celulares. Em repouso, fica ligado à proteína Keap1 no citosol. Sob estresse oxidativo, dissocia-se, migra para o núcleo e ativa o <strong>Elemento de Resposta Antioxidante (ARE)</strong> no DNA, aumentando a síntese de enzimas de defesa.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ==========================================
+         SEÇÃO 6: HISTOLOGIA E REGENERAÇÃO
+         ========================================== -->
+    <article class="study-card" id="sec-histologia">
+      <div class="card-header-bar">
+        <div class="card-title-group">
+          <div class="card-icon">🔬</div>
+          <div>
+            <h2 class="card-title">6. Histologia do Músculo Esquelético & Células Satélite</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Envoltórios conjuntivos, organização sarcomérica e fases biológicas da regeneração vs fibrose</span>
+          </div>
+        </div>
+        <span class="card-tag tag-histo">Histologia</span>
+      </div>
+
+      <h3 class="section-heading">Os 3 Envoltórios de Tecido Conjuntivo</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Envoltório Conjuntivo</th>
+              <th>Localização Anatômica</th>
+              <th>Composição Tecidual</th>
+              <th>Função Fisiológica e Mecânica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Epimísio</strong></td>
+              <td>Envolve todo o corpo do músculo externamente</td>
+              <td>Tecido conjuntivo denso não modelado rico em colágeno tipo I</td>
+              <td>Concede contenção mecânica, transmite a força contrátil para as fáscias e tendões de inserção e reduz atrito com músculos adjacentes.</td>
+            </tr>
+            <tr>
+              <td><strong>Perimísio</strong></td>
+              <td>Envolve e separa feixes de fibras chamados <strong>fascículos musculares</strong></td>
+              <td>Tecido conjuntivo com fibras colágenas e elásticas</td>
+              <td>Conduz feixes vasculares maiores (artérias/veias) e ramos de nervos motores para dentro do ventre muscular.</td>
+            </tr>
+            <tr>
+              <td><strong>Endomísio</strong></td>
+              <td>Envolve cada <strong>fibra muscular individual</strong></td>
+              <td>Tecido conjuntivo frouxo rico em fibras reticulares (colágeno tipo III) e lâmina basal</td>
+              <td>Conduz uma rica rede de capilares sanguíneos e terminações nervosas livres para oxigenação direta de cada miócito.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-heading">Ultraestrutura do Sarcômero em Microscopia</h3>
+      <p>
+        O sarcômero é o segmento entre duas <strong>Linhas Z consecutivas</strong>:
+      </p>
+      <ul style="margin-left: 1.5rem; color: var(--text-soft); margin-bottom: 1.2rem;">
+        <li><strong>Banda A:</strong> Região escura (anisotrópica) contendo toda a extensão dos filamentos grossos de miosina, com sobreposição parcial de actina. <em>Não altera seu comprimento na contração!</em></li>
+        <li><strong>Banda I:</strong> Região clara (isotrópica) contendo apenas filamentos finos de actina ancorados na linha Z. <em>Encurta durante a contração muscular.</em></li>
+        <li><strong>Zona H:</strong> Região central e mais clara da banda A, contendo apenas miosina (sem actina). <em>Encurta ou desaparece durante a contração máxima.</em></li>
+        <li><strong>Linha M:</strong> Ponto médio do sarcômero na zona H, onde proteínas estruturais (miomesina) sustentam os filamentos grossos paralelos.</li>
+      </ul>
+
+      <h3 class="section-heading">O Papel Vital das Células Satélite na Regeneração</h3>
+      <p>
+        As fibras musculares esqueléticas maduras são multinucleadas e não realizam mitose. Por isso, toda a capacidade de regeneração do músculo esquelético depende de uma população especializada de <strong>Células Satélite</strong> (células-tronco adultas mononucleadas).
+      </p>
+
+      <div class="flow-steps">
+        <div class="flow-step-card">
+          <span class="flow-step-number">Etapa A</span>
+          <h4>Nicho Anatômico</h4>
+          <p>Localizam-se em estado quiescente (dormência, expressando Pax7) alojadas entre o <strong>sarcolema</strong> da fibra muscular e a <strong>lâmina basal</strong> circundante.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Etapa B</span>
+          <h4>Ativação & Proliferação</h4>
+          <p>Após a ruptura e liberação de fatores de crescimento (HGF, FGF, IGF-1) por macrófagos e plaquetas, as células satélite "acordam", entram no ciclo celular e proliferam intensamente.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Etapa C</span>
+          <h4>Diferenciação em Mioblastos</h4>
+          <p>As células filhas ativam fatores reguladores miogênicos (MyoD, Miogenina) e se diferenciam em <strong>Mioblastos</strong> mononucleados.</p>
+        </div>
+        <div class="flow-step-card">
+          <span class="flow-step-number">Etapa D</span>
+          <h4>Fusão em Miotubos e Novas Fibras</h4>
+          <p>Guiados pela <strong>lâmina basal intacta</strong>, os mioblastos se alinham e se fundem, formando <strong>Miotubos</strong> multinucleados (com núcleos centrais). Estes sintetizam novas miofibrilas de actina e miosina, tornando-se novas fibras musculares funcionais.</p>
+        </div>
+      </div>
+
+      <div class="alert-box alert-osce">
+        <div class="alert-icon">⚖️</div>
+        <div>
+          <strong>Batalha Biológica: Regeneração Muscular vs Fibrose Cicatricial</strong><br>
+          Se a lesão destruir a lâmina basal ou houver inflamação crônica excessiva com imobilização prolongada, os <strong>Fibroblastos</strong> proliferam sob estímulo do <strong>TGF-β</strong> e depositam colágeno denso desorganizado. Isso gera uma <strong>cicatriz fibrótica não contrátil</strong>, que reduz a elasticidade do músculo e constitui o principal foco de recidiva de estiramentos esportivos! O papel do fisioterapeuta com mobilização precoce guiada é estimular a orientação das novas fibras e minimizar a fibrose.
+        </div>
+      </div>
+    </article>
+
+    <!-- ==========================================
+         SEÇÃO 7: PERGUNTAS RÁPIDAS DE FIXAÇÃO
+         ========================================== -->
+    <article class="study-card" id="sec-perguntas">
+      <div class="card-header-bar">
+        <div class="card-title-group">
+          <div class="card-icon">❓</div>
+          <div>
+            <h2 class="card-title">7. Perguntas Rápidas de Prova (Flashcards da OSCE)</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Clique para desdobrar a resposta e simular o questionamento do examinador</span>
+          </div>
+        </div>
+        <span class="card-tag tag-osce" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);">Fixação</span>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-title">
+            <span>❓</span> Por que o Reto Femoral e os Isquiotibiais são os músculos que mais sofrem estiramento?
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </div>
+        <div class="accordion-content">
+          <p><strong>Resposta Esperada:</strong> Porque são músculos <strong>biarticulares</strong>. Eles cruzam simultaneamente duas articulações (quadril e joelho). Ao serem submetidos a contrações excêntricas vigorosas em posições de máximo alongamento passivo (ex: flexão de quadril com joelho estendido no sprint ou chute), a tensão mecânica sobre o sarcômero e a junção miotendínea ultrapassa o limite de deformação do tecido, rompendo fibras.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-title">
+            <span>❓</span> Por que o cálcio é chamado de "gatilho" da contração, mas vira "vilão" na lesão muscular?
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </div>
+        <div class="accordion-content">
+          <p><strong>Resposta Esperada:</strong> Na contração fisiológica, o Ca²⁺ é liberado de forma transitória e controlada pelo retículo sarcoplasmático, ligando-se à Troponina C para desmascarar a actina. Porém, na lesão muscular com ruptura do sarcolema, ocorre um <strong>influxo maciço e descontrolado de cálcio extracelular</strong>. Esse excesso patológico ativa proteases líticas (calpaínas) e fosfolipases, que autodigerem as proteínas estruturais e destroem o citoesqueleto da fibra.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-title">
+            <span>❓</span> Por que a Creatina Quinase (CK) é o marcador sanguíneo clássico de dano muscular?
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </div>
+        <div class="accordion-content">
+          <p><strong>Resposta Esperada:</strong> A Creatina Quinase é uma enzima intracelular abundante no sarcoplasma (isoforma CK-MM), responsável por transferir fosfato da fosfocreatina para o ADP no sistema ATP-CP. Como ela não atravessa um sarcolema intacto, sua presença em níveis séricos elevados indica diretamente perda de integridade de membrana (ruptura e necrose de fibras musculares).</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-title">
+            <span>❓</span> O que são células satélite e por que a lâmina basal é essencial para elas?
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </div>
+        <div class="accordion-content">
+          <p><strong>Resposta Esperada:</strong> São células-tronco miogênicas mononucleadas quiescentes localizadas entre o sarcolema e a lâmina basal. Mediante lesão, ativam-se, proliferam e diferenciam-se em mioblastos, que se fundem formando miotubos. A <strong>lâmina basal intacta</strong> atua como um molde e guia estrutural; se for rompida, os fibroblastos invadem a área antes dos mioblastos, resultando em cicatrização por fibrose rica em colágeno, em vez de regeneração de tecido muscular contrátil.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-title">
+            <span>❓</span> Por que a urina de um paciente com lesão muscular grave pós-agachamento fica cor de refrigerante de cola?
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </div>
+        <div class="accordion-content">
+          <p><strong>Resposta Esperada:</strong> Trata-se de <strong>Mioglobinúria</strong> decorrente de Rabdomiólise. A destruição massiva de fibras musculares libera grandes quantidades de <strong>Mioglobina</strong> (proteína heme carreadora de O₂). Como ela é pequena, é filtrada pelo glomérulo renal, escurecendo a urina. É um sinal de alarme para nefrotoxicidade tubular e insuficiência renal aguda.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Footer Navigation -->
+    <footer class="footer-nav">
+      <div class="footer-left">
+        <span>📖 Guia Teórico Sala 1 • 2º Período de Fisioterapia</span>
+      </div>
+      <div class="footer-btns">
+        <a href="index.html" class="nav-btn nav-btn-hub">
+          <span>🏠</span> Voltar ao Hub
+        </a>
+        <a href="sala1_locomotor_bioquimica_histologia.html" class="nav-btn nav-btn-sim">
+          <span>⏱️</span> Ir para o Simulador Sala 1
+        </a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Smooth scroll helper and tab highlight
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        const offset = 120;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = el.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+
+      // Update tab active state
+      document.querySelectorAll('.study-tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.currentTarget.classList.add('active');
+    }
+
+    // Toggle Accordion function
+    function toggleAccordion(header) {
+      const item = header.parentElement;
+      item.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

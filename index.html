@@ -204,6 +204,9 @@
 
     .card-footer {
       margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
     }
 
     .btn-enter {
@@ -212,35 +215,128 @@
       justify-content: center;
       gap: 0.6rem;
       width: 100%;
-      padding: 0.95rem;
-      border-radius: 0.9rem;
+      padding: 0.85rem;
+      border-radius: 0.85rem;
       text-decoration: none;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 0.95rem;
       transition: all 0.2s ease;
       cursor: pointer;
     }
 
-    .sala-1 .btn-enter {
+    .sala-1 .btn-enter-primary {
       background: linear-gradient(135deg, #06b6d4, #2563eb);
       color: #fff;
       box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
     }
 
-    .sala-1 .btn-enter:hover {
+    .sala-1 .btn-enter-primary:hover {
       box-shadow: 0 6px 22px rgba(6, 182, 212, 0.5);
       filter: brightness(1.1);
+      transform: translateY(-2px);
     }
 
-    .sala-2 .btn-enter {
+    .sala-1 .btn-enter-secondary {
+      background: rgba(6, 182, 212, 0.12);
+      color: #67e8f9;
+      border: 1px solid rgba(6, 182, 212, 0.3);
+    }
+
+    .sala-1 .btn-enter-secondary:hover {
+      background: rgba(6, 182, 212, 0.22);
+      color: #fff;
+    }
+
+    .sala-2 .btn-enter-primary {
       background: linear-gradient(135deg, #10b981, #0284c7);
       color: #fff;
       box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
     }
 
-    .sala-2 .btn-enter:hover {
+    .sala-2 .btn-enter-primary:hover {
       box-shadow: 0 6px 22px rgba(16, 185, 129, 0.5);
       filter: brightness(1.1);
+      transform: translateY(-2px);
+    }
+
+    .sala-2 .btn-enter-secondary {
+      background: rgba(16, 185, 129, 0.12);
+      color: #6ee7b7;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .sala-2 .btn-enter-secondary:hover {
+      background: rgba(16, 185, 129, 0.22);
+      color: #fff;
+    }
+
+    .study-banner {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1.25rem;
+      padding: 1.5rem 1.8rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+    }
+
+    .study-banner-content h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      color: #fff;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .study-banner-content p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .study-banner-actions {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .study-quick-btn {
+      padding: 0.65rem 1.2rem;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .quick-s1 {
+      background: rgba(6, 182, 212, 0.15);
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      color: #67e8f9;
+    }
+
+    .quick-s1:hover {
+      background: rgba(6, 182, 212, 0.25);
+      color: #fff;
+    }
+
+    .quick-s2 {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #6ee7b7;
+    }
+
+    .quick-s2:hover {
+      background: rgba(16, 185, 129, 0.25);
+      color: #fff;
     }
 
     .instructions-box {
@@ -283,9 +379,25 @@
   <div class="container">
     <header class="header">
       <div class="badge">🩺 Fisioterapia • 2º Período • Metodologia Ativa</div>
-      <h1>Simulador Oficial OSCE</h1>
-      <p class="subtitle">Prepare-se para o seu Exame Clínico Objetivo Estruturado com cronômetro real de 5 minutos, checklists de pontuação, casos práticos e roteiro completo de argumentação.</p>
+      <h1>Simulador & Guia Teórico OSCE</h1>
+      <p class="subtitle">Prepare-se com resumos teóricos aprofundados baseados nos slides dos professores e treine nos simuladores com cronômetro real de 5 minutos, checklists de pontuação e casos clínicos.</p>
     </header>
+
+    <!-- Banner de Estudos Teóricos -->
+    <div class="study-banner">
+      <div class="study-banner-content">
+        <h2><span>📚</span> Resumos Teóricos Aprofundados (Estude Antes da Simulação)</h2>
+        <p>Acesse as sínteses completas de Anatomia de MMII, Bioquímica, Histologia, Virologia, MHC, Imunoglobulinas e Vacinas vs Soros.</p>
+      </div>
+      <div class="study-banner-actions">
+        <a href="resumo_sala1_locomotor_bioquimica_histologia.html" class="study-quick-btn quick-s1">
+          <span>📖</span> Teoria Sala 1 (Locomotor)
+        </a>
+        <a href="resumo_sala2_imunologia_microbiologia.html" class="study-quick-btn quick-s2">
+          <span>📖</span> Teoria Sala 2 (Imuno/Micro)
+        </a>
+      </div>
+    </div>
 
     <div class="grid">
       <!-- SALA 1 -->
@@ -303,12 +415,15 @@
             <span class="pill">Cenário 4: Sobrecarga & CK Alta</span>
           </div>
           <p class="room-desc">
-            Agora com <strong>4 cenários clínicos selecionáveis</strong> por abas! Contém glossário simples para o 2º período, anatomia detalhada de membros inferiores, mecanismo sarcomérico dependente de íons cálcio e ATP, estresse oxidativo e reparo por células satélite.
+            Contém <strong>guia teórico completo</strong> e <strong>4 cenários de simulação</strong>! Abrange anatomia funcional de membros inferiores, mecanismo sarcomérico dependente de íons Ca²⁺ e ATP, estresse oxidativo, marcadores séricos (CK/Mioglobina) e reparo por células satélite.
           </p>
         </div>
         <div class="card-footer">
-          <a href="sala1_locomotor_bioquimica_histologia.html" class="btn-enter" id="btn-enter-sala-1">
-            Entrar na Sala 1 (4 Casos)
+          <a href="resumo_sala1_locomotor_bioquimica_histologia.html" class="btn-enter btn-enter-secondary" id="btn-theory-sala-1">
+            <span>📖</span> Ler Resumo Teórico da Sala 1
+          </a>
+          <a href="sala1_locomotor_bioquimica_histologia.html" class="btn-enter btn-enter-primary" id="btn-enter-sala-1">
+            <span>⏱️</span> Entrar no Simulador da Sala 1 (4 Casos)
             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
         </div>
@@ -319,7 +434,7 @@
         <div>
           <div class="room-header">
             <span class="room-tag">📍 Estação 02</span>
-            <span class="time-chip">⏱️ 5:00 min cada</span>
+            <span class="time-chip">⏱️ 5:00 min</span>
           </div>
           <h2 class="room-title">Microbiologia & Imunologia</h2>
           <div class="topic-pills">
@@ -329,12 +444,15 @@
             <span class="pill">Cenário 4: Tétano vs Vacinas (dT)</span>
           </div>
           <p class="room-desc">
-            Agora com <strong>4 cenários clínicos selecionáveis</strong> por abas! Abrange estrutura viral e sensibilidade ao álcool 70%, ciclo replicativo, imunidade inata/adaptativa, vacinas vs soros e biossegurança na Fisioterapia.
+            Contém <strong>guia teórico completo</strong> e <strong>4 cenários de simulação</strong>! Abrange estrutura viral e sensibilidade ao álcool 70%, complexo MHC (HLA no cromossomo 6), anticorpos IgM e IgG, vacinas vs soros e biossegurança na Fisioterapia.
           </p>
         </div>
         <div class="card-footer">
-          <a href="sala2_imunologia_microbiologia.html" class="btn-enter" id="btn-enter-sala-2">
-            Entrar na Sala 2 (4 Casos)
+          <a href="resumo_sala2_imunologia_microbiologia.html" class="btn-enter btn-enter-secondary" id="btn-theory-sala-2">
+            <span>📖</span> Ler Resumo Teórico da Sala 2
+          </a>
+          <a href="sala2_imunologia_microbiologia.html" class="btn-enter btn-enter-primary" id="btn-enter-sala-2">
+            <span>⏱️</span> Entrar no Simulador da Sala 2 (4 Casos)
             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
         </div>
@@ -342,12 +460,12 @@
     </div>
 
     <div class="instructions-box">
-      <h3>💡 Como usar este simulador para tirar nota máxima:</h3>
+      <h3>💡 Método de Estudo Recomendado para Tirar Nota Máxima:</h3>
       <ol class="instructions-list">
-        <li>Clique em uma das salas e leia primeiro o <strong>Comando de Porta</strong> (você tem mentalmente 1 minuto antes de entrar).</li>
-        <li>Inicie o cronômetro oficial de <strong>5:00 minutos</strong> com áudio ativado (aviso com som nos últimos 60 segundos).</li>
-        <li>Responda e marque os itens do <strong>Checklist Oficial do Avaliador</strong> conforme desenvolve seu raciocínio.</li>
-        <li>Consulte o <strong>Guia de Resposta & Argumentação Verbal</strong> para saber exatamente quais termos técnicos o professor espera escutar de você.</li>
+        <li><strong>Fase 1 (Teoria Sólida):</strong> Abra os <strong>Resumos Teóricos</strong> de cada sala para memorizar termos técnicos, vias bioquímicas, anatomia de membros inferiores e critérios de prova.</li>
+        <li><strong>Fase 2 (Simulação Real):</strong> Entre no Simulador, leia a <strong>Folha de Porta</strong> mentalmente e dispare o cronômetro oficial de <strong>5:00 minutos</strong> com áudio.</li>
+        <li><strong>Fase 3 (Treino Verbal):</strong> Fale em voz alta seguindo o <strong>Roteiro de Fala Cronometrado</strong> e marque os itens do <strong>Checklist Oficial do Avaliador</strong> para acompanhar sua pontuação estimada.</li>
+        <li><strong>Fase 4 (Fixação):</strong> Utilize as <strong>Perguntas Rápidas (Flashcards)</strong> para testar sua agilidade ao ser sabatinado pelo examinador.</li>
       </ol>
     </div>
   </div>

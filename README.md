@@ -4,11 +4,17 @@ Simulador interativo desenvolvido para treino e preparação de estudantes do 2�
 
 ---
 
-## 🏛️ Estrutura das Estações (Salas)
+## 🏛️ Estrutura das Estações (Salas) & Guias Teóricos
 
-O simulador é dividido em duas salas cronometradas (5 minutos cada), com sinal sonoro de alerta no último minuto e gongo de encerramento via Web Audio API nativo:
+O projeto é organizado em duas frentes complementares: **Guias Teóricos de Alto Rendimento** (para consolidação dos conteúdos antes da prova) e **Simuladores Cronometrados** (5 minutos cada com gongo sonoro):
 
-### 📍 [Sala 1: Aparelho Locomotor, Bioquímica e Histologia](sala1_locomotor_bioquimica_histologia.html)
+### 📚 Guias Teóricos Aprofundados (Estudo Prévio):
+1. 📖 **[Guia Teórico Sala 1: Locomotor, Bioquímica & Histologia](resumo_sala1_locomotor_bioquimica_histologia.html):** Anatomia detalhada de Membros Inferiores (quadril, coxa e perna/pé), bioquímica de aminoácidos, proteínas e turnover, ciclo excitação-contração com Ca²⁺ e ATP, necrose muscular, rabdomiólise e CK, inflamação e estresse oxidativo (ERO/ERN vs antioxidantes), histologia sarcomérica e regeneração por células satélite.
+2. 📖 **[Guia Teórico Sala 2: Microbiologia & Imunologia](resumo_sala2_imunologia_microbiologia.html):** Propriedades biológicas e estrutura viral, ação físico-química do álcool 70%, principais viroses (Chikungunya, Hepatite B e C, HIV, Raiva), Complexo MHC/HLA no cromossomo 6, Linfócitos T CD4/CD8 e B, classes de anticorpos (IgM, IgG, IgA, IgE) e quadro comparativo definitivo de Vacinas vs Soros.
+
+---
+
+### 📍 [Sala 1: Aparelho Locomotor, Bioquímica e Histologia (Simulador)](sala1_locomotor_bioquimica_histologia.html)
 Integração pura das ciências biológicas básicas do 2º período, sem prescrição de condutas clínicas:
 1. **Biossegurança e Acolhimento (1.0 pt):** Apresentação profissional e higienização alcoólica das mãos a 70%.
 2. **Anatomia de Membro Inferior (3.0 pts):** Identificação de grupos musculares, origens ósseas, inserções, ações articulares e inervação motora correspondente.
