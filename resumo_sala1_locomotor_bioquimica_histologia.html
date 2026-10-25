@@ -618,6 +618,203 @@
       display: flex;
       gap: 0.8rem;
     }
+    /* Quiz Styles */
+    .quiz-container {
+      margin-top: 1.5rem;
+    }
+
+    .quiz-score-hud {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(59, 130, 246, 0.1));
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      border-radius: 1rem;
+      padding: 1.2rem 1.6rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .quiz-score-info {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .quiz-score-badge {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary-light);
+    }
+
+    .quiz-score-label {
+      font-size: 0.95rem;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .quiz-score-sub {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .btn-reset-quiz {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--card-border);
+      color: #cbd5e1;
+      padding: 0.55rem 1.1rem;
+      border-radius: 0.6rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-reset-quiz:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    .quiz-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .quiz-card:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .quiz-question-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .quiz-q-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .quiz-q-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .quiz-statement {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.55;
+      margin-bottom: 1.2rem;
+    }
+
+    .quiz-options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .quiz-opt-btn {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0.75rem;
+      padding: 0.85rem 1.1rem;
+      color: #cbd5e1;
+      text-align: left;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+
+    .quiz-opt-btn:hover:not(:disabled) {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      transform: translateX(4px);
+    }
+
+    .quiz-opt-letter {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 0.15rem 0.55rem;
+      border-radius: 0.4rem;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .quiz-opt-btn.correct {
+      background: rgba(16, 185, 129, 0.18) !important;
+      border-color: #10b981 !important;
+      color: #a7f3d0 !important;
+    }
+
+    .quiz-opt-btn.correct .quiz-opt-letter {
+      background: #10b981;
+      color: #fff;
+    }
+
+    .quiz-opt-btn.incorrect {
+      background: rgba(244, 63, 94, 0.18) !important;
+      border-color: #f43f5e !important;
+      color: #fecdd3 !important;
+    }
+
+    .quiz-opt-btn.incorrect .quiz-opt-letter {
+      background: #f43f5e;
+      color: #fff;
+    }
+
+    .quiz-feedback {
+      margin-top: 1rem;
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .quiz-feedback.show {
+      display: block;
+    }
+
+    .feedback-correct {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #a7f3d0;
+    }
+
+    .feedback-incorrect {
+      background: rgba(244, 63, 94, 0.12);
+      border: 1px solid rgba(244, 63, 94, 0.3);
+      color: #fecdd3;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -676,6 +873,7 @@
         <button class="study-tab-btn" onclick="scrollToSection('sec-inflamacao')">🔥 5. Inflamação & Estresse Oxidativo</button>
         <button class="study-tab-btn" onclick="scrollToSection('sec-histologia')">🔬 6. Histologia & Regeneração</button>
         <button class="study-tab-btn" onclick="scrollToSection('sec-perguntas')">❓ 7. Perguntas Rápidas de Fixação</button>
+        <button class="study-tab-btn" onclick="scrollToSection('sec-simulado')">📝 8. Simulado de Questões (10 Qs)</button>
       </div>
     </nav>
 
@@ -1272,6 +1470,338 @@
       </div>
     </article>
 
+    <!-- ==========================================
+         SEÇÃO 8: SIMULADO INTERATIVO PRÉ-OSCE
+         ========================================== -->
+    <article class="study-card" id="sec-simulado">
+      <div class="card-header-bar">
+        <div class="card-title-group">
+          <div class="card-icon">📝</div>
+          <div>
+            <h2 class="card-title">8. Simulado Interativo Pré-OSCE (10 Questões de Prova)</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Teste seus conhecimentos com feedback imediato e justificativa clínica detalhada antes de entrar na simulação</span>
+          </div>
+        </div>
+        <span class="card-tag tag-osce" style="background: rgba(6, 182, 212, 0.15); color: #67e8f9; border: 1px solid rgba(6, 182, 212, 0.35);">Simulado Oficial</span>
+      </div>
+
+      <!-- Placar do Simulado -->
+      <div class="quiz-score-hud">
+        <div class="quiz-score-info">
+          <div class="quiz-score-badge"><span id="s1-score-val">0</span> / 10</div>
+          <div>
+            <div class="quiz-score-label">Seu Desempenho no Simulado</div>
+            <div class="quiz-score-sub"><span id="s1-answered-count">0</span> de 10 questões respondidas • Meta recomendada: ≥ 8 acertos</div>
+          </div>
+        </div>
+        <button class="btn-reset-quiz" onclick="resetQuizSala1()">🔄 Reiniciar Simulado</button>
+      </div>
+
+      <div class="quiz-container" id="quiz-sala1-container">
+
+        <!-- Questão 1 -->
+        <div class="quiz-card" data-qindex="1">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 01 de 10</span>
+            <span class="quiz-q-tag tag-histo">Histologia & Regeneração</span>
+          </div>
+          <div class="quiz-statement">
+            (Aplicação Clínica dos Slides) Considerando o papel fisiológico das células satélite após uma lesão muscular por estiramento, assinale a alternativa que apresenta a relação mais adequada entre a resposta tecidual e a recuperação do músculo:
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(1, 'A', false, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>A resposta inflamatória inicial é substituída pela ação dos fibroblastos, que originam diretamente novas fibras contráteis funcionais.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(1, 'B', false, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>A resposta inflamatória inicial ativa os neurônios motores, que se diferenciam em novas fibras musculares e restauram a contração.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(1, 'C', true, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>A resposta inflamatória inicial é seguida pela ativação e proliferação das células satélite na lâmina basal, que se diferenciam em mioblastos e fundem-se em miotubos, promovendo a regeneração contrátil.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(1, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>A resposta inflamatória promove a substituição definitiva das miofibrilas por tecido adiposo unilocular para suportar o impacto articular.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s1-fb-1"></div>
+        </div>
+
+        <!-- Questão 2 -->
+        <div class="quiz-card" data-qindex="2">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 02 de 10</span>
+            <span class="quiz-q-tag tag-anat">Anatomia de Membros Inferiores</span>
+          </div>
+          <div class="quiz-statement">
+            Um paciente deu entrada na clínica com dor aguda e estalido audível na face posterior da coxa direita ao tentar frear bruscamente em um sprint de futebol. Na avaliação biomecânica, qual grupo muscular foi lesionado, qual o tipo de contração em curso no momento do estiramento e qual sua inervação motora?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(2, 'A', false, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>Quadríceps Femoral (Vastos e Reto Femoral); contração concêntrica; Nervo Femoral (L2–L4).</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(2, 'B', true, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>Isquiotibiais (Bíceps Femoral, Semitendíneo e Semimembranoso); contração excêntrica; Nervo Isquiático / Ciático (ramos tibial e fibular comum).</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(2, 'C', false, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>Tríceps Sural (Gastrocnêmios e Sóleo); contração isométrica pura; Nervo Tibial (S1–S2).</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(2, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>Adutores da Coxa (Adutor Longo, Curto e Magno); contração pliométrica passiva; Nervo Obturatório.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s1-fb-2"></div>
+        </div>
+
+        <!-- Questão 3 -->
+        <div class="quiz-card" data-qindex="3">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 03 de 10</span>
+            <span class="quiz-q-tag tag-anat">Anatomia de Membros Inferiores</span>
+          </div>
+          <div class="quiz-statement">
+            Na clássica "Síndrome da Pedrada" que acomete a panturrilha em arrancadas com o joelho em extensão e tornozelo em dorsiflexão forçada, qual músculo do tríceps sural é mais frequentemente lesado na sua transição miotendínea e por qual razão funcional?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(3, 'A', false, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>O músculo Sóleo, porque é o único músculo da perna inervado pelo nervo fibular profundo.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(3, 'B', true, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>A cabeça medial do Gastrocnêmio, por ser um músculo biarticular (cruza joelho e tornozelo) com alta proporção de fibras rápidas tipo II, sofrendo máxima tensão de estiramento excêntrico.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(3, 'C', false, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>O Tibial Anterior, porque sua inserção distal na base do 1º metatarso não tolera contração concêntrica rápida.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(3, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>O Fibular Curto, devido ao mecanismo de inversão forçada subtalar que rompe o ligamento talofibular anterior.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s1-fb-3"></div>
+        </div>
+
+        <!-- Questão 4 -->
+        <div class="quiz-card" data-qindex="4">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 04 de 10</span>
+            <span class="quiz-q-tag tag-anat">Anatomia de Membros Inferiores</span>
+          </div>
+          <div class="quiz-statement">
+            Entre os quatro ventres que formam o Quadríceps Femoral (Reto Femoral, Vasto Lateral, Vasto Medial e Vasto Intermédio), o Reto Femoral é o mais vulnerável a estiramentos severos em chutes no vácuo e desacelerações de saltos. Qual a explicação anatômica precisa para essa vulnerabilidade?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(4, 'A', true, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>Porque é o único músculo biarticular do grupo, originando-se na Espinha Ilíaca Ântero-Inferior (EIAI) e atuando tanto na flexão do quadril quanto na extensão do joelho, ficando sob estiramento passivo em duas articulações opostas.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(4, 'B', false, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>Porque recebe inervação dupla do nervo isquiático e do nervo femoral, gerando descoordenação motora no disparo sináptico.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(4, 'C', false, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>Porque se insere exclusivamente na cabeça da fíbula, longe do tendão patelar.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(4, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>Porque não possui endomísio, permitindo que a força mecânica rompa diretamente os vasos sanguíneos femorais.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s1-fb-4"></div>
+        </div>
+
+        <!-- Questão 5 -->
+        <div class="quiz-card" data-qindex="5">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 05 de 10</span>
+            <span class="quiz-q-tag tag-bioq">Bioquímica da Contração</span>
+          </div>
+          <div class="quiz-statement">
+            No acoplamento excitação-contração do músculo esquelético, qual é o papel bioquímico direto desempenhado pela ligação dos íons Cálcio (Ca²⁺) à Troponina C?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(5, 'A', false, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>Fornecer energia livre de Gibbs para a fosforilação oxidativa mitocondrial.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(5, 'B', true, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>Provocar uma mudança conformacional no complexo da troponina que desloca a Tropomiosina, desmascarando os sítios ativos da Actina para que as cabeças da Miosina possam se acoplar.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(5, 'C', false, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>Hidrolisar diretamente o ATP em ADP + Pi na ausência de magnésio.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(5, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>Fazer a Linha M deslizar para fora da Banda A, aumentando o comprimento do sarcômero.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s1-fb-5"></div>
+        </div>
+
+        <!-- Questão 6 -->
+        <div class="quiz-card" data-qindex="6">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 06 de 10</span>
+            <span class="quiz-q-tag tag-bioq">Bioquímica da Contração & ATP</span>
+          </div>
+          <div class="quiz-statement">
+            O que acontece bioquimicamente no sarcômero no momento exato em que uma NOVA molécula de ATP se liga à cabeça da miosina após a execução do golpe de força (power stroke)?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(6, 'A', false, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>A miosina forma ligações covalentes irreversíveis com a tropomiosina, travando a fibra.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(6, 'B', true, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>A afinidade da cabeça da miosina pela actina cai drasticamente, promovendo o desligamento da ponte cruzada e permitindo o relaxamento ou um novo ciclo de puxada.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(6, 'C', false, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>O cálcio citoplasmático é destruído instantaneamente pela enzima Creatina Quinase.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(6, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>Ocorre o alargamento da Banda I e da Zona H mesmo sem a ação da bomba SERCA.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s1-fb-6"></div>
+        </div>
+
+        <!-- Questão 7 -->
+        <div class="quiz-card" data-qindex="7">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 07 de 10</span>
+            <span class="quiz-q-tag tag-bioq">Mecanismos de Lesão & CK</span>
+          </div>
+          <div class="quiz-statement">
+            Em um estiramento muscular grau 2, o sarcolema sofre ruptura mecânica. Qual a sequência patológica de eventos intracelulares que resulta em necrose e liberação massiva de Creatina Quinase (CK-MM) para o plasma sanguíneo?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(7, 'A', true, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>Perda da permeabilidade seletiva ➔ influxo maciço de Ca²⁺ extracelular ➔ ativação patológica de proteases dependentes de cálcio (Calpaínas) e Fosfolipases ➔ degradação do citoesqueleto e necrose ➔ extravasamento de CK e mioglobina para o sangue.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(7, 'B', false, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>Saída total de potássio e cálcio da célula ➔ aumento da síntese de colágeno pelo retículo sarcoplasmático ➔ rigidez elástica sem lesão da membrana.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(7, 'C', false, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>Ativação exclusiva de neutrófilos sem que haja dano mitocondrial ou alteração da homeostase iônica.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(7, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>Inibição da via ubiquitina-proteassoma pelo estresse oxidativo, impedindo qualquer degradação enzimática.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s1-fb-7"></div>
+        </div>
+
+        <!-- Questão 8 -->
+        <div class="quiz-card" data-qindex="8">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 08 de 10</span>
+            <span class="quiz-q-tag tag-clin">Rabdomiólise & Risco Renal</span>
+          </div>
+          <div class="quiz-statement">
+            (Cenário 4 da OSCE) Um paciente sedentário executou um treino extenuante de agachamentos com saltos. 48 horas depois, procura a clínica com dor muscular generalizada severa e relata que sua urina adquiriu coloração escura como "Coca-Cola" ou "chá-mate". Qual o diagnóstico fisiopatológico e a complicação clínica mais grave que deve ser prevenida imediatamente?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(8, 'A', false, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>Desidratação simples com excesso de ureia; complicação: hipertrofia do tríceps sural.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(8, 'B', true, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>Rabdomiólise com Mioglobinúria maciça; complicação: precipitação de cilindros de mioglobina nos túbulos renais levando à Necrose Tubular Aguda e Insuficiência Renal Aguda.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(8, 'C', false, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>Acúmulo fisiológico de ácido láctico na bexiga; complicação: alcalose metabólica severa.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(8, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>Infecção urinária bacteriana por Staphylococcus aureus transmitida pelo solo da academia.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s1-fb-8"></div>
+        </div>
+
+        <!-- Questão 9 -->
+        <div class="quiz-card" data-qindex="9">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 09 de 10</span>
+            <span class="quiz-q-tag tag-bioq">Inflamação & Estresse Oxidativo</span>
+          </div>
+          <div class="quiz-statement">
+            Durante o processo inflamatório agudo que se segue à lesão muscular, os macrófagos e neutrófilos geram Espécies Reativas de Oxigênio (ERO). Qual é o principal sistema enzimático antioxidante que decompõe o ânion superóxido (O₂•⁻) e o peróxido de hidrogênio (H₂O₂), protegendo as células sadias vizinhas?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(9, 'A', true, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>A Superóxido Dismutase (SOD), que dismuta o O₂•⁻ em H₂O₂ e O₂, seguida pela Catalase (CAT) e Glutationa Peroxidase (GPx), que convertem o H₂O₂ em água (H₂O).</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(9, 'B', false, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>A Ciclooxigenase-2 (COX-2) e a Tromboxano Sintase, que convertem radicais livres em leucotrienos protetores.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(9, 'C', false, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>A Creatina Quinase e a Lactato Desidrogenase, que consomem elétrons livres para regenerar fosfocreatina.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(9, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>As Calpaínas e Caspases, que neutralizam diretamente o radical hidroxila (•OH) através de proteólise.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s1-fb-9"></div>
+        </div>
+
+        <!-- Questão 10 -->
+        <div class="quiz-card" data-qindex="10">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 10 de 10</span>
+            <span class="quiz-q-tag tag-bioq">Bioquímica de Proteínas & Reparo</span>
+          </div>
+          <div class="quiz-statement">
+            No contexto da reabilitação e da hipertrofia muscular pós-lesão, qual aminoácido essencial de cadeia ramificada (BCAA) atua como sinalizador chave na ativação da via molecular da mTORC1, desencadeando a síntese proteica muscular e a reconstrução sarcomérica?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(10, 'A', false, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>Prolina (aminoácido não essencial do colágeno).</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(10, 'B', false, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>Glicina (o aminoácido mais simples da cadeia).</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(10, 'C', true, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>Leucina (aminoácido essencial com papel metabólico anabólico direto na ativação da mTOR).</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala1(10, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>Tirosina (precursora exclusiva de hormônios tireoidianos).</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s1-fb-10"></div>
+        </div>
+
+      </div>
+    </article>
+
     <!-- Footer Navigation -->
     <footer class="footer-nav">
       <div class="footer-left">
@@ -1317,6 +1847,109 @@
     function toggleAccordion(header) {
       const item = header.parentElement;
       item.classList.toggle('open');
+    }
+
+    // SIMULADO INTERATIVO SALA 1
+    const s1Explanations = {
+      1: {
+        title: "Alternativa C está Correta! (Slide do Prof. Thiago)",
+        text: "Conforme o slide 10 da Aula de Tecido Muscular: o músculo não se regenera por ação de neurônios ou fibroblastos (que apenas produzem colágeno e cicatriz fibrótica não-contrátil). A regeneração verdadeira depende das CÉLULAS SATÉLITE na lâmina basal, que se ativam, proliferam, diferenciam-se em mioblastos e fundem-se formando miotubos."
+      },
+      2: {
+        title: "Alternativa B está Correta! (Anatomia MI)",
+        text: "Os Isquiotibiais (Bíceps Femoral, Semitendíneo e Semimembranoso) são inervados pelo Nervo Isquiático (ramos tibial e fibular comum). A lesão ocorre tipicamente durante a desaceleração excêntrica brusca no sprint, onde as fibras se alongam sob altíssima tensão mecânica."
+      },
+      3: {
+        title: "Alternativa B está Correta! (Síndrome da Pedrada)",
+        text: "O Gastrocnêmio Medial é biarticular e sofre máxima tensão na transição miotendínea quando submetido a estiramento excêntrico rápido com joelho em extensão e tornozelo em dorsiflexão forçada."
+      },
+      4: {
+        title: "Alternativa A está Correta! (Reto Femoral Biarticular)",
+        text: "O Reto Femoral origina-se na Espinha Ilíaca Ântero-Inferior (EIAI). Por cruzar tanto o quadril quanto o joelho, fica estirado nas duas pontas durante o chute ou desaceleração, tornando-se muito mais vulnerável que os vastos."
+      },
+      5: {
+        title: "Alternativa B está Correta! (Acoplamento Ca²⁺)",
+        text: "A ligação do Ca²⁺ à Troponina C induz uma mudança conformacional alostérica que traciona a Tropomiosina para fora da fenda da actina, expondo os sítios de ligação para o engate das pontes cruzadas da miosina."
+      },
+      6: {
+        title: "Alternativa B está Correta! (Papel do ATP no Desligamento)",
+        text: "A ligação de uma NOVA molécula de ATP à cabeça da miosina reduz sua afinidade pela actina, soltando a ponte cruzada. Sem ATP disponível, as pontes travam na actina (rigor mortis / contratura patológica)!"
+      },
+      7: {
+        title: "Alternativa A está Correta! (Cascata Molecular da Lesão)",
+        text: "A ruptura do sarcolema permite o influxo maciço de Ca²⁺, ativando proteases dependentes de cálcio (Calpaínas) e fosfolipases A2 que digerem o citoesqueleto da fibra, resultando em necrose e liberação de Creatina Quinase (CK-MM) e Mioglobina no sangue."
+      },
+      8: {
+        title: "Alternativa B está Correta! (Rabdomiólise & Mioglobinúria)",
+        text: "Urina cor de refrigerante de cola ou chá escuro é sinal cardinal de Mioglobinúria por destruição muscular maciça. A mioglobina precipita nos túbulos renais e causa necrose tubular aguda (Insuficiência Renal Aguda), exigindo hidratação venosa urgente!"
+      },
+      9: {
+        title: "Alternativa A está Correta! (Defesas Antioxidantes)",
+        text: "A Superóxido Dismutase (SOD) transforma o ânion superóxido (O₂•⁻) em peróxido de hidrogênio (H₂O₂). Em seguida, a Catalase e a Glutationa Peroxidase (GPx) convertem o H₂O₂ em água pura (H₂O), evitando danos de estresse oxidativo."
+      },
+      10: {
+        title: "Alternativa C está Correta! (Leucina e mTOR)",
+        text: "A Leucina (aminoácido essencial de cadeia ramificada / BCAA) atua como sinalizador intracelular direto ativando a via anabólica mTORC1, indispensável para a síntese de novas proteínas contráteis e reconstrução tecidual."
+      }
+    };
+
+    let s1Answered = {};
+    let s1Score = 0;
+
+    function checkAnswerSala1(qIndex, selectedOpt, isCorrect, btnElement) {
+      if (s1Answered[qIndex]) return; // Evita responder duas vezes a mesma questão
+
+      s1Answered[qIndex] = true;
+      const card = btnElement.closest('.quiz-card');
+      const allButtons = card.querySelectorAll('.quiz-opt-btn');
+
+      // Desabilita os botões da questão
+      allButtons.forEach(btn => btn.disabled = true);
+
+      const feedbackBox = document.getElementById(`s1-fb-${qIndex}`);
+      const expl = s1Explanations[qIndex];
+
+      if (isCorrect) {
+        s1Score++;
+        btnElement.classList.add('correct');
+        feedbackBox.className = 'quiz-feedback feedback-correct show';
+        feedbackBox.innerHTML = `<strong>✅ Parabéns! ${expl.title}</strong><br>${expl.text}`;
+      } else {
+        btnElement.classList.add('incorrect');
+        // Destaca a correta
+        allButtons.forEach(btn => {
+          if (btn.getAttribute('onclick').includes('true')) {
+            btn.classList.add('correct');
+          }
+        });
+        feedbackBox.className = 'quiz-feedback feedback-incorrect show';
+        feedbackBox.innerHTML = `<strong>❌ Atenção! ${expl.title}</strong><br>${expl.text}`;
+      }
+
+      // Atualiza o placar no HUD
+      document.getElementById('s1-score-val').innerText = s1Score;
+      document.getElementById('s1-answered-count').innerText = Object.keys(s1Answered).length;
+    }
+
+    function resetQuizSala1() {
+      s1Answered = {};
+      s1Score = 0;
+      document.getElementById('s1-score-val').innerText = '0';
+      document.getElementById('s1-answered-count').innerText = '0';
+
+      const allCards = document.querySelectorAll('#quiz-sala1-container .quiz-card');
+      allCards.forEach(card => {
+        const btns = card.querySelectorAll('.quiz-opt-btn');
+        btns.forEach(btn => {
+          btn.disabled = false;
+          btn.classList.remove('correct', 'incorrect');
+        });
+        const fb = card.querySelector('.quiz-feedback');
+        fb.className = 'quiz-feedback';
+        fb.innerHTML = '';
+      });
+
+      scrollToSection('sec-simulado');
     }
   </script>
 </body>

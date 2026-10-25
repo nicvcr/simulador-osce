@@ -615,6 +615,203 @@
       display: flex;
       gap: 0.8rem;
     }
+    /* Quiz Styles */
+    .quiz-container {
+      margin-top: 1.5rem;
+    }
+
+    .quiz-score-hud {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(2, 132, 199, 0.1));
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 1rem;
+      padding: 1.2rem 1.6rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .quiz-score-info {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .quiz-score-badge {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary-light);
+    }
+
+    .quiz-score-label {
+      font-size: 0.95rem;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .quiz-score-sub {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .btn-reset-quiz {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--card-border);
+      color: #cbd5e1;
+      padding: 0.55rem 1.1rem;
+      border-radius: 0.6rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-reset-quiz:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    .quiz-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .quiz-card:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .quiz-question-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .quiz-q-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .quiz-q-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .quiz-statement {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.55;
+      margin-bottom: 1.2rem;
+    }
+
+    .quiz-options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .quiz-opt-btn {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0.75rem;
+      padding: 0.85rem 1.1rem;
+      color: #cbd5e1;
+      text-align: left;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+
+    .quiz-opt-btn:hover:not(:disabled) {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      transform: translateX(4px);
+    }
+
+    .quiz-opt-letter {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 0.15rem 0.55rem;
+      border-radius: 0.4rem;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .quiz-opt-btn.correct {
+      background: rgba(16, 185, 129, 0.18) !important;
+      border-color: #10b981 !important;
+      color: #a7f3d0 !important;
+    }
+
+    .quiz-opt-btn.correct .quiz-opt-letter {
+      background: #10b981;
+      color: #fff;
+    }
+
+    .quiz-opt-btn.incorrect {
+      background: rgba(244, 63, 94, 0.18) !important;
+      border-color: #f43f5e !important;
+      color: #fecdd3 !important;
+    }
+
+    .quiz-opt-btn.incorrect .quiz-opt-letter {
+      background: #f43f5e;
+      color: #fff;
+    }
+
+    .quiz-feedback {
+      margin-top: 1rem;
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .quiz-feedback.show {
+      display: block;
+    }
+
+    .feedback-correct {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #a7f3d0;
+    }
+
+    .feedback-incorrect {
+      background: rgba(244, 63, 94, 0.12);
+      border: 1px solid rgba(244, 63, 94, 0.3);
+      color: #fecdd3;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -672,6 +869,7 @@
         <button class="study-tab-btn" onclick="scrollToSection('sec-imunoglobulinas')">🛡️ 4. Imunoglobulinas (Anticorpos)</button>
         <button class="study-tab-btn" onclick="scrollToSection('sec-vacinas-soros')">💉 5. Vacinas vs. Soros</button>
         <button class="study-tab-btn" onclick="scrollToSection('sec-cenarios-osce')">❓ 6. Perguntas de Fixação da OSCE</button>
+        <button class="study-tab-btn" onclick="scrollToSection('sec-simulado')">📝 7. Simulado de Questões (10 Qs)</button>
       </div>
     </nav>
 
@@ -1236,6 +1434,338 @@
       </div>
     </article>
 
+    <!-- ==========================================
+         SEÇÃO 7: SIMULADO INTERATIVO PRÉ-OSCE
+         ========================================== -->
+    <article class="study-card" id="sec-simulado">
+      <div class="card-header-bar">
+        <div class="card-title-group">
+          <div class="card-icon">📝</div>
+          <div>
+            <h2 class="card-title">7. Simulado Interativo Pré-OSCE (10 Questões de Prova)</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Teste seus conhecimentos sobre Virologia, Álcool 70%, MHC, Anticorpos e Vacinas vs Soros</span>
+          </div>
+        </div>
+        <span class="card-tag tag-imuno" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.35);">Simulado Oficial</span>
+      </div>
+
+      <!-- Placar do Simulado -->
+      <div class="quiz-score-hud">
+        <div class="quiz-score-info">
+          <div class="quiz-score-badge"><span id="s2-score-val">0</span> / 10</div>
+          <div>
+            <div class="quiz-score-label">Seu Desempenho no Simulado da Sala 2</div>
+            <div class="quiz-score-sub"><span id="s2-answered-count">0</span> de 10 questões respondidas • Meta recomendada: ≥ 8 acertos</div>
+          </div>
+        </div>
+        <button class="btn-reset-quiz" onclick="resetQuizSala2()">🔄 Reiniciar Simulado</button>
+      </div>
+
+      <div class="quiz-container" id="quiz-sala2-container">
+
+        <!-- Questão 1 -->
+        <div class="quiz-card" data-qindex="1">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 01 de 10</span>
+            <span class="quiz-q-tag tag-micro">Virologia & Biossegurança</span>
+          </div>
+          <div class="quiz-statement">
+            Por que vírus envelopados como o SARS-CoV-2, Influenza e HIV são prontamente inativados pela higienização correta das mãos com álcool a 70%, enquanto vírus não envelopados (nus) como o Rotavírus e Poliovírus apresentam alta tolerância ambiental?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(1, 'A', false, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>Porque o álcool a 70% converte o material genético viral em toxinas bacterianas inofensivas.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(1, 'B', true, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>Porque o álcool a 70% solubiliza e dissolve a bicamada fosfolipídica do envelope e desnatura as glicoproteínas/espículas de ancoramento, destruindo a capacidade do vírus de aderir e invadir a célula hospedeira.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(1, 'C', false, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>Porque vírus envelopados possuem mitocôndrias ativas que são bloqueadas pelo etanol puro.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(1, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>Porque os vírus nus possuem parede celular espessa de peptideoglicano resistente ao álcool.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s2-fb-1"></div>
+        </div>
+
+        <!-- Questão 2 -->
+        <div class="quiz-card" data-qindex="2">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 02 de 10</span>
+            <span class="quiz-q-tag tag-micro">Biologia Viral</span>
+          </div>
+          <div class="quiz-statement">
+            De acordo com os conceitos fundamentais da Microbiologia Médica apresentados nos slides, qual das afirmativas abaixo expressa a definição biológica exata de um vírus?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(2, 'A', false, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>São microrganismos unicelulares procariontes capazes de sintetizar ATP autônomo na poeira ambiental.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(2, 'B', false, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>São seres vivos eucariontes com núcleo organizado que se reproduzem por divisão binária simples.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(2, 'C', true, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>São agentes infecciosos acelulares e parasitas intracelulares obrigatórios que possuem genoma constituído por DNA ou RNA protegido por um capsídeo protéico, sendo inertes fora da célula hospedeira.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(2, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>São fungos filamentosos que liberam esporos contendo simultaneamente DNA, RNA e organelas locomotoras.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s2-fb-2"></div>
+        </div>
+
+        <!-- Questão 3 -->
+        <div class="quiz-card" data-qindex="3">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 03 de 10</span>
+            <span class="quiz-q-tag tag-imuno">Complexo MHC Classe I</span>
+          </div>
+          <div class="quiz-statement">
+            O Complexo Maior de Histocompatibilidade de Classe I (HLA-A, HLA-B, HLA-C) é codificado no braço curto do cromossomo 6 humano. Em quais células corporais ele é expresso e qual é a sua principal função na resposta imune?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(3, 'A', false, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>Expresso exclusivamente em hemácias anucleadas e apresenta toxinas bacterianas para mastócitos.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(3, 'B', true, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>Expresso em todas as células nucleadas do organismo e plaquetas, apresentando peptídeos de origem endógena (virais ou tumorais) para os Linfócitos T Citotóxicos (CD8+).</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(3, 'C', false, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>Expresso apenas em células dendríticas e linfócitos B virgens, apresentando antígenos para macrófagos M2.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(3, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>Expresso exclusivamente no tecido cartilaginoso articular para impedir o atrito ósseo.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s2-fb-3"></div>
+        </div>
+
+        <!-- Questão 4 -->
+        <div class="quiz-card" data-qindex="4">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 04 de 10</span>
+            <span class="quiz-q-tag tag-imuno">Complexo MHC Classe II</span>
+          </div>
+          <div class="quiz-statement">
+            Ao contrário do MHC de Classe I, o MHC de Classe II (HLA-DP, HLA-DQ, HLA-DR) apresenta distribuição celular estritamente restrita no sistema imunológico. Onde ele é encontrado e para quem apresenta antígenos?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(4, 'A', true, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>É expresso em Células Apresentadoras de Antígenos (APCs) profissionais (Macrófagos, Células Dendríticas e Linfócitos B), apresentando antígenos exógenos capturados por endocitose para Linfócitos T Auxiliares (CD4+).</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(4, 'B', false, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>É expresso apenas em neurônios periféricos, apresentando impulsos nervosos para a membrana sinovial.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(4, 'C', false, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>É expresso nas fibras musculares estriadas esqueléticas, apresentando cálcio para os túbulos T.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(4, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>É expresso em neutrófilos mortos para ativar a coagulação sanguínea extrínseca.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s2-fb-4"></div>
+        </div>
+
+        <!-- Questão 5 -->
+        <div class="quiz-card" data-qindex="5">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 05 de 10</span>
+            <span class="quiz-q-tag tag-imuno">Imunidade Celular & "Beijo da Morte"</span>
+          </div>
+          <div class="quiz-statement">
+            (Tema da Aula de Imunologia) Na destruição de células hospedeiras infectadas por vírus intracelulares, os Linfócitos T Citotóxicos (CD8+) utilizam o mecanismo conhecido como "Beijo da Morte". Quais mediadores bioquímicos são liberados por suas vesículas citoplasmáticas e como atuam?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(5, 'A', false, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>Histamina e heparina, que provocam edema osmótico irreversível na matriz extracelular.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(5, 'B', true, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>Perforinas (que polimerizam na membrana plasmática formando poros cilíndricos) e Granzimas (enzimas proteolíticas que entram pelos poros e ativam as caspases, disparando a apoptose celular programada).</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(5, 'C', false, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>Ácido clorídrico e pepsina, destruindo o vírus por queima ácida direta no interstício.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(5, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>Anticorpos IgM solúveis que se fundem ao envelope viral para bloquear a síntese de ATP.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s2-fb-5"></div>
+        </div>
+
+        <!-- Questão 6 -->
+        <div class="quiz-card" data-qindex="6">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 06 de 10</span>
+            <span class="quiz-q-tag tag-imuno">Imunoglobulinas (Anticorpos)</span>
+          </div>
+          <div class="quiz-statement">
+            As imunoglobulinas são glicoproteínas plasmáticas efetoras sintetizadas por plasmócitos (não são células!). Na estrutura de um anticorpo monomérico em forma de "Y", qual o papel funcional desempenhado pelas regiões Fab e Fc, respectivamente?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(6, 'A', false, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>A região Fab ativa o sistema complemento e a região Fc reconhece os antígenos da bactéria.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(6, 'B', true, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>A porção Fab (Fragment antigen-binding) contém os domínios variáveis (VH e VL) responsáveis pela união altamente específica ao epítopo do antígeno; a porção Fc (Fragment crystallizable) é a fração efetora que interage com receptores de fagócitos (opsonização) e fixa o complemento.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(6, 'C', false, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>Ambas as porções executam exclusivamente a degradação proteolítica de carboidratos virais.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(6, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>A fração Fab fixa o anticorpo na membrana nuclear e a fração Fc atua como enzima respiratória.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s2-fb-6"></div>
+        </div>
+
+        <!-- Questão 7 -->
+        <div class="quiz-card" data-qindex="7">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 07 de 10</span>
+            <span class="quiz-q-tag tag-imuno">Cinética Sorológica: IgM vs IgG</span>
+          </div>
+          <div class="quiz-statement">
+            Um paciente com suspeita de infecção viral realiza sorologia e o laudo laboratorial apresenta: IgM Reagente (positivo) e IgG Não Reagente (negativo). Como você, fisioterapeuta em avaliação clínica, interpreta esse padrão imunológico?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(7, 'A', false, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>O paciente possui imunidade de memória consolidada por vacina prévia e não transmite o vírus.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(7, 'B', true, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>O paciente encontra-se em fase aguda de infecção primária recente, pois a IgM pentamérica é a primeira classe de anticorpos sintetizada na resposta imune adaptativa primária antes da troca de isotipo.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(7, 'C', false, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>O resultado indica cura completa e eliminação definitiva do vírus há pelo menos cinco anos.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(7, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>O paciente possui alergia respiratória crônica mediada exclusivamente por desgranulação de IgE.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s2-fb-7"></div>
+        </div>
+
+        <!-- Questão 8 -->
+        <div class="quiz-card" data-qindex="8">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 08 de 10</span>
+            <span class="quiz-q-tag tag-imuno">Classes de Imunoglobulinas</span>
+          </div>
+          <div class="quiz-statement">
+            Qual classe de imunoglobulina é a mais abundante no plasma sanguíneo humano (~75 a 80%), constitui o principal anticorpo da resposta imune secundária e é a ÚNICA capaz de atravessar a barreira transplacentária (via receptor FcRn) para imunizar passivamente o feto?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(8, 'A', false, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>Imunoglobulina M (IgM).</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(8, 'B', false, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>Imunoglobulina A (IgA).</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(8, 'C', true, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>Imunoglobulina G (IgG).</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(8, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>Imunoglobulina E (IgE).</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s2-fb-8"></div>
+        </div>
+
+        <!-- Questão 9 -->
+        <div class="quiz-card" data-qindex="9">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 09 de 10</span>
+            <span class="quiz-q-tag tag-bio">Vacinas vs. Soros</span>
+          </div>
+          <div class="quiz-statement">
+            A comparação biológica e farmacológica entre Vacinas e Soros Heterólogos é tema obrigatório na OSCE. Assinale a alternativa que apresenta a correlação correta entre essas duas modalidades de imunobiológicos:
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(9, 'A', false, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>As vacinas conferem proteção imediata que dura poucas semanas sem gerar células de memória.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(9, 'B', true, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>As vacinas promovem Imunização Ativa (inoculam antígenos atenuados, inativados ou toxoides, estimulando o próprio sistema imune a produzir anticorpos e células de memória duradouras); já os soros promovem Imunização Passiva (fornecem anticorpos pré-formados prontos com ação imediata, porém temporária e sem memória).</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(9, 'C', false, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>Os soros heterólogos equinos são isentos de reações adversas e não apresentam qualquer risco de choque anafilático.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(9, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>As vacinas atenuadas vivas são perfeitamente indicadas para gestantes e pacientes imunodeprimidos severos.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s2-fb-9"></div>
+        </div>
+
+        <!-- Questão 10 -->
+        <div class="quiz-card" data-qindex="10">
+          <div class="quiz-question-header">
+            <span class="quiz-q-num">Questão 10 de 10</span>
+            <span class="quiz-q-tag tag-clin">Conduta Clínica de Urgência (OSCE)</span>
+          </div>
+          <div class="quiz-statement">
+            (Cenário 4 da OSCE - Risco de Tétano) Um paciente sofreu um corte profundo em ferro enferrujado e terra na horta, com esquema vacinal incompleto. O médico prescreveu Soro Antitetânico (SAT) e Vacina Antitetânica (dT). Qual a regra de ouro na técnica de administração que o profissional deve seguir rigorosamente?
+          </div>
+          <div class="quiz-options-list">
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(10, 'A', false, this)">
+              <span class="quiz-opt-letter">A</span>
+              <span>Misturar os dois produtos no mesmo frasco para diminuir o número de agulhadas no paciente.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(10, 'B', true, this)">
+              <span class="quiz-opt-letter">B</span>
+              <span>Administrar o Soro e a Vacina em MEMBROS CORPORAIS DISTINTOS (ex: Soro no deltoide direito e Vacina no deltoide esquerdo), pois a aplicação no mesmo sítio faria os anticorpos prontos do soro neutralizarem imediatamente os antígenos da vacina, impedindo a geração de memória ativa!</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(10, 'C', false, this)">
+              <span class="quiz-opt-letter">C</span>
+              <span>Injetar o soro diretamente dentro da artéria femoral para atingir o cérebro mais depressa.</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="checkAnswerSala2(10, 'D', false, this)">
+              <span class="quiz-opt-letter">D</span>
+              <span>Administrar a vacina apenas após 6 meses do término do efeito do soro antitetânico.</span>
+            </button>
+          </div>
+          <div class="quiz-feedback" id="s2-fb-10"></div>
+        </div>
+
+      </div>
+    </article>
+
     <!-- Footer Navigation -->
     <footer class="footer-nav">
       <div class="footer-left">
@@ -1281,6 +1811,108 @@
     function toggleAccordion(header) {
       const item = header.parentElement;
       item.classList.toggle('open');
+    }
+
+    // SIMULADO INTERATIVO SALA 2
+    const s2Explanations = {
+      1: {
+        title: "Alternativa B está Correta! (Mecanismo do Álcool a 70%)",
+        text: "A água (30%) retarda a evaporação e hidrata as proteínas dos microrganismos. O álcool a 99-100% evapora rápido demais e causa coagulação proteica instantânea da camada externa antes de penetrar no interior, formando uma 'crosta' protetora em bactérias e vírus."
+      },
+      2: {
+        title: "Alternativa A está Correta! (Envelopados vs Não Envelopados)",
+        text: "O envelope viral é derivado da membrana da célula hospedeira e é rico em fosfolipídios. Solventes orgânicos como etanol a 70% dissolvem essa bicamada lipídica e soltam as glicoproteínas de fixação, inativando o poder infeccioso de vírus como Influenza, HIV, Dengue e Coronavírus."
+      },
+      3: {
+        title: "Alternativa B está Correta! (Conceito Biológico de Vírus)",
+        text: "Vírus são partículas acelulares sem citoplasma, sem organelas e sem síntese de ATP. Eles necessitam obrigatoriamente sequestrar os ribossomos e enzimas da célula hospedeira para transcrever, traduzir e montar novos vírions."
+      },
+      4: {
+        title: "Alternativa A está Correta! (MHC de Classe I e CD8+)",
+        text: "O MHC-I (HLA-A, B, C no cromossomo 6) é expresso em todas as células com núcleo. Ele processa peptídeos sintetizados no citosol (origem endógena) e apresenta para o receptor TCR dos Linfócitos T CD8+ citotóxicos."
+      },
+      5: {
+        title: "Alternativa C está Correta! (MHC de Classe II e CD4+)",
+        text: "O MHC-II (HLA-DP, DQ, DR) é restrito a APCs profissionais (Dendríticas, Macrófagos e Células B). Ele expõe fragmentos de patógenos fagocitados (origem exógena) para Linfócitos T CD4+ (Helper), orquestrando a imunidade adaptativa."
+      },
+      6: {
+        title: "Alternativa B está Correta! ('Beijo da Morte' - Perforinas e Granzimas)",
+        text: "A sinapse citotóxica exocita grânulos de Perforina (que polimerizam criando túneis na membrana) e Granzima B (que penetra e cliva caspases intracelulares, ativando a cascata da apoptose programada sem derramar conteúdo citotóxico no tecido vizinho)."
+      },
+      7: {
+        title: "Alternativa A está Correta! (Anatomia do Anticorpo: Fab vs Fc)",
+        text: "O Fab (Fragment antigen-binding) é a porção variável hipervariável que reconhece o antígeno específico com alta complementaridade. O Fc (Fragment crystallizable) é a base constante que interage com receptores celulares (FcR) em macrófagos, neutrófilos e ativa C1q do complemento."
+      },
+      8: {
+        title: "Alternativa B está Correta! (Interpretação Sorológica IgM vs IgG)",
+        text: "O IgM é pentamérico e é o primeiro a subir na fase aguda da infecção. O IgG surge dias/semanas após através da troca de isotipo (switch de classe) e permanece por anos como anticorpo protetor de memória."
+      },
+      9: {
+        title: "Alternativa A está Correta! (Passagem Placentária e Mucosas)",
+        text: "A IgG possui receptores específicos (FcRn) na placenta materna, sendo a única que atravessa para a corrente sanguínea do feto. A IgA secretória (forma dimérica ligada ao componente secretor) é abundante na saliva, lágrimas e no colostro/leite materno."
+      },
+      10: {
+        title: "Alternativa B está Correta! (Regra Clínica: Soro e Vacina em Membros Diferentes)",
+        text: "O Soro contém imunoglobulinas prontas em altíssima concentração (imunidade passiva para neutralização imediata da tetanospasmina). Se injetado no mesmo membro da vacina, os anticorpos do soro vão se complexar e destruir os antígenos vacinais antes que eles possam ser processados pelas APCs locais, anulando a formação de memória ativa!"
+      }
+    };
+
+    let s2Answered = {};
+    let s2Score = 0;
+
+    function checkAnswerSala2(qIndex, selectedOpt, isCorrect, btnElement) {
+      if (s2Answered[qIndex]) return; // Evita responder duas vezes
+
+      s2Answered[qIndex] = true;
+      const card = btnElement.closest('.quiz-card');
+      const allButtons = card.querySelectorAll('.quiz-opt-btn');
+
+      // Desabilita botões da questão
+      allButtons.forEach(btn => btn.disabled = true);
+
+      const feedbackBox = document.getElementById(`s2-fb-${qIndex}`);
+      const expl = s2Explanations[qIndex];
+
+      if (isCorrect) {
+        s2Score++;
+        btnElement.classList.add('correct');
+        feedbackBox.className = 'quiz-feedback feedback-correct show';
+        feedbackBox.innerHTML = `<strong>✅ Parabéns! ${expl.title}</strong><br>${expl.text}`;
+      } else {
+        btnElement.classList.add('incorrect');
+        allButtons.forEach(btn => {
+          if (btn.getAttribute('onclick').includes('true')) {
+            btn.classList.add('correct');
+          }
+        });
+        feedbackBox.className = 'quiz-feedback feedback-incorrect show';
+        feedbackBox.innerHTML = `<strong>❌ Atenção! ${expl.title}</strong><br>${expl.text}`;
+      }
+
+      // Atualiza o placar no HUD
+      document.getElementById('s2-score-val').innerText = s2Score;
+      document.getElementById('s2-answered-count').innerText = Object.keys(s2Answered).length;
+    }
+
+    function resetQuizSala2() {
+      s2Answered = {};
+      s2Score = 0;
+      document.getElementById('s2-score-val').innerText = '0';
+      document.getElementById('s2-answered-count').innerText = '0';
+
+      const allCards = document.querySelectorAll('#quiz-sala2-container .quiz-card');
+      allCards.forEach(card => {
+        const btns = card.querySelectorAll('.quiz-opt-btn');
+        btns.forEach(btn => {
+          btn.disabled = false;
+          btn.classList.remove('correct', 'incorrect');
+        });
+        const fb = card.querySelector('.quiz-feedback');
+        fb.className = 'quiz-feedback';
+        fb.innerHTML = '';
+      });
+
+      scrollToSection('sec-simulado');
     }
   </script>
 </body>
